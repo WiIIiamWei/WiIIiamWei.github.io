@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给新生的挑战</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#给新生的挑战">给新生的挑战</a>
+<ul>
+<li><a href="#想做机器学习！">想做机器学习！</a></li>
+<li><a href="#想帮队长做硬件！">想帮队长做硬件！</a></li>
+<li><a href="#想做大屏或者小程序！">想做大屏或者小程序！</a></li>
+<li><a href="#想帮我们维护服务器！">想帮我们维护服务器！</a></li>
+<li><a href="#想帮我们做数字孪生！">想帮我们做数字孪生！</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="给新生的挑战">给新生的挑战</h1>
+<blockquote>
+<p>在下面选择一个你认为擅长的挑战，完成它，证明你的实力。祝你好运！</p>
+</blockquote>
+<h2 id="想做机器学习！">想做机器学习！</h2>
+<p>机器学习领域有一个很入门的课题，叫 MNIST（手写数字识别）。请你完成一个实例。</p>
+<p>我推荐你使用 Jupyter Notebook + Tensorflow 完成这一任务。你可以从我给你的示例代码开始做，里面包含完整的数据集和测试集，不需要你再找。你也可以用你自己的方式完成。</p>
+<p>仓库地址：<a href="https://gitee.com/WiIIiamWei/mnist-beginner.git">https://gitee.com/WiIIiamWei/mnist-beginner.git</a></p>
+<p>使用以下命令克隆仓库（这是一个 Git 仓库，在使用之前你可能还需要学习一下如何安装和使用 Git）：</p>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">git</span> clone https://gitee.com/WiIIiamWei/mnist-beginner.git
+</code></pre>
+<p>如果你认为你完成了，请联系我们并发给我们完整的压缩包，或者直接在 Gitee 上提出 Pull Request（那样我更看好你）。</p>
+<h2 id="想帮队长做硬件！">想帮队长做硬件！</h2>
+<h3 id="基础要求">基础要求</h3>
+<p>从一块 ESP32 中获取温湿度数据，将数据上传到阿里云物联网平台。</p>
+<h3 id="进阶挑战">进阶挑战</h3>
+<p>从一块 ESP32 中获取温湿度数据，利用任意无线传输方式将温湿度数据从这块 ESP32 传输到另一块 ESP32 再上传到阿里云物联网平台。</p>
+<h2 id="想做大屏或者小程序！">想做大屏或者小程序！</h2>
+<p><a href="https://element.eleme.cn/#/zh-CN">Element</a> 是一个对新手非常友好的前端库，也是我们大屏主要使用的技术。</p>
+<p>请你用这个库写一个好看的界面。请注意：你要做的不只是 UI 设计，而是在网页上实现它。</p>
+<p>Element 是基于 Vue 2.0 的，在此之前你可能还需要了解 Vue 基础。</p>
+<p>或者……如果你真的很牛，想用其他的框架（甚至是纯 HTML + CSS + JS）搓出一个好看的界面也不是不行。</p>
+<h2 id="想帮我们维护服务器！">想帮我们维护服务器！</h2>
+<ol>
+<li>拥有一个自己可控的 GNU/Linux 系统作为服务器，可以是实体机或虚拟机，发行版随意；</li>
+<li>在服务器上部署一个 Flask 服务：</li>
+</ol>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask
+
+app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+
+@app<span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello, World!'</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    app<span class="token punctuation">.</span>run<span class="token punctuation">(</span>debug<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre>
+<ol start="3">
+<li>在另一台机器上以任意方式（浏览器、<code>curl</code>、<code>wget</code> 等）访问这个服务，看到 <code>Hello, World!</code> 便算你成功。</li>
+</ol>
+<p>你说你会部署其他服务？也可以和我们聊聊看。</p>
+<h2 id="想帮我们做数字孪生！">想帮我们做数字孪生！</h2>
+<p><strong>我们在这个领域其实也是新手。如果有大佬能在这方面有些见解，欢迎来找我们聊聊！</strong></p>
+<p>数字孪生这一技术一般呈现数据大屏上。帮我们做一个这样的大屏吧，只不过你<strong>必须使用 Unity</strong>。</p>
+<p>简陋一点或者没做出数字孪生也没关系，只要用 Unity 实现一个像样的数据大屏就可以了。毕竟我们在这方面了解也不多，慢慢来。</p>
+<p>如果说你不会做大屏，但你喜欢建模，可以试试这个：</p>
+<p>使用下面的素材文件，任选一个进行建模，以<strong>书页</strong>为主题，其余场景可自主发挥，但需要契合音频，不可对音频进行任何改动，包括删减、增添、混响等。</p>
+<p>素材下载（包含一个示例成果）：<a href="https://pan.huang1111.cn/s/LxZKzU6">https://pan.huang1111.cn/s/LxZKzU6</a></p>
+<p>密码：<code>yg4u02</code></p>
+
+    </div>
+  </div>
+</body>
+
+</html>
