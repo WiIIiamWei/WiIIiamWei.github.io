@@ -1,6 +1,6 @@
 ---
-title: Example Category
-description: A description of this category
+title: 没有标签
+description: 我懒得写啦（
 image:
 
 # Badge style

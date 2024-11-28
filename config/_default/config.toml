@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://wiiiiamwei.github.io"
+baseurl = "https://williamwei.top"
 languageCode = "zh-cn"
 title = "William Wei's Blog"
 
