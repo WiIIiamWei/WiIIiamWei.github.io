@@ -10,6 +10,14 @@ links:
     description: 一个喜欢炼丹的小镇青年 | 希望能成为一个厉害的人
     website: https://ziheng5.github.io/
     image: https://ziheng5.github.io/images/head.jpg
+  - title: Ain\'t no moon? | fermata
+    description: 技术、生活、文学 | 😘
+    website: https://anemone.moe/
+    image: fermata.jpg
+  - title: Foth's Blog
+    description: 是咱同专业的学长捏 | 小小的人偶，想要摘月亮 | Graphics, Reading and the Others
+    website: https://www.foth.top/
+    image: https://www.foth.top/img/foth_hu5812789855465179678.jpg
 menu:
     main: 
         weight: 4

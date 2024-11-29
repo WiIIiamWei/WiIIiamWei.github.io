@@ -10,9 +10,9 @@ categories:
     - 置顶
 ---
 
-为确保可用性，本网站使用不同构建方式构建：
+为确保可用性，本网站使用不同构建方式构建 ~~（白嫖免费服务の神）~~：
 
-* ~~Cloudflare Pages: [williamwei.pages.dev](https://williamwei.pages.dev)~~（不知为何爆炸了）
+* Cloudflare Pages: [williamwei.pages.dev](https://williamwei.pages.dev)
 * GitHub Pages（主站所在处）: [williamwei.top](https://williamwei.top)、[wiiiiamwei.github.io](https://wiiiiamwei.github.io)
 * Vercel: [williamwei.vercel.app](https://williamwei.vercel.app)
 
