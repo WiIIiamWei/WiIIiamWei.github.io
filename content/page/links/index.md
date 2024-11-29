@@ -18,6 +18,10 @@ links:
     description: 是咱同专业的学长捏 | 小小的人偶，想要摘月亮 | Graphics, Reading and the Others
     website: https://www.foth.top/
     image: https://www.foth.top/img/foth_hu5812789855465179678.jpg
+  - title: 清风之恋の小窝 | qingfengzl
+    description: ええ...?被找到了呢,这里会不定期更新一些好玩的东西哦
+    website: https://aurora0x27.github.io/
+    image: https://aurora0x27.github.io/img/personal/matsuri.jpg
 menu:
     main: 
         weight: 4
