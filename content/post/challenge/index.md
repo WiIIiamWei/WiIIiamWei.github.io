@@ -59,6 +59,7 @@ Element 是基于 Vue 2.0 的，在此之前你可能还需要了解 Vue 基础�
 
 1. 拥有一个自己可控的 GNU/Linux 系统作为服务器，可以是实体机或虚拟机，发行版随意；
 2. 在服务器上部署一个 Flask 服务：
+
 ```python
 from flask import Flask
 
@@ -71,6 +72,7 @@ def hello():
 if __name__ == '__main__':
     app.run(debug=True)
 ```
+
 3. 在另一台机器上以任意方式（浏览器、`curl`、`wget` 等）访问这个服务，看到 `Hello, World!` 便算你成功。
 
 你说你会部署其他服务？也可以和我们聊聊看。

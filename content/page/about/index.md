@@ -18,6 +18,7 @@ William Wei（男）
 使用 Windows / Arch Linux（日用程度）
 
 手残音游玩家，成分复杂：
+
 * Arcaea（基本退坑，打不动啦）：Potential 10.40，好友码 `044 040 642`
 * AstroDX（不出勤只打模拟器，社恐人，急需大佬带我打）：没上机也有 w3
 * Deemo II：大魔法师，技巧分 315+
