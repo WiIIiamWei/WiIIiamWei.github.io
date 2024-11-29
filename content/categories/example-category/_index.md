@@ -1,6 +1,6 @@
 ---
-title: 没有标签
-description: 我懒得写啦（
+title: 竞赛
+description: 与我参加的竞赛相关的文章。
 image:
 
 # Badge style

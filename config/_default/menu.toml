@@ -22,3 +22,19 @@ url = "https://x.com/WiIIiamWei"
 
 [social.params]
 icon = "brand-twitter"
+
+[[social]]
+identifier = "telegram"
+name = "Telegram"
+url = "https://t.me/WiIIiamWei"
+
+[social.params]
+icon = "brand-telegram"
+
+[[social]]
+identifier = "mail"
+name = "Mail"
+url = "mailto:me@williamwei.top?body=!%20Please%20do%20not%20spam%2C%20or%20you%20will%20be%20permanently%20banned."
+
+[social.params]
+icon = "mail"

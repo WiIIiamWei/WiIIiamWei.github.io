@@ -3,14 +3,20 @@ title: 成员招募挑战
 description: 路桥卫士项目组
 slug: challenge
 date: 2024-11-15 00:00:00+0800
+categories:
+    - 竞赛
 ---
 
 > 在下面选择一个你认为擅长的挑战，完成它，证明你的实力。完成任意挑战之后都请尽快提交。祝你好运！
 
 > **联系方式（QQ）**
+>
 > 硬件相关：1542745943
+>
 > 软件相关：1397784681
+>
 > 建模相关：1969860168
+>
 > 提交成果请联系对应的负责人，联系我们时请务必注明来意。
 
 ## 想做机器学习！
@@ -19,7 +25,7 @@ date: 2024-11-15 00:00:00+0800
 
 我推荐你使用 Jupyter Notebook + Tensorflow 完成这一任务。你可以从我给你的示例代码开始做，里面包含完整的数据集和测试集，不需要你再找。你也可以用你自己的方式完成。
 
-仓库地址：https://gitee.com/WiIIiamWei/mnist-beginner.git
+仓库地址：[https://gitee.com/WiIIiamWei/mnist-beginner.git](https://gitee.com/WiIIiamWei/mnist-beginner.git)
 
 使用以下命令克隆仓库（这是一个 Git 仓库，在使用之前你可能还需要学习一下如何安装和使用 Git）：
 
