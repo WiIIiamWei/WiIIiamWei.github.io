@@ -2,7 +2,7 @@
 title: 音游联系方式
 description: Let's 音游趴体！能和我一起……打音游吗？
 slug: mug
-date: 2024-11-29 00:00:00+0800
+date: 2024-11-29
 categories:
     - 音游
 ---

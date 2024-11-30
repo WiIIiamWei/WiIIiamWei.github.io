@@ -22,13 +22,17 @@ links:
     description: ええ...?被找到了呢,这里会不定期更新一些好玩的东西哦
     website: https://aurora0x27.github.io/
     image: https://aurora0x27.github.io/img/personal/matsuri.jpg
+  - title: kingpoem 的王国🏰 | 王俊琦
+    description: 适闻有客金陵至，见说江南风景异。 | 每个人都只有一个使命，那就是寻找自我，无论最终成为诗人还是疯子、先知还是罪犯。
+    website: https://kingpoem.github.io/
+    image: https://kingpoem.github.io/images/avatar.png
 menu:
     main: 
         weight: 4
         params:
             icon: link
 
-comments: false
+comments: true
 ---
 
 如果希望交换友链，可以在评论区留言，或是用任意联系方式联系我。

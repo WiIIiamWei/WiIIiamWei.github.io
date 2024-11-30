@@ -2,7 +2,7 @@
 title: 成员招募挑战
 description: 路桥卫士项目组
 slug: challenge
-date: 2024-11-15 00:00:00+0800
+date: 2024-11-15
 categories:
     - 竞赛
 ---

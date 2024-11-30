@@ -2,7 +2,7 @@
 title: 2024 新年彩蛋
 description: 在 2024 年农历新年时出的彩蛋解谜题目
 slug: happy_chinese_new_year_2024
-date: 2024-01-01 00:00:00+0800
+date: 2024-01-01
 categories:
     - 技术
 tags:

@@ -2,7 +2,7 @@
 title: 公告
 description: 在这里查看网站的公告！
 slug: notice
-date: 2024-11-29 00:00:00+0800
+date: 2024-11-29
 image: cover.jpg
 weight: 1
 categories:
