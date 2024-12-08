@@ -245,7 +245,7 @@ URL 部分很简单，由于要做的是 `GET` 请求，我们只需要把请求
 >
 > **提示**：作者此时已经连续写了两个半小时文档，他现在的神经很状态。（2024/12/07 22:00）
 
-所以为了不让服务器在知道你要爬爬它的时候就把你拒之门外，你还是需要伪装成正规军的。
+所以为了不让服务器在知道你要爬爬它的时候就把你拒之门外，你还是需要伪装成“正人君子”的。
 
 ```python
 req = requests.get(url, headers=headers)
@@ -254,6 +254,8 @@ req = requests.get(url, headers=headers)
 这里则是使用了 `requests` 库的 `get` 方法，参数 `url` `headers` 分别对应我们需要的 URL 和请求头。之后再通过 `print(req.text)` 输出请求结果。
 
 整个过程就是通过 `requests` 发送登录的 `GET` 请求（包含我们的用户名密码等），然后验证通过，得到请求结果。
+
+你还可以看看我一年前初次爬校园网时对这里的代码做的改进（渣库勿喷），里面有用 `pyinstaller` 打包的可执行版本以及命令行（`curl` 或 `Invoke-WebRequest`）登录的方法。[GitHub - WiIIiamWei/NJUPT-login](https://github.com/WiIIiamWei/NJUPT-login)
 
 至此你便完成了你的第一个爬虫项目，祝贺你！
 
@@ -266,3 +268,4 @@ req = requests.get(url, headers=headers)
 * 你还没有学完 `requests` 里的所有内容。多练练吧！
 * 和 `requests` 配套的另一个工具是 Beautiful Soup `bs4`。它可以对 HTML 进行解析，查找特定节点的内容等。
 * 很多大网站（比如淘宝等购物网站）都是动态加载的网页，用 `requests` 什么都读不到，这时候就需要 `selenium` 出手了。`selenium` 是一个 Web 的自动化测试工具，最初是为网站自动化测试而开发，可以直接运行在浏览器上，可以控制浏览器发送请求，获取网页数据。**注意：为了能正常使用 `selenium`，你通常需要安装一个 WebDriver，请自行搜索安装教程。**
+* 如果你是大佬，你还可以试试最新最热的 `playwright` 浏览器自动化测试工具……

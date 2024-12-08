@@ -25,7 +25,7 @@ William Wei（男）
 * AstroDX（不出勤只打模拟器，社恐人，急需大佬带我打）：没上机也有 w3
 * Deemo II：大魔法师，技巧分 315+
 * Phigros：RankingScore 10.50
-* Rotaeno：音律值 15.764，好友码 `HPMGCP`
+* Rotaeno：音律值 15.777，好友码 `HPMGCP`
 * Muse Dash，Orzmic，等等
 
 想与我一起打音游？非常欢迎！请到[音游联系方式](/p/mug)找我。
