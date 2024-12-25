@@ -7,11 +7,13 @@ categories:
     - 音游
 ---
 
-## AstroDX Best 50
+## AstroDX Best 50 / Rating Graph
 
 **请注意：此成绩非官方成绩，与 SEGA 没有任何关系！**
 
 ![](https://github.com/WiIIiamWei/maimai-scores/raw/master/scoreb50.jpg)
+
+![](https://github.com/WiIIiamWei/maimai-scores/raw/master/history/rating.jpg)
 
 ## Deemo II
 
