@@ -4,6 +4,8 @@ description: “我打 CTF…真的假的？”——从未打过 CTF 的新人�
 slug: furryctf-2024-winter-writeup
 date: 2025-01-15
 categories:
+    - 技术
+tags:
     - CTF
 ---
 
