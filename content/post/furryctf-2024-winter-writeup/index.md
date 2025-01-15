@@ -3,6 +3,7 @@ title: furryCTF 2024 寒假赛总结
 description: “我打 CTF…真的假的？”——从未打过 CTF 的新人初次尝试 CTF 实录
 slug: furryctf-2024-winter-writeup
 date: 2025-01-15
+image: cats.jpg
 categories:
     - 技术
 tags:
