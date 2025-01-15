@@ -25,7 +25,11 @@ links:
   - title: kingpoem 的王国🏰 | 王俊琦
     description: 适闻有客金陵至，见说江南风景异。 | 每个人都只有一个使命，那就是寻找自我，无论最终成为诗人还是疯子、先知还是罪犯。
     website: https://kingpoem.github.io/
-    image: https://kingpoem.github.io/images/avatar.png
+    image: https://kingpoem.github.io/assets/avatar.png
+  - title: s3loy's blog
+    description: who’s wtt.? | neither emo nor demo
+    website: https://www.seloy.cn/
+    image: https://www.seloy.cn/wp-content/uploads/2025/01/IMG_5556-scaled.jpg
 menu:
     main: 
         weight: 4

@@ -254,6 +254,10 @@ furryCTF{laoliuchuantongzhengcaiguan}
 
 以及，图一应该是古城南边的墨小牛。
 
+```text
+furryCTF{dezhuanghuoguo}
+```
+
 ### [q. [osint]神秘影片](https://hydro.ac/p/furryCTF023?tid=6728fe9aa325b9e5ba5f9489)
 
 这题卡了我不少时间。拿网易云听歌识曲识别出来[这个](https://music.163.com/#/song?id=1881821029)，于是就到 bilibili 搜这首歌，什么也没有得到。后来看云音乐的评论区才意识到这玩意是个无授权的二创填词曲！被引到了正道上，找到 WUHAN 这首歌。之后从一个[疑似搬运视频](https://www.bilibili.com/video/BV1TU4y1J7bq)的推荐以及后面的 ky 评论引到了 Hyun's Dojo 频道上，从片头的动静确认了是这位 UP 的视频。一个一个看有没有时长=2 分 55 秒 ± 1 秒的视频，看到了[这个视频](https://www.bilibili.com/video/BV1Bf4y157pa)。
