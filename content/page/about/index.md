@@ -23,7 +23,7 @@ William Wei（男）
 
 * Arcaea（基本退坑，打不动啦）：Potential 10.40，好友码 `044 040 642`
 * AstroDX（不出勤只打模拟器，社恐人，急需大佬带我打）：没上机也有 w3
-* Deemo II：大魔法师，技巧分 315+
+* Deemo II：大魔法师成就（国际服），技巧分 315+，零氪藏品全收集，最近最常玩
 * Phigros：RankingScore 10.50
 * Rotaeno：音律值 15.777，好友码 `HPMGCP`
 * Muse Dash，Orzmic，等等

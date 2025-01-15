@@ -1,7 +1,7 @@
 ---
 title: 永恒的回文单词
 description: William Wei 去年精神状态不对劲时出的算法题
-slug: everlasting_palindrome
+slug: everlasting-palindrome
 date: 2024-10-25
 math: true
 categories:
