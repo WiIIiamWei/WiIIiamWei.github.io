@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技术 on William Wei's Blog</title><link>https://williamwei.top/categories/%E6%8A%80%E6%9C%AF/</link><description>Recent content in 技术 on William Wei's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://williamwei.top/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>furryCTF 2024 寒假赛总结</title><link>https://williamwei.top/p/furryctf-2024-winter-writeup/</link><pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/furryctf-2024-winter-writeup/</guid><description>&lt;img src="https://williamwei.top/p/furryctf-2024-winter-writeup/cats.jpg" alt="Featured image of post furryCTF 2024 寒假赛总结" />&lt;blockquote>
+&lt;p>&lt;strong>注意：&lt;/strong>&lt;/p>
+&lt;p>此文章为完全没打过 CTF 的新人初次尝试 CTF 的记录和感想，这不是一篇好的题解，各位 CTF 大神们不要喷我 awa&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>另请参阅：&lt;/strong>&lt;/p>
+&lt;p>&lt;a class="link" href="https://hydro.ac/contest/6728fe9aa325b9e5ba5f9489" target="_blank" rel="noopener"
+>furryCTF 2024 寒假赛题目&lt;/a>&lt;/p>
+&lt;p>本人得分为 1886.5，位次 21（Hydro 排行榜），不得不说比我想象的好太多了。&lt;/p></description></item><item><title>网络爬虫入门</title><link>https://williamwei.top/p/web-crawler-intro/</link><pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/web-crawler-intro/</guid><description>&lt;img src="https://williamwei.top/p/web-crawler-intro/cover.webp" alt="Featured image of post 网络爬虫入门" />&lt;h2 id="什么是爬虫">什么是爬虫
+&lt;/h2>&lt;p>网络爬虫就是一种可以从网页上抓取数据信息并保存的自动化程序，它的原理就是模拟浏览器发送网络请求，接受请求响应，然后按照一定的规则自动抓取互联网数据。&lt;/p></description></item><item><title>永恒的回文单词</title><link>https://williamwei.top/p/everlasting-palindrome/</link><pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/everlasting-palindrome/</guid><description>&lt;p>这是在大一脑子不清爽的时候出的一道题。当时看到了 carykh 的视频（见下），遂有感而发：这玩意就是个算法题啊！于是就写出了题面。&lt;/p>
+&lt;p>据算法组的人说，这题目意外质量蛮高的，因此放出来给大家看看。我本身并不写算法，因此题解以及测试数据都没有办法提供。试着用 AI 解决此题，AI（GPT 4o）上了动态规划，但是仍然过不了样例，估计是个比较难的题吧。&lt;/p></description></item></channel></rss>
