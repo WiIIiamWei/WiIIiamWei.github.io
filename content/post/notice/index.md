@@ -3,12 +3,14 @@ title: 公告
 description: 在这里查看网站的公告！
 slug: notice
 date: 2024-11-29
-image: cover.jpg
+image: image.jpg
 weight: 1
 categories:
     - 公告
     - 置顶
 ---
+
+> 封面图片：《天籁人偶 冬空焰火／雪华纹样》CG
 
 为确保可用性，本网站使用不同构建方式构建 ~~（白嫖免费服务の神）~~：
 
