@@ -2,6 +2,7 @@
 title: 2024 新年彩蛋
 description: 2024 年农历新年彩蛋解谜题目
 slug: happy-chinese-new-year-2024
+image: image.jpg
 date: 2024-01-01
 categories:
     - 杂项
@@ -9,6 +10,8 @@ tags:
     - 新年快乐
     - 2024
 ---
+
+> 封面图片：[✨🎉ॱ॰*❅HAPPY NEW YEAR❅*॰ॱ🎉✨](https://www.pixiv.net/artworks/114748159)
 
 农历新年在家闲着无事，想来点新年彩蛋，又想起曾经看过的某个逆天[文言编程语言](https://wy-lang.org/)，就学着用文言写了这一出：
 

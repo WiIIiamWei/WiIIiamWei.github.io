@@ -2,6 +2,7 @@
 title: "关于"
 date: 2025-01-27
 slug: "about"
+image: image.jpg
 menu:
     main:
         weight: 2
@@ -9,9 +10,11 @@ menu:
             icon: user
 ---
 
+> 封面图片：[《アズールレーン-綾波改》サクラレーン](https://www.pixiv.net/artworks/81634515)
+
 William Wei（男）
 
-此前使用 WordPress 搭建博客，现在换到了 Hugo，感觉变清爽了很多……在[原站点](https://realwilliamwei.wordpress.com)上的博文就不公布/同步了。说得好听点：有一股清涩感；难听点：都啥玩意（不忍直视.webp）
+此前使用 WordPress 搭建博客，现在换到了 Hugo，感觉变清爽了很多……在[原站点](https://realwilliamwei.wordpress.com)（已经关闭）上的博文就不公布/同步了。说得好听点：有一股清涩感；难听点：都啥玩意（不忍直视.webp）
 
 喜欢信息技术但主修地信的大二生 ~~（谁告诉我地信会学 CS 的所有内容的？！）~~
 
@@ -25,7 +28,7 @@ William Wei（男）
 * AstroDX（不出勤只打模拟器，社恐人，急需大佬带我打）：没上机也有 w3.9，在冲纯板子 w4
 * Deemo II：大魔法师成就（国际服），技巧分 318+，零氪藏品全收集，最常玩（因为长期有活动）
 * Phigros：RankingScore 10.50
-* Rotaeno：音律值 2.6 版本改版前 15.784，现改版后 16.150，好友码 `HPMGCP`，基本上只在有活动的时候高强度玩
+* Rotaeno：音律值 2.6 版本改版前 15.784，现改版后 16.190，好友码 `HPMGCP`，基本上只在有活动的时候高强度玩
 * Milthm，Muse Dash，Orzmic，等等
 
 想与我一起打音游？非常欢迎！请到[音游联系方式](/p/mug)找我。

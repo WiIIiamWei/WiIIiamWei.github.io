@@ -3,6 +3,7 @@ title: 2025 新年彩蛋
 description: 2025 年农历新年彩蛋解谜题目
 slug: happy-chinese-new-year-2025
 date: 2025-01-16
+image: image.jpg
 math: true
 categories:
     - 杂项
@@ -11,6 +12,8 @@ tags:
     - 2025
 ---
 
+> 封面图片：[エタクロニクル:Re【公式】](https://x.com/etechroniclejp/status/1884058817748447474)
+>
 > 题目出处：[Can You Solve These Equations? by matrix67](https://matrix67.itch.io/can-you-solve-these-equations)
 
 今年也想写一个彩蛋题，正好看到一个很合适的，就直接分享给大家吧。

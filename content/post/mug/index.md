@@ -2,10 +2,13 @@
 title: 音游联系方式
 description: Let's 音游趴体！能和我一起……打音游吗？
 slug: mug
+image: image.jpg
 date: 2025-01-27
 categories:
     - 音游
 ---
+
+> 封面图片：(From Rotaeno) Inverted World - ARForest
 
 ## AstroDX Best 50 / Rating Graph
 

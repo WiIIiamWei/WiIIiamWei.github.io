@@ -1,6 +1,7 @@
 ---
 title: "友链"
 slug: "links"
+image: image.jpg
 links:
   - title: 594飞飘的个人博客 | feipiao594
     description: 学习笔记与生活记录 | Pray to take back the sunflower that was given out from the bottom of my heart.
@@ -38,6 +39,8 @@ menu:
 
 comments: true
 ---
+
+> 封面图片：[出発進航！](https://www.pixiv.net/artworks/100339123)
 
 如果希望交换友链，可以在评论区留言，或是用任意联系方式联系我。
 
