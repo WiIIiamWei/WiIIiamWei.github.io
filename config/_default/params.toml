@@ -6,7 +6,7 @@ favicon = "/favicon.png"
 
 [footer]
 since = 2024
-customText = "<a href='https://icp.gov.moe/?keyword=20255210' target='_blank'>萌 ICP 备 20255210 号</a>"
+customText = "<a href='https://icp.gov.moe/?keyword=20255210' target='_blank'>萌 ICP 备 20255210 号</a> | <a href='https://travel.moe/go.html' target='_blank'>异次元之旅</a>"
 
 [dateFormat]
 published = "2006-01-02"

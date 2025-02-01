@@ -38,3 +38,11 @@ url = "mailto:me@williamwei.top?body=!%20Please%20do%20not%20spam%2C%20or%20you%
 
 [social.params]
 icon = "mail"
+
+[[social]]
+identifier = "rss"
+name = "RSS"
+url = "/index.xml"
+
+[social.params]
+icon = "rss"
