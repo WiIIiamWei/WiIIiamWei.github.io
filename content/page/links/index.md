@@ -48,7 +48,7 @@ comments: true
 
 * 名称：William Wei's Blog
 * 链接：`https://williamwei.top`
-* 头像：`https://williamwei.top/img/avatar_hu8697087389109790795.png`
+* 头像：`https://williamwei.top/links/avatar.png`
 * 简介：Everything will be well. Hopefully.
 
 咱朋友少，所以欢迎大家和我做朋友~
