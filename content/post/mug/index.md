@@ -1,5 +1,5 @@
 ---
-title: 音游联系方式
+title: 音游联系方式与成绩截图
 description: Let's 音游趴体！能和我一起……打音游吗？
 slug: mug
 image: image.jpg
@@ -17,6 +17,12 @@ categories:
 ![](https://github.com/WiIIiamWei/maimai-scores/raw/master/scoreb50.jpg)
 
 ![](https://github.com/WiIIiamWei/maimai-scores/raw/master/history/rating.jpg)
+
+## 舞萌 DX
+
+![](https://github.com/WiIIiamWei/maimai-scores/raw/master/realb50.jpg)
+
+![](https://github.com/WiIIiamWei/maimai-scores/raw/master/history/realrating.jpg)
 
 ## Deemo II
 
