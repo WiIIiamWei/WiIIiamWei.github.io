@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数理统计 on William Wei's Blog</title><link>https://williamwei.top/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/</link><description>Recent content in 数理统计 on William Wei's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://williamwei.top/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml"/><item><title>数理统计 - 置信区间估计整理</title><link>https://williamwei.top/p/stats-homework/</link><pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/stats-homework/</guid><description>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>题意&lt;/th>
+&lt;th>枢轴量&lt;/th>
+&lt;th>双侧置信区间&lt;/th>
+&lt;th>单侧置信限&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>估计 $\mu$, 已知 $\sigma^2$&lt;/td>
+&lt;td>$Z = \dfrac{\overline{X} - \mu}{\sigma / \sqrt{n}} \sim N\left(0, 1\right)$&lt;/td>
+&lt;td>$\left(\overline{X} - \dfrac{\sigma}{\sqrt{n}}z_{\alpha/2}, \overline{X} + \dfrac{\sigma}{\sqrt{n}}z_{\alpha/2}\right)$&lt;/td>
+&lt;td>$\overline{\mu} = \overline{X} + \dfrac{\sigma}{\sqrt{n}}z_{\alpha}, \ \underline{\mu} = \overline{X} - \dfrac{\sigma}{\sqrt{n}}z_{\alpha}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>估计 $\mu$, 未知 $\sigma^2$&lt;/td>
+&lt;td>$T = \dfrac{\overline{X} - \mu}{S / \sqrt{n}} \sim t\left({n - 1}\right)$&lt;/td>
+&lt;td>$\left(\overline{X} - \dfrac{S}{\sqrt{n}}t_{\alpha/2}\left({n - 1}\right), \overline{X} + \dfrac{S}{\sqrt{n}}t_{\alpha/2}\left({n - 1}\right)\right)$&lt;/td>
+&lt;td>$\overline{\mu} = \overline{X} + \dfrac{S}{\sqrt{n}}t_{\alpha}\left({n - 1}\right), \ \underline{\mu} = \overline{X} - \dfrac{S}{\sqrt{n}}t_{\alpha}\left({n - 1}\right)$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>估计 $\sigma^2$, 已知 $\mu$&lt;/td>
+&lt;td>$\chi^2 = \dfrac{\sum\limits^n_{i=1}\left(X_i - \mu\right)^2}{\sigma^2} \sim \chi^2\left(n\right)$&lt;/td>
+&lt;td>$\left(\dfrac{\sum\limits^n_{i=1}\left(X_i - \mu\right)^2}{\chi^2_{\alpha/2}\left(n\right)}, \dfrac{\sum\limits^n_{i=1}\left(X_i - \mu\right)^2}{\chi^2_{1-\alpha/2}\left(n\right)}\right)$&lt;/td>
+&lt;td>$\overline{\sigma^2} = \dfrac{\sum\limits^n_{i=1}\left(X_i - \mu\right)^2}{\chi^2_{1-\alpha}\left(n\right)}, \ \underline{\sigma^2} = \dfrac{\sum\limits^n_{i=1}\left(X_i - \mu\right)^2}{\chi^2_{\alpha}\left(n\right)}$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>估计 $\sigma^2$, 未知 $\mu$&lt;/td>
+&lt;td>$\chi^2 = \dfrac{\left(n - 1\right) S^2}{\sigma^2} \sim \chi^2\left(n - 1\right)$&lt;/td>
+&lt;td>$\left(\dfrac{\left(n - 1\right) S^2}{\chi^2_{\alpha/2}\left(n - 1\right)}, \dfrac{\left(n - 1\right) S^2}{\chi^2_{1 - \alpha/2}\left(n - 1\right)}\right)$&lt;/td>
+&lt;td>$\overline{\sigma^2} = \dfrac{\left(n - 1\right) S^2}{\chi^2_{1 - \alpha}\left(n - 1\right)}, \ \underline{\sigma^2} = \dfrac{\left(n - 1\right) S^2}{\chi^2_{\alpha}\left(n - 1\right)}$&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>
