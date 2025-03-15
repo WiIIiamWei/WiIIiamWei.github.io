@@ -3,7 +3,7 @@ title: PowerPoint 技巧合集
 description: 在被各种 PPT 制作需求折磨良久后整理出的又一篇文章
 slug: ppt-tips
 date: 2025-03-06
-image: image.jpg
+image: cover.png
 categories:
     - 学习
 tags:
