@@ -42,4 +42,6 @@ William Wei（男）
 
 同时长期欢迎有想法、想一起学些什么或者想一起打竞赛的联系我。我参加的比赛基本都是团队合作出项目的那种（例如挑战杯），如果你智力超群、会写算法、想打 ICPC 或者蓝桥杯那还是算了，我菜（
 
-有话想和我讲？请点击头像下的 [Gravatar](https://gravatar.com/realwilliamwei) 图标来找我，或是在评论区留言！
+有话想和我讲？请点击头像下的 [Gravatar](https://gravatar.com/realwilliamwei) 图标/下方的卡片来找我，或是在评论区留言！
+
+<iframe src="https://gravatar.com/realwilliamwei.card" width="340" height="450" style="border:0; margin:0; padding:0;"></iframe>
