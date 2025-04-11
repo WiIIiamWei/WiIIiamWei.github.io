@@ -44,7 +44,7 @@ plt.title('Map of China Provinces')
 plt.show()
 ```
 
-```
+```text
 # Out [1]
     Skipping field center: unsupported OGR type: 3
     Skipping field centroid: unsupported OGR type: 3
