@@ -1,0 +1,258 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="计算机图形学 第三次实验"><title>Python 中使用 GeoJSON，以及压缩算法</title>
+<link rel=canonical href=https://williamwei.top/p/cpu-graphics-exp3/><link rel=stylesheet href=/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css><meta property='og:title' content="Python 中使用 GeoJSON，以及压缩算法"><meta property='og:description' content="计算机图形学 第三次实验"><meta property='og:url' content='https://williamwei.top/p/cpu-graphics-exp3/'><meta property='og:site_name' content="William Wei's Blog"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-04-10T00:00:00+00:00'><meta property='article:modified_time' content='2025-04-10T00:00:00+00:00'><meta name=twitter:title content="Python 中使用 GeoJSON，以及压缩算法"><meta name=twitter:description content="计算机图形学 第三次实验"><link rel="shortcut icon" href=/favicon.png><style>:root{--article-font-family:"HarmonyOS Sans SC", var(--base-font-family)}kbd{font-family:harmonyos sans sc,var(--base-font-family);font-style:normal}</style><script>(function(){const e=document.createElement("link");e.href="https://cdn.jsdelivr.net/npm/@lobehub/webfont-harmony-sans-sc@1.0.0/css/index.min.css",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_101abff92c61e72.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>William Wei's Blog</a></h1><h2 class=site-description>Everything will be well. Hopefully.</h2></div></header><ol class=menu-social><li><a href=https://gravatar.com/realwilliamwei target=_blank title=Gravatar rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-gravatar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.64 5.632A9 9 0 1012 3v7.714"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 102 0 1 1 0 10-2 0"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>关于</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>归档</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>友链</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#python-中实现-geojson-绘图>Python 中实现 GeoJSON 绘图</a></li><li><a href=#压缩算法>压缩算法</a><ol><li><a href=#douglas-peucker-简化>Douglas-Peucker 简化</a></li><li><a href=#visvalingam-whyatt-简化>Visvalingam-Whyatt 简化</a></li><li><a href=#总结><strong>总结</strong></a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%AD%A6%E4%B9%A0/ style=background-color:#8ea885;color:#fff>学习</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/cpu-graphics-exp3/>Python 中使用 GeoJSON，以及压缩算法</a></h2><h3 class=article-subtitle>计算机图形学 第三次实验</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>2025-04-10</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 3 分钟</time></div></footer></div></header><section class=article-content><blockquote><p>本文章由 Jupyter Notebook 文件自动转换，仅作部分修改。</p><p>在<a class=link href=https://github.com/WiIIiamWei/WiIIiamWei.github.io/tree/master/content/post/cpu-graphics-exp3/geojson_draw.ipynb target=_blank rel=noopener>此处</a>浏览 / 下载原始 Jupyter Notebook。</p></blockquote><h2 id=python-中实现-geojson-绘图>Python 中实现 GeoJSON 绘图</h2><p>使用 <a class=link href=https://datav.aliyun.com/portal/school/atlas/area_selector target=_blank rel=noopener>DataV.GeoAtlas</a> 工具下载 GeoJSON，结合 GeoPandas / Matplotlib 即可轻松完成。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># In [1]</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>geopandas</span> <span class=k>as</span> <span class=nn>gpd</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>matplotlib.pyplot</span> <span class=k>as</span> <span class=nn>plt</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>gdf</span> <span class=o>=</span> <span class=n>gpd</span><span class=o>.</span><span class=n>read_file</span><span class=p>(</span><span class=s1>&#39;resources/china.geojson&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>gdf</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>10</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>title</span><span class=p>(</span><span class=s1>&#39;Map of China Provinces&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl># Out [1]
+</span></span><span class=line><span class=cl>    Skipping field center: unsupported OGR type: 3
+</span></span><span class=line><span class=cl>    Skipping field centroid: unsupported OGR type: 3
+</span></span><span class=line><span class=cl>    Skipping field acroutes: unsupported OGR type: 1
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/6a75e3c7b74f913f14270760fb76174ed9e42889.png width=822 height=782 srcset="/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/6a75e3c7b74f913f14270760fb76174ed9e42889_hu_fa75eaf0b6b89868.png 480w, /p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/6a75e3c7b74f913f14270760fb76174ed9e42889_hu_f3450d0ca919466a.png 1024w" loading=lazy alt=Out[1] class=gallery-image data-flex-grow=105 data-flex-basis=252px></p><h2 id=压缩算法>压缩算法</h2><h3 id=douglas-peucker-简化>Douglas-Peucker 简化</h3><p>了解到 <code>geopandas</code> 使用 <code>shapely</code> 作为几何处理工具，而 <code>shapely</code> 自带
+<code>simplify</code> 方法，其正好使用了 Douglas-Peucker
+算法，我们将采用这个方法简化。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># In [2]</span>
+</span></span><span class=line><span class=cl><span class=n>tolerance_dp</span> <span class=o>=</span> <span class=mf>0.1</span>   <span class=c1># 以度为单位的容差值，这里设置相对大的值，以便看到差别</span>
+</span></span><span class=line><span class=cl><span class=n>gdf_dp</span> <span class=o>=</span> <span class=n>gdf</span><span class=o>.</span><span class=n>copy</span><span class=p>()</span>  <span class=c1># 创建一个新的 GeoDataFrame 用于存储简化后的数据</span>
+</span></span><span class=line><span class=cl><span class=n>gdf_dp</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=n>gdf</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>simplify</span><span class=p>(</span><span class=n>tolerance_dp</span><span class=p>,</span> <span class=n>preserve_topology</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>gdf_dp</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>10</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>title</span><span class=p>(</span><span class=s1>&#39;Douglas-Peucker Simplified Map&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/eaae6ec20e38d2d45aca41cb3f4e308952b681e4.png width=822 height=782 srcset="/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/eaae6ec20e38d2d45aca41cb3f4e308952b681e4_hu_514b9235c1492ecd.png 480w, /p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/eaae6ec20e38d2d45aca41cb3f4e308952b681e4_hu_66e0ae4c4a5c7b8b.png 1024w" loading=lazy alt="Out [2]" class=gallery-image data-flex-grow=105 data-flex-basis=252px></p><h3 id=visvalingam-whyatt-简化>Visvalingam-Whyatt 简化</h3><p>在搜集网络资源时，我们发现了另一个名为 Visvalingam-Whyatt 的算法。使用
+<code>simplification</code>
+库可以快速应用这种算法。但是该方法只能接受<strong>点对</strong>，因此我们需要一些转换代码，将
+GeoJSON 转换为 <code>shapely</code> 几何实例。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># In [3]</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>simplification.cutil</span> <span class=kn>import</span> <span class=n>simplify_coords_vw</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>shapely.geometry</span> <span class=kn>import</span> <span class=n>Polygon</span><span class=p>,</span> <span class=n>MultiPolygon</span><span class=p>,</span> <span class=n>LinearRing</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>simplify_ring_vw</span><span class=p>(</span><span class=n>ring</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>coords</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=n>ring</span><span class=o>.</span><span class=n>coords</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>simplified_coords</span> <span class=o>=</span> <span class=n>simplify_coords_vw</span><span class=p>(</span><span class=n>coords</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=n>simplified_coords</span><span class=p>)</span> <span class=o>&lt;</span> <span class=mi>4</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>ring</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>LinearRing</span><span class=p>(</span><span class=n>simplified_coords</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>simplify_polygon_vw</span><span class=p>(</span><span class=n>poly</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>exterior</span> <span class=o>=</span> <span class=n>simplify_ring_vw</span><span class=p>(</span><span class=n>poly</span><span class=o>.</span><span class=n>exterior</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>interiors</span> <span class=o>=</span> <span class=p>[</span><span class=n>simplify_ring_vw</span><span class=p>(</span><span class=n>interior</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>)</span> <span class=k>for</span> <span class=n>interior</span> <span class=ow>in</span> <span class=n>poly</span><span class=o>.</span><span class=n>interiors</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>Polygon</span><span class=p>(</span><span class=n>exterior</span><span class=p>,</span> <span class=n>interiors</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>simplify_multipolygon_vw</span><span class=p>(</span><span class=n>mpoly</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>simplified_polys</span> <span class=o>=</span> <span class=p>[</span><span class=n>simplify_polygon_vw</span><span class=p>(</span><span class=n>poly</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>)</span> <span class=k>for</span> <span class=n>poly</span> <span class=ow>in</span> <span class=n>mpoly</span><span class=o>.</span><span class=n>geoms</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>MultiPolygon</span><span class=p>(</span><span class=n>simplified_polys</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>simplify_geometry_vw</span><span class=p>(</span><span class=n>geom</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>geom</span><span class=o>.</span><span class=n>geom_type</span> <span class=o>==</span> <span class=s1>&#39;Polygon&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>simplify_polygon_vw</span><span class=p>(</span><span class=n>geom</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>elif</span> <span class=n>geom</span><span class=o>.</span><span class=n>geom_type</span> <span class=o>==</span> <span class=s1>&#39;MultiPolygon&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>simplify_multipolygon_vw</span><span class=p>(</span><span class=n>geom</span><span class=p>,</span> <span class=n>tolerance</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>raise</span> <span class=ne>ValueError</span><span class=p>(</span><span class=s2>&#34;Unsupported geometry type: </span><span class=si>{}</span><span class=s2>&#34;</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=n>geom</span><span class=o>.</span><span class=n>geom_type</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>tolerance_vw</span> <span class=o>=</span> <span class=mf>0.01</span>  <span class=c1># 以平方度为单位的容差值，这里设置相对大的值，以便看到差别</span>
+</span></span><span class=line><span class=cl><span class=n>gdf_vw</span> <span class=o>=</span> <span class=n>gdf</span><span class=o>.</span><span class=n>copy</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>gdf_vw</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=n>gdf</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>apply</span><span class=p>(</span><span class=k>lambda</span> <span class=n>geom</span><span class=p>:</span> <span class=n>simplify_geometry_vw</span><span class=p>(</span><span class=n>geom</span><span class=p>,</span> <span class=n>tolerance_vw</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>gdf_vw</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>10</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>title</span><span class=p>(</span><span class=s1>&#39;Visvalingam-Whyatt Simplified Map&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/3d74126b3efabae8a31250f44f8559a145c6df0a.png width=822 height=782 srcset="/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/3d74126b3efabae8a31250f44f8559a145c6df0a_hu_af5c98b44e3b867e.png 480w, /p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/3d74126b3efabae8a31250f44f8559a145c6df0a_hu_f28458b4a8e6837b.png 1024w" loading=lazy alt="Out [3]" class=gallery-image data-flex-grow=105 data-flex-basis=252px></p><p>我们来比较一下吧！</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># In [4]</span>
+</span></span><span class=line><span class=cl><span class=n>fig</span><span class=p>,</span> <span class=n>axes</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>subplots</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>20</span><span class=p>,</span> <span class=mi>10</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 原始</span>
+</span></span><span class=line><span class=cl><span class=n>gdf</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>ax</span><span class=o>=</span><span class=n>axes</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;black&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>axes</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>.</span><span class=n>set_title</span><span class=p>(</span><span class=s1>&#39;Original&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Douglas-Peucker</span>
+</span></span><span class=line><span class=cl><span class=n>gdf_dp</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>ax</span><span class=o>=</span><span class=n>axes</span><span class=p>[</span><span class=mi>1</span><span class=p>],</span> <span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;blue&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>axes</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span><span class=o>.</span><span class=n>set_title</span><span class=p>(</span><span class=s1>&#39;Douglas-Peucker&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Visvalingam-Whyatt</span>
+</span></span><span class=line><span class=cl><span class=n>gdf_vw</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>ax</span><span class=o>=</span><span class=n>axes</span><span class=p>[</span><span class=mi>2</span><span class=p>],</span> <span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;red&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>axes</span><span class=p>[</span><span class=mi>2</span><span class=p>]</span><span class=o>.</span><span class=n>set_title</span><span class=p>(</span><span class=s1>&#39;Visvalingam-Whyatt&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/e1d0756009abadebf44184a6907a0ca43c7e473f.png width=1597 height=486 srcset="/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/e1d0756009abadebf44184a6907a0ca43c7e473f_hu_8dac61627ee0b62e.png 480w, /p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/e1d0756009abadebf44184a6907a0ca43c7e473f_hu_78d763a940e6cb03.png 1024w" loading=lazy alt="Out [4]" class=gallery-image data-flex-grow=328 data-flex-basis=788px></p><p>对于这种大范围的压缩，我们可以看到两种算法的压缩都很不错，基本看不出差别。我们随便拿一个行政区仔细比较一下。这里不用专门的
+GeoJSON 文件了，直接取数列的第一个。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># In [5]</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>matplotlib.patches</span> <span class=kn>import</span> <span class=n>Patch</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>province</span> <span class=o>=</span> <span class=n>gdf</span><span class=o>.</span><span class=n>iloc</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=n>province_dp</span> <span class=o>=</span> <span class=n>gdf_dp</span><span class=o>.</span><span class=n>iloc</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=n>province_vw</span> <span class=o>=</span> <span class=n>gdf_vw</span><span class=o>.</span><span class=n>iloc</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>fig</span><span class=p>,</span> <span class=n>ax</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>subplots</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>10</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>gpd</span><span class=o>.</span><span class=n>GeoSeries</span><span class=p>([</span><span class=n>province</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]])</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>ax</span><span class=o>=</span><span class=n>ax</span><span class=p>,</span> <span class=n>color</span><span class=o>=</span><span class=s1>&#39;none&#39;</span><span class=p>,</span> <span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;black&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>gpd</span><span class=o>.</span><span class=n>GeoSeries</span><span class=p>([</span><span class=n>province_dp</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]])</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>ax</span><span class=o>=</span><span class=n>ax</span><span class=p>,</span> <span class=n>color</span><span class=o>=</span><span class=s1>&#39;none&#39;</span><span class=p>,</span> <span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;blue&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>gpd</span><span class=o>.</span><span class=n>GeoSeries</span><span class=p>([</span><span class=n>province_vw</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]])</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=n>ax</span><span class=o>=</span><span class=n>ax</span><span class=p>,</span> <span class=n>color</span><span class=o>=</span><span class=s1>&#39;none&#39;</span><span class=p>,</span> <span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;red&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>legend_handles</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=n>Patch</span><span class=p>(</span><span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;black&#39;</span><span class=p>,</span> <span class=n>facecolor</span><span class=o>=</span><span class=s1>&#39;none&#39;</span><span class=p>,</span> <span class=n>label</span><span class=o>=</span><span class=s1>&#39;Original&#39;</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>    <span class=n>Patch</span><span class=p>(</span><span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;blue&#39;</span><span class=p>,</span> <span class=n>facecolor</span><span class=o>=</span><span class=s1>&#39;none&#39;</span><span class=p>,</span> <span class=n>label</span><span class=o>=</span><span class=s1>&#39;Douglas-Peucker&#39;</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>    <span class=n>Patch</span><span class=p>(</span><span class=n>edgecolor</span><span class=o>=</span><span class=s1>&#39;red&#39;</span><span class=p>,</span> <span class=n>facecolor</span><span class=o>=</span><span class=s1>&#39;none&#39;</span><span class=p>,</span> <span class=n>label</span><span class=o>=</span><span class=s1>&#39;Visvalingam-Whyatt&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=n>ax</span><span class=o>.</span><span class=n>legend</span><span class=p>(</span><span class=n>handles</span><span class=o>=</span><span class=n>legend_handles</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>title</span><span class=p>(</span><span class=s1>&#39;Boundary Comparison for One Province&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/07435edbb2db91e8e90f4e7f4ef6a76f7ba76dfb.png width=835 height=663 srcset="/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/07435edbb2db91e8e90f4e7f4ef6a76f7ba76dfb_hu_2d07bd836c3a8abc.png 480w, /p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/07435edbb2db91e8e90f4e7f4ef6a76f7ba76dfb_hu_ceb9dec6c1b25a0f.png 1024w" loading=lazy alt="Out [5]" class=gallery-image data-flex-grow=125 data-flex-basis=302px></p><p>抽到了<strong>北京市</strong>。</p><p>可以看到 <strong>Douglas 算法会保留折线中转折比较大的点，Visvalingam
+算法则是考虑面积一致性，让图线变得更平滑</strong>。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># In [7]</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>count_points</span><span class=p>(</span><span class=n>geom</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>geom</span><span class=o>.</span><span class=n>geom_type</span> <span class=o>==</span> <span class=s1>&#39;Polygon&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>len</span><span class=p>(</span><span class=n>geom</span><span class=o>.</span><span class=n>exterior</span><span class=o>.</span><span class=n>coords</span><span class=p>)</span> <span class=o>+</span> <span class=nb>sum</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>interior</span><span class=o>.</span><span class=n>coords</span><span class=p>)</span> <span class=k>for</span> <span class=n>interior</span> <span class=ow>in</span> <span class=n>geom</span><span class=o>.</span><span class=n>interiors</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>elif</span> <span class=n>geom</span><span class=o>.</span><span class=n>geom_type</span> <span class=o>==</span> <span class=s1>&#39;MultiPolygon&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>sum</span><span class=p>(</span><span class=n>count_points</span><span class=p>(</span><span class=n>poly</span><span class=p>)</span> <span class=k>for</span> <span class=n>poly</span> <span class=ow>in</span> <span class=n>geom</span><span class=o>.</span><span class=n>geoms</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>total_points_original</span> <span class=o>=</span> <span class=n>gdf</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>apply</span><span class=p>(</span><span class=n>count_points</span><span class=p>)</span><span class=o>.</span><span class=n>sum</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>total_points_dp</span> <span class=o>=</span> <span class=n>gdf_dp</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>apply</span><span class=p>(</span><span class=n>count_points</span><span class=p>)</span><span class=o>.</span><span class=n>sum</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>total_points_vw</span> <span class=o>=</span> <span class=n>gdf_vw</span><span class=p>[</span><span class=s1>&#39;geometry&#39;</span><span class=p>]</span><span class=o>.</span><span class=n>apply</span><span class=p>(</span><span class=n>count_points</span><span class=p>)</span><span class=o>.</span><span class=n>sum</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;原始点数: </span><span class=si>{</span><span class=n>total_points_original</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;Douglas-Peucker 压缩后: </span><span class=si>{</span><span class=n>total_points_dp</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;Visvalingam-Whyatt 压缩后: </span><span class=si>{</span><span class=n>total_points_vw</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl># Out [7]
+</span></span><span class=line><span class=cl>    原始点数: 25240
+</span></span><span class=line><span class=cl>    Douglas-Peucker 压缩后: 3594
+</span></span><span class=line><span class=cl>    Visvalingam-Whyatt 压缩后: 5399
+</span></span></code></pre></td></tr></table></div></div><p>在相同的容差值下（认为 0.1 度相当于 0.01 平方度），Douglas
+算法压缩了更多点。</p><blockquote><p>注：不知道这样比较是否合适。不合适还请批评指正。</p></blockquote><p>我们总结一下两种算法的区别。</p><p>在核心原理上：</p><div class=table-wrapper><table><thead><tr><th><strong>特征</strong></th><th><strong>Douglas-Peucker</strong></th><th><strong>Visvalingam-Whyatt</strong></th></tr></thead><tbody><tr><td><strong>评估标准</strong></td><td>基于点到基准线的垂直距离</td><td>基于相邻三点构成三角形的面积</td></tr><tr><td><strong>迭代方式</strong></td><td>递归分割线段，保留最大偏差点</td><td>逐步移除对形状影响最小的点（最小面积）</td></tr><tr><td><strong>参数意义</strong></td><td>距离阈值（ε）：允许的最大垂直误差</td><td>面积阈值（或保留点数）：移除最不重要的点</td></tr></tbody></table></div><p>在效果上：</p><div class=table-wrapper><table><thead><tr><th><strong>特性</strong></th><th><strong>Douglas-Peucker</strong></th><th><strong>Visvalingam-Whyatt</strong></th></tr></thead><tbody><tr><td><strong>形状保持</strong></td><td>保留尖锐拐角，适合人造特征（如道路）</td><td>保持区域重要性，适合自然特征（如河流）</td></tr><tr><td><strong>简化结果</strong></td><td>可能忽略小波动，但保留显著转折点</td><td>更均匀简化，减少局部细节但维持整体形态</td></tr><tr><td><strong>参数敏感性</strong></td><td>对距离阈值敏感，易控制局部误差</td><td>对面积阈值敏感，需调整以平衡全局特征</td></tr></tbody></table></div><h3 id=总结><strong>总结</strong></h3><ul><li><strong>Douglas-Peucker</strong> 以距离为核心，适合保留显著特征；</li><li><strong>Visvalingam-Whyatt</strong> 以面积为度量，适合维持整体形态。</li></ul></section><footer class=article-footer><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>本文协议：CC BY-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/ppt-tips/><div class=article-image><img src=/p/ppt-tips/cover.6ad3738266526e56a7a5757f91312ece_hu_243220634bdaaa83.png width=250 height=150 loading=lazy alt="Featured image of post PowerPoint 技巧合集" data-key=ppt-tips data-hash="md5-atNzgmZSblanpXV/kTEuzg=="></div><div class=article-details><h2 class=article-title>PowerPoint 技巧合集</h2></div></a></article><article class=has-image><a href=/p/thesis-tips/><div class=article-image><img src=/p/thesis-tips/image.645e6425f1b174e768a2c79a4a80e4ba_hu_7fd247118accf1ee.jpg width=250 height=150 loading=lazy alt="Featured image of post 如何高效进行论文排版" data-key=thesis-tips data-hash="md5-ZF5kJfGxdOdooseaSoDkug=="></div><div class=article-details><h2 class=article-title>如何高效进行论文排版</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//williamweiblog.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2024 -
+2025 William Wei's Blog</section><section class=powerby><a href='https://icp.gov.moe/?keyword=20255210' target=_blank>萌 ICP 备 20255210 号</a> | <a href=https://travel.moe/go.html target=_blank>异次元之旅</a><br>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.30.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
