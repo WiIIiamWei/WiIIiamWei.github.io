@@ -199,7 +199,7 @@ print(f"Douglas-Peucker 压缩后: {total_points_dp}")
 print(f"Visvalingam-Whyatt 压缩后: {total_points_vw}")
 ```
 
-```
+```text
 # Out [7]
     原始点数: 25240
     Douglas-Peucker 压缩后: 3594
