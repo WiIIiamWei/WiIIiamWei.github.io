@@ -269,7 +269,7 @@ furryCTF{dezhuanghuoguo}
 
 *话说我其实是 Hyun's Dojo 老粉来着，YouTube 关注了他的频道，但却没听出来他片头……他的 Doors 系列可算是太经典了，什么时候去回味一下吧。*
 
-```
+```text
 furryCTF{BV1Bf4y157pa}
 ```
 
@@ -313,7 +313,7 @@ furryCTF{shanghaizhan}
 
 不难发现 `loadingMsgs` 里面藏着一个 flag：
 
-```
+```text
 furryCTF{It's_Me~awa}
 ```
 

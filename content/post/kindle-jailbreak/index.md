@@ -154,7 +154,7 @@ Kindle 在连接到网络时会自动更新。虽然有热补丁的存在，但�
 * `kindlepw2`: 其余更新的设备型号（PW2, KV, KT2, PW3, KOA, KT3, KOA2, PW4, KT4, KOA3, PW5, KS），且内核版本小于等于 5.16.2.1.1；
 * `kindlehf`: **所有**内核版本大于等于 5.16.3 的设备。
 
-对于内核版本大于等于 5.16.3 的设备，另外提供一种建议安装方式：在[此处](https://scriptlets.notmarek.com/)下载 KOReader Installer (nightly)，将其放在 Kindle 根目录下的 `documents` 文件夹中，并在书架中运行它，脚本将自动下载并为你安装 KOReader。
+对于内核版本大于等于 5.16.3 的设备，另外提供一种简易安装方式：在[此处](https://scriptlets.notmarek.com/)下载 KOReader Installer (nightly)，将其放在 Kindle 根目录下的 `documents` 文件夹中，并在书架中运行它，脚本将自动下载并为你安装 KOReader。
 
 **注意：上述方法不一定有效。推荐你手动安装。**
 
