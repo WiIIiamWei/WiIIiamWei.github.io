@@ -16,10 +16,6 @@ categories:
 
 ![](https://github.com/WiIIiamWei/maimai-scores/raw/master/scoreb50.jpg)
 
-下方展示的是 PRiSM 曲库的 Best 50。由于国际服还没有上架某些曲子，因此此成绩不会绘制在历史趋势图中。咱只想玩玩最新最热……
-
-![](https://github.com/WiIIiamWei/maimai-scores/raw/master/prismb50.jpg)
-
 ![](https://github.com/WiIIiamWei/maimai-scores/raw/master/history/rating.jpg)
 
 ## 舞萌 DX
