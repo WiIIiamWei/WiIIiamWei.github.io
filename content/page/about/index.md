@@ -12,9 +12,25 @@ menu:
 
 > 封面图片：[《アズールレーン-綾波改》サクラレーン](https://www.pixiv.net/artworks/81634515)
 
-William Wei（男）
+## 关于这里
+
+这里是 William Wei 的个人小站，会看心情更新一些内容……
 
 此前使用 WordPress 搭建博客，现在换到了 Hugo，感觉变清爽了很多……在[原站点](https://realwilliamwei.wordpress.com)（已经关闭）上的博文就不公布/同步了。说得好听点：有一股清涩感；难听点：都啥玩意（不忍直视.webp）
+
+本博客使用以下技术构建：
+* 静态站点生成 - Hugo
+* 字体 - jsDelivr（提供 Harmony OS Sans SC，意外地觉得这个字体很美观）、Google Font API
+
+本博客使用以下服务构建（详见公告）：
+* GitHub Pages
+* Cloudflare Pages
+* Vercel
+* Netlify
+
+## 关于我
+
+William Wei（男）
 
 喜欢信息技术但主修地信的大二生 ~~（谁告诉我地信会学 CS 的所有内容的？！）~~
 

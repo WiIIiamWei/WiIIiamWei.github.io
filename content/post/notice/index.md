@@ -21,6 +21,8 @@ categories:
 
 当一个站点不可用时，你可尝试使用其他方式构建的站点。
 
+网站支持 RSS 订阅，请点击头像下方的 RSS 图标访问 XML。
+
 考虑到隐私问题，所有的联系方式现已转到 [Gravatar](https://gravatar.com/realwilliamwei) 上。请使用头像下方的 Gravatar 图标或使用评论区联系我。你也可以点击下方的卡片：
 
 <iframe src="https://gravatar.com/realwilliamwei.card" width="340" height="450" style="border:0; margin:0; padding:0;"></iframe>
