@@ -32,6 +32,8 @@ categories:
 
 ![](rotaeno.jpg)
 
+![](rotaenob40.jpg)
+
 ## Muse Dash
 
 ![](musedash.jpg)
