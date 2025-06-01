@@ -18,7 +18,7 @@ links:
   - title: Foth's Blog
     description: 是咱同专业的学长捏 | 小小的人偶，想要摘月亮 | Graphics, Reading and the Others
     website: https://www.foth.top/
-    image: https://www.foth.top/img/foth_hu5812789855465179678.jpg
+    image: foth.jpg
   - title: 清风之恋の小窝 | qingfengzl
     description: ええ...?被找到了呢,这里会不定期更新一些好玩的东西哦
     website: https://aurora0x27.github.io/
@@ -27,10 +27,6 @@ links:
     description: 适闻有客金陵至，见说江南风景异。 | 每个人都只有一个使命，那就是寻找自我，无论最终成为诗人还是疯子、先知还是罪犯。
     website: https://kingpoem.github.io/
     image: https://kingpoem.github.io/assets/avatar.png
-  - title: s3loy's blog
-    description: who’s wtt.? | neither emo nor demo
-    website: https://www.seloy.cn/
-    image: https://www.seloy.cn/wp-content/uploads/2025/01/IMG_5556-scaled.jpg
 menu:
     main: 
         weight: 4
@@ -52,3 +48,5 @@ comments: true
 * 简介：Everything will be well. Hopefully.
 
 咱朋友少，所以欢迎大家和我做朋友~
+
+顺带，本站会定期清理已经失效的友链。如果你的链接被误删，请联系我恢复。
