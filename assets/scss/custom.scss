@@ -1,3 +1,28 @@
 /*
     You can add your own custom styles here.
 */
+kbd {
+  margin: 0 .1em;
+  padding: .1em .6em;
+  font-size: .8em;
+  color: #242729;
+  background: #fff;
+  border: 1px solid #adb3b9;
+  border-radius: 3px;
+  box-shadow: 0px 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-family: monospace;
+  position: relative;
+  top: -3px;
+}
+
+/* Add border radius to article images */
+.article-list--compact article a .article-image {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+}
+
+.article-list--compact article a .article-image img {
+  border-radius: var(--card-border-radius);
+}

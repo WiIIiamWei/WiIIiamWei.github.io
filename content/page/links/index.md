@@ -27,6 +27,10 @@ links:
     description: 适闻有客金陵至，见说江南风景异。 | 每个人都只有一个使命，那就是寻找自我，无论最终成为诗人还是疯子、先知还是罪犯。
     website: https://kingpoem.github.io/
     image: https://kingpoem.github.io/assets/avatar.png
+  - title: minortex’s blog
+    description: With great power comes great responsibility.
+    website: https://blog.texsd.eu.org
+    image: https://blog.texsd.eu.org/images/avatar.webp
 menu:
     main: 
         weight: 4
