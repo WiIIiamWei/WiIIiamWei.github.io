@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>William Wei's Blog</title><link>https://williamwei.top/</link><description>Recent content on William Wei's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 06 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://williamwei.top/index.xml" rel="self" type="application/rss+xml"/><item><title>公告</title><link>https://williamwei.top/p/notice/</link><pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/notice/</guid><description>&lt;img src="https://williamwei.top/p/notice/image.jpg" alt="Featured image of post 公告" />&lt;blockquote>
+&lt;p>封面图片：《天籁人偶 冬空焰火／雪华纹样》CG&lt;/p>&lt;/blockquote>
+&lt;p>为确保可用性，本网站使用不同构建方式构建 &lt;del>（白嫖免费服务の神）&lt;/del>：&lt;/p>
+&lt;ul>
+&lt;li>GitHub Pages（主站所在处）: &lt;a class="link" href="https://williamwei.top" target="_blank" rel="noopener"
+>williamwei.top&lt;/a>、&lt;a class="link" href="https://wiiiiamwei.github.io" target="_blank" rel="noopener"
+>wiiiiamwei.github.io&lt;/a>&lt;/li>
+&lt;li>Cloudflare Pages: &lt;a class="link" href="https://williamwei.dpdns.org" target="_blank" rel="noopener"
+>williamwei.dpdns.org&lt;/a>、&lt;a class="link" href="https://williamwei.pages.dev" target="_blank" rel="noopener"
+>williamwei.pages.dev&lt;/a>&lt;/li>
+&lt;li>Vercel: &lt;a class="link" href="williamwei.us.kg" >williamwei.us.kg&lt;/a>、&lt;a class="link" href="https://williamwei.vercel.app" target="_blank" rel="noopener"
+>williamwei.vercel.app&lt;/a>&lt;/li>
+&lt;li>Netlify: &lt;a class="link" href="https://williamwei.is-a.dev" target="_blank" rel="noopener"
+>williamwei.is-a.dev&lt;/a>、&lt;a class="link" href="https://willwell.netlify.app" target="_blank" rel="noopener"
+>willwell.netlify.app&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>当一个站点不可用时，你可尝试使用其他方式构建的站点。&lt;/p></description></item><item><title>关于联系方式 - QQ</title><link>https://williamwei.top/p/qq/</link><pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/qq/</guid><description>&lt;blockquote>
+&lt;p>本页面会不时更新。最后更新时间见标题下方。&lt;/p>&lt;/blockquote>
+&lt;p>如果您是通过直接访问该链接看到此文章，那么说明您应该知道我的 QQ 号码了。这篇文章专门用来对我的 QQ 情况做一些说明。&lt;/p></description></item><item><title>Kindle 越狱</title><link>https://williamwei.top/p/kindle-jailbreak/</link><pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/kindle-jailbreak/</guid><description>&lt;img src="https://williamwei.top/p/kindle-jailbreak/image.png" alt="Featured image of post Kindle 越狱" />&lt;blockquote>
+&lt;p>本文章参考以下来源：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.youtube.com/watch?v=Qtk7ERwlIAk" target="_blank" rel="noopener"
+>It&amp;rsquo;s Time to Jailbreak Your Kindle. - YouTube&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://kindlemodding.org/" target="_blank" rel="noopener"
+>Kindle Modding Wiki&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://koreader.rocks/user_guide/" target="_blank" rel="noopener"
+>KOReader User Guide&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>如果有条件的话，请务必去看看原文！&lt;/p>&lt;/blockquote>
+&lt;p>距离 Kindle 中国关闭（2023 年 6 月 30 日）已经过去快两年了。这段时间以来，我的 Kindle 一直在我的抽屉里躺着，扮演着泡面盖板的角色。我曾尝试一些第三方的 Kindle 刷机包，奈何门槛和风险都很高。直到今年初，某位大神看不惯亚马逊的吃相，在 2025 年新年发布了 WinterBreak 破解，让 Kindle 越狱变得触手可得。本文将详细介绍这种越狱方法，祝你也能越狱成功。&lt;/p></description></item><item><title>Python 中使用 GeoJSON，以及压缩算法</title><link>https://williamwei.top/p/cpu-graphics-exp3/</link><pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/cpu-graphics-exp3/</guid><description>&lt;blockquote>
+&lt;p>本文章由 Jupyter Notebook 文件自动转换，仅作部分修改。&lt;/p>
+&lt;p>在&lt;a class="link" href="https://github.com/WiIIiamWei/WiIIiamWei.github.io/tree/master/content/post/cpu-graphics-exp3/geojson_draw.ipynb" target="_blank" rel="noopener"
+>此处&lt;/a>浏览 / 下载原始 Jupyter Notebook。&lt;/p>&lt;/blockquote>
+&lt;h2 id="python-中实现-geojson-绘图">Python 中实现 GeoJSON 绘图
+&lt;/h2>&lt;p>使用 &lt;a class="link" href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener"
+>DataV.GeoAtlas&lt;/a> 工具下载 GeoJSON，结合 GeoPandas / Matplotlib 即可轻松完成。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># In [1]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">geopandas&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">gpd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">matplotlib.pyplot&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">plt&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">gdf&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">gpd&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read_file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;resources/china.geojson&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">gdf&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">figsize&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">plt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">title&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Map of China Provinces&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">plt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">show&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl"># Out [1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Skipping field center: unsupported OGR type: 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Skipping field centroid: unsupported OGR type: 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Skipping field acroutes: unsupported OGR type: 1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://williamwei.top/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/6a75e3c7b74f913f14270760fb76174ed9e42889.png"
+width="822"
+height="782"
+srcset="https://williamwei.top/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/6a75e3c7b74f913f14270760fb76174ed9e42889_hu_fa75eaf0b6b89868.png 480w, https://williamwei.top/p/cpu-graphics-exp3/vertopal_f3e258165df54e82a8bee2f329378427/6a75e3c7b74f913f14270760fb76174ed9e42889_hu_f3450d0ca919466a.png 1024w"
+loading="lazy"
+alt="Out[1]"
+class="gallery-image"
+data-flex-grow="105"
+data-flex-basis="252px"
+>&lt;/p></description></item><item><title>PowerPoint 技巧合集</title><link>https://williamwei.top/p/ppt-tips/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/ppt-tips/</guid><description>&lt;img src="https://williamwei.top/p/ppt-tips/cover.png" alt="Featured image of post PowerPoint 技巧合集" />&lt;blockquote>
+&lt;p>看这个博客内容就知道这是个学文科的。&lt;/p>
+&lt;p>&lt;em>——某位科协朋友的吐槽&lt;/em>&lt;/p>&lt;/blockquote>
+&lt;p>我平常会打些比赛，经常遇到需要团队共同完成一份展示用 PowerPoint 演示文稿（下简称 PPT）的场景，这其中的排版工作通常又是由我来把关的。奈何我所呆过的团队还没有见到能在排版技巧上超过我的（虽然我的团队定位是个技术人员），因此决定整理一篇我自己常用的排版和美化技巧，希望可以帮助大家更有效率的完成各种排版。&lt;/p></description></item><item><title>如何高效进行论文排版</title><link>https://williamwei.top/p/thesis-tips/</link><pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/thesis-tips/</guid><description>&lt;img src="https://williamwei.top/p/thesis-tips/image.jpg" alt="Featured image of post 如何高效进行论文排版" />&lt;p>我平常会打些比赛，经常遇到需要团队共同完成一篇技术文稿/论文的场景，这其中的收尾排版工作通常是由我来把关的。奈何我所呆过的团队还没有见到能在排版技巧上超过我的（虽然我的团队定位是个技术人员），因此决定整理一篇我自己常用的排版技巧，希望可以帮助大家更有效率的完成各种排版。&lt;/p></description></item><item><title>zoxide 使用感受</title><link>https://williamwei.top/p/feelings-about-zoxide/</link><pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/feelings-about-zoxide/</guid><description>&lt;img src="https://williamwei.top/p/feelings-about-zoxide/image.jpg" alt="Featured image of post zoxide 使用感受" />&lt;p>&lt;a class="link" href="https://github.com/ajeetdsouza/zoxide" target="_blank" rel="noopener"
+>zoxide&lt;/a> 是一个更聪明的 &lt;code>cd&lt;/code> 命令，旨在让你更快速的在目录之间来回切换。&lt;/p>
+&lt;p>我是在 YouTube 闲逛时看到这个项目的，感觉很不错就尝试了一下。事实证明，这个工具确实很方便。下文将详细阐述为什么我认为这是个好工具。&lt;/p></description></item><item><title>关于</title><link>https://williamwei.top/about/</link><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/about/</guid><description>&lt;img src="https://williamwei.top/about/image.jpg" alt="Featured image of post 关于" />&lt;blockquote>
+&lt;p>封面图片：&lt;a class="link" href="https://www.pixiv.net/artworks/81634515" target="_blank" rel="noopener"
+>《アズールレーン-綾波改》サクラレーン&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;h2 id="关于这里">关于这里
+&lt;/h2>&lt;p>这里是 William Wei 的个人小站，会看心情更新一些内容……&lt;/p>
+&lt;p>此前使用 WordPress 搭建博客，现在换到了 Hugo，感觉变清爽了很多……在&lt;a class="link" href="https://realwilliamwei.wordpress.com" target="_blank" rel="noopener"
+>原站点&lt;/a>（已经关闭）上的博文就不公布/同步了。说得好听点：有一股清涩感；难听点：都啥玩意（不忍直视.webp）&lt;/p></description></item><item><title>音游联系方式与成绩截图</title><link>https://williamwei.top/p/mug/</link><pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/mug/</guid><description>&lt;img src="https://williamwei.top/p/mug/image.jpg" alt="Featured image of post 音游联系方式与成绩截图" />&lt;blockquote>
+&lt;p>封面图片：(From Rotaeno) Inverted World - ARForest&lt;/p>&lt;/blockquote>
+&lt;h2 id="astrodx-best-50--rating-graph">AstroDX Best 50 / Rating Graph
+&lt;/h2>&lt;p>&lt;strong>请注意：此成绩非官方成绩，与 SEGA 没有任何关系！&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://github.com/WiIIiamWei/maimai-scores/raw/master/scoreb50.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://github.com/WiIIiamWei/maimai-scores/raw/master/history/rating.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;h2 id="舞萌-dx">舞萌 DX
+&lt;/h2>&lt;p>&lt;img src="https://github.com/WiIIiamWei/maimai-scores/raw/master/realb50.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://github.com/WiIIiamWei/maimai-scores/raw/master/history/realrating.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;h2 id="deemo-ii">Deemo II
+&lt;/h2>&lt;p>&lt;img src="https://williamwei.top/p/mug/deemoii.jpg"
+width="1152"
+height="720"
+srcset="https://williamwei.top/p/mug/deemoii_hu_cea66a52c48529ba.jpg 480w, https://williamwei.top/p/mug/deemoii_hu_2e0c23f7ed274857.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>&lt;/p>
+&lt;h2 id="rotaeno">Rotaeno
+&lt;/h2>&lt;p>&lt;img src="https://williamwei.top/p/mug/rotaeno.jpg"
+width="1280"
+height="576"
+srcset="https://williamwei.top/p/mug/rotaeno_hu_4195138504a27689.jpg 480w, https://williamwei.top/p/mug/rotaeno_hu_7c8c84446e452b83.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="533px"
+>&lt;/p></description></item><item><title>2025 新年彩蛋</title><link>https://williamwei.top/p/happy-chinese-new-year-2025/</link><pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/happy-chinese-new-year-2025/</guid><description>&lt;img src="https://williamwei.top/p/happy-chinese-new-year-2025/image.jpg" alt="Featured image of post 2025 新年彩蛋" />&lt;blockquote>
+&lt;p>封面图片：&lt;a class="link" href="https://x.com/etechroniclejp/status/1884058817748447474" target="_blank" rel="noopener"
+>エタクロニクル:Re【公式】&lt;/a>&lt;/p>
+&lt;p>题目出处：&lt;a class="link" href="https://matrix67.itch.io/can-you-solve-these-equations" target="_blank" rel="noopener"
+>Can You Solve These Equations? by matrix67&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;p>今年也想写一个彩蛋题，正好看到一个很合适的，就直接分享给大家吧。&lt;/p>
+&lt;p>本题目由原题翻译而来，如果有条件的话，请务必去游玩原题目！&lt;/p></description></item><item><title>furryCTF 2024 寒假赛总结</title><link>https://williamwei.top/p/furryctf-2024-winter-writeup/</link><pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/furryctf-2024-winter-writeup/</guid><description>&lt;img src="https://williamwei.top/p/furryctf-2024-winter-writeup/image.jpg" alt="Featured image of post furryCTF 2024 寒假赛总结" />&lt;blockquote>
+&lt;p>封面图片：&lt;a class="link" href="https://www.pixiv.net/artworks/114436683" target="_blank" rel="noopener"
+>にゃー&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>注意：&lt;/strong>&lt;/p>
+&lt;p>此文章为完全没打过 CTF 的新人初次尝试 CTF 的记录和感想，这不是一篇好的题解，各位 CTF 大神们不要喷我 awa&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>另请参阅：&lt;/strong>&lt;/p>
+&lt;p>&lt;a class="link" href="https://hydro.ac/contest/6728fe9aa325b9e5ba5f9489" target="_blank" rel="noopener"
+>furryCTF 2024 寒假赛题目&lt;/a>&lt;/p></description></item><item><title>网络爬虫入门</title><link>https://williamwei.top/p/web-crawler-intro/</link><pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/web-crawler-intro/</guid><description>&lt;img src="https://williamwei.top/p/web-crawler-intro/cover.webp" alt="Featured image of post 网络爬虫入门" />&lt;h2 id="什么是爬虫">什么是爬虫
+&lt;/h2>&lt;p>网络爬虫就是一种可以从网页上抓取数据信息并保存的自动化程序，它的原理就是模拟浏览器发送网络请求，接受请求响应，然后按照一定的规则自动抓取互联网数据。&lt;/p></description></item><item><title>永恒的回文单词</title><link>https://williamwei.top/p/everlasting-palindrome/</link><pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/everlasting-palindrome/</guid><description>&lt;img src="https://williamwei.top/p/everlasting-palindrome/yMnB5YFfEImchXz7lJoL6.png" alt="Featured image of post 永恒的回文单词" />&lt;p>这是在大一脑子不清爽的时候出的一道题。当时看到了 carykh 的视频（见下），遂有感而发：这玩意就是个算法题啊！于是就写出了题面。&lt;/p>
+&lt;p>据算法组的人说，这题目意外质量蛮高的，因此放出来给大家看看。我本身并不写算法，因此题解以及测试数据都没有办法提供。试着用 AI 解决此题，AI（GPT 4o）上了动态规划，但是仍然过不了样例，估计是个比较难的题吧。&lt;/p></description></item><item><title>2024 新年彩蛋</title><link>https://williamwei.top/p/happy-chinese-new-year-2024/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/happy-chinese-new-year-2024/</guid><description>&lt;img src="https://williamwei.top/p/happy-chinese-new-year-2024/image.jpg" alt="Featured image of post 2024 新年彩蛋" />&lt;blockquote>
+&lt;p>封面图片：&lt;a class="link" href="https://www.pixiv.net/artworks/114748159" target="_blank" rel="noopener"
+>✨🎉ॱ॰&lt;em>❅HAPPY NEW YEAR❅&lt;/em>॰ॱ🎉✨&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;p>农历新年在家闲着无事，想来点新年彩蛋，又想起曾经看过的某个逆天&lt;a class="link" href="https://wy-lang.org/" target="_blank" rel="noopener"
+>文言编程语言&lt;/a>，就学着用文言写了这一出：&lt;/p></description></item><item><title>一位一中人的内心呐喊</title><link>https://williamwei.top/p/anti-ntyz/</link><pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/anti-ntyz/</guid><description>&lt;blockquote>
+&lt;p>本文经过原作者的同意，为引用原标题的授权转载。按照原作者要求，不公布作者姓名。&lt;/p>
+&lt;p>这篇文章在老的博客上就转载过。鉴于我曾也是这种学校教育模式的受害者，且文中所述“一中”似乎还存在这种情况，甚至崇尚这种模式的校领导得到了表彰和升职，我决定将这篇文章再次转载到新博客上。&lt;/p></description></item><item><title>封校的那些事</title><link>https://williamwei.top/p/schooling-under-covid/</link><pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/schooling-under-covid/</guid><description>&lt;blockquote>
+&lt;p>本文主要记述在 2022-09-05~2022-09-09 期间因疫情原因在南通市开放大学封校的生活。&lt;/p>&lt;/blockquote>
+&lt;p>高三学业紧张，再加上开学前突然出现的阳性病例，打了个措手不及，把教育局属实是搞蒙了，于是在刚做完四次全员核酸还是阴性的情况下，教育局慌慌张张地就决定让我们封校上课。而我所在的学校不具备高三学生全体住宿的条件，故借用南通开放大学的场地，在那里开展教学活动。本文将分各个方面记述封校四天的生活。&lt;/p></description></item><item><title>归档</title><link>https://williamwei.top/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://williamwei.top/archives/</guid><description/></item><item><title>搜索</title><link>https://williamwei.top/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://williamwei.top/search/</guid><description/></item><item><title>友链</title><link>https://williamwei.top/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://williamwei.top/links/</guid><description>&lt;img src="https://williamwei.top/links/image.jpg" alt="Featured image of post 友链" />&lt;blockquote>
+&lt;p>封面图片：&lt;a class="link" href="https://www.pixiv.net/artworks/100339123" target="_blank" rel="noopener"
+>出発進航！&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;p>如果希望交换友链，可以在评论区留言，或是用任意联系方式联系我。&lt;/p>
+&lt;p>请务必附上自己的信息（以下是我的信息，作为示例）：&lt;/p>
+&lt;ul>
+&lt;li>名称：William Wei&amp;rsquo;s Blog&lt;/li>
+&lt;li>链接：&lt;code>https://williamwei.top&lt;/code>&lt;/li>
+&lt;li>头像：&lt;code>https://williamwei.top/links/avatar.png&lt;/code>&lt;/li>
+&lt;li>简介：Everything will be well. Hopefully.&lt;/li>
+&lt;/ul>
+&lt;p>咱朋友少，所以欢迎大家和我做朋友~&lt;/p></description></item></channel></rss>
