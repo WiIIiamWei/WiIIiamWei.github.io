@@ -3,7 +3,7 @@ title: 音游联系方式与成绩截图
 description: Let's 音游趴体！能和我一起……打音游吗？
 slug: mug
 image: image.jpg
-date: 2025-01-27
+date: 2025-06-23
 categories:
     - 音游
 ---

@@ -26,3 +26,15 @@ kbd {
 .article-list--compact article a .article-image img {
   border-radius: var(--card-border-radius);
 }
+
+pre, code, .code-toolbar, .highlight {
+  font-family: "Cascadia Code", monospace !important;
+}
+
+.article-page .article-content .highlight,
+.article-page .article-content .highlight pre,
+.article-page .article-content .highlight code,
+html body.article-page div.container.main-container.flex.on-phone--column.extended main.main.full-width article.main-article section.article-content div.highlight,
+html body.article-page div.container.main-container.flex.on-phone--column.extended main.main.full-width article.main-article section.article-content div.highlight * {
+  font-family: "Cascadia Code", monospace !important;
+}
