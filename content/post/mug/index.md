@@ -18,7 +18,7 @@ categories:
 
 ![](https://github.com/WiIIiamWei/maimai-scores/raw/master/history/rating.jpg)
 
-## 舞萌 DX
+## 舞萌 DX / Rating Graph
 
 ![](https://github.com/WiIIiamWei/maimai-scores/raw/master/realb50.jpg)
 
