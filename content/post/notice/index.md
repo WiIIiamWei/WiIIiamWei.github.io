@@ -15,9 +15,10 @@ categories:
 为确保可用性，本网站使用不同构建方式构建 ~~（白嫖免费服务の神）~~：
 
 * GitHub Pages（主站所在处）: [williamwei.top](https://williamwei.top)、[wiiiiamwei.github.io](https://wiiiiamwei.github.io)
-* Cloudflare Pages: [williamwei.dpdns.org](https://williamwei.dpdns.org)、[williamwei.pages.dev](https://williamwei.pages.dev)
+* Cloudflare Pages: [williamwei.pages.dev](https://williamwei.pages.dev)
 * Vercel: [williamwei.us.kg](williamwei.us.kg)、[williamwei.vercel.app](https://williamwei.vercel.app)
 * Netlify: [williamwei.is-a.dev](https://williamwei.is-a.dev)、[willwell.netlify.app](https://willwell.netlify.app)
+* Render: [williamwei.dpdns.org](https://williamwei.dpdns.org)、[williamwei.onrender.com](https://williamwei.onrender.com)
 
 当一个站点不可用时，你可尝试使用其他方式构建的站点。
 
