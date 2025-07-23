@@ -31,6 +31,10 @@ links:
     description: With great power comes great responsibility.
     website: https://blog.texsd.eu.org
     image: https://blog.texsd.eu.org/images/avatar.webp
+  - title: 白音的小屋
+    description: EarthOnline™ Player | 难得的同好，好耶！
+    website: https://shirone.moe/
+    image: https://assets.shirone.moe/assets/avatar.webp
 menu:
     main: 
         weight: 4
