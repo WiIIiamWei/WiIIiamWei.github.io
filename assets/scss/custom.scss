@@ -17,14 +17,43 @@ kbd {
   top: -3px;
 }
 
-/* Add border radius to article images */
-.article-list--compact article a .article-image {
-  border-radius: var(--card-border-radius);
-  overflow: hidden;
+// /* Add border radius to article images */
+// .article-list--compact article a .article-image {
+//   border-radius: var(--card-border-radius);
+//   overflow: hidden;
+// }
+
+// .article-list--compact article a .article-image img {
+//   border-radius: var(--card-border-radius);
+// }
+
+/* 将友链的链接元素设置为 Flex 容器 */
+.article-list--compact.links article a {
+    display: flex;
+    align-items: center; /* 垂直居中对齐文本和头像 */
+    justify-content: space-between; /* 将文本和头像推向两端 */
 }
 
-.article-list--compact article a .article-image img {
-  border-radius: var(--card-border-radius);
+/* * 为链接中的第一个 div（通常是包含标题和描述的文本容器）设置样式
+ * 让它可以缩放并允许内部文本换行
+*/
+.article-list--compact.links article a > div:not(.article-image) {
+    flex: 1; /* 允许该元素占据所有可用空间 */
+    min-width: 0; /* 关键属性：允许元素收缩到其内容大小以下，从而触发文本换行 */
+    padding-right: 1em; /* 在文本和头像之间添加一些间距 */
+}
+
+/* 设置头像样式，防止其被压缩 */
+.article-list--compact.links article a .article-image {
+    flex-shrink: 0; /* 防止头像被压缩变形 */
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+/* 保持头像图片的圆角 */
+.article-list--compact.links article a .article-image img {
+    border-radius: var(--card-border-radius);
+    display: block; /* 解决一些潜在的布局问题 */
 }
 
 pre, code, .code-toolbar, .highlight {

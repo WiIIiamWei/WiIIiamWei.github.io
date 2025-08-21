@@ -19,8 +19,9 @@ categories:
 * Vercel: [williamwei.us.kg](williamwei.us.kg)、[williamwei.vercel.app](https://williamwei.vercel.app)
 * Netlify: [williamwei.is-a.dev](https://williamwei.is-a.dev)、[willwell.netlify.app](https://willwell.netlify.app)
 * Render: [williamwei.dpdns.org](https://williamwei.dpdns.org)、[williamwei.onrender.com](https://williamwei.onrender.com)
+* Tencent EdgeOne: [blog.williamwei.top](https://blog.williamwei.top)
 
-当一个站点不可用时，你可尝试使用其他方式构建的站点。
+当一个站点不可用时，你可尝试使用其他方式构建的站点。对于使用中国大陆地区网络访问的读者，推荐使用代理或者访问由 Tencent EdgeOne 部署的页面。
 
 网站支持 RSS 订阅，请点击头像下方的 RSS 图标访问 XML。
 
