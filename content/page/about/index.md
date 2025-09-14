@@ -41,19 +41,21 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 此前使用 WordPress 搭建博客，现在换到了 Hugo，感觉变清爽了很多……在[原站点](https://realwilliamwei.wordpress.com)（已经关闭）上的博文就不公布/同步了。说得好听点：有一股清涩感；难听点：都啥玩意（不忍直视.webp）
 
 本博客使用以下技术构建：
-* 静态站点生成 - Hugo（使用主题见页面底部）
+* 静态站点生成 - Hugo（使用 Stack 主题，详见页面底部）
 * 字体 - jsDelivr（提供 HarmonyOS Sans SC，意外地觉得这个字体很美观）、Google Font API（提供 Cascadia Mono）
 
-为确保可用性，本博客使用以下构建方式构建：
+咱正好注册了一些免费域名。为确保可用性，本博客使用以下构建方式构建：
 
-* GitHub Pages（主站所在处）: [williamwei.top](https://williamwei.top)、[wiiiiamwei.github.io](https://wiiiiamwei.github.io)
-* Cloudflare Pages: [williamwei.pages.dev](https://williamwei.pages.dev)
-* Vercel: [williamwei.us.kg](williamwei.us.kg)、[williamwei.vercel.app](https://williamwei.vercel.app)
-* Netlify: [williamwei.is-a.dev](https://williamwei.is-a.dev)、[willwell.netlify.app](https://willwell.netlify.app)
-* Render: [williamwei.dpdns.org](https://williamwei.dpdns.org)、[williamwei.onrender.com](https://williamwei.onrender.com)
-* Tencent EdgeOne: [blog.williamwei.top](https://blog.williamwei.top)
+| 构建服务 | 网址 |
+| :------ | :--- |
+| GitHub Pages（主站所在处，推荐访问） | [williamwei.top](https://williamwei.top)、[wiiiiamwei.github.io](https://wiiiiamwei.github.io)
+| Cloudflare Pages（中国移动网络访问存在问题） | [williamwei.qzz.io](https://williamwei.qzz.io)、[williamwei.pages.dev](https://williamwei.pages.dev)
+| Vercel | [williamwei.us.kg](williamwei.us.kg)、[williamwei.vercel.app](https://williamwei.vercel.app)
+| Netlify | [williamwei.is-a.dev](https://williamwei.is-a.dev)、[willwell.netlify.app](https://willwell.netlify.app)
+| Render | [williamwei.dpdns.org](https://williamwei.dpdns.org)、[williamwei.onrender.com](https://williamwei.onrender.com)
+| Tencent EdgeOne（中国大陆读者推荐访问） | [blog.williamwei.top](https://blog.williamwei.top)
 
-当一个站点不可用时，你可尝试使用其他方式构建的站点。对于使用中国大陆地区网络访问的读者，推荐使用代理或者访问由 Tencent EdgeOne 部署的页面（你应该会被自动重定向）。
+当一个站点不可用时，你可尝试使用其他方式构建的站点。对于使用中国大陆地区网络访问的读者，推荐使用代理或者访问由 Tencent EdgeOne 部署的页面。 
 
 博客支持 RSS 订阅，请点击头像下方的 RSS 图标访问 XML。
 

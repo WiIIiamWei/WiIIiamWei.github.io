@@ -28,13 +28,13 @@ categories:
 
 **请注意：此成绩非官方成绩，与 SEGA 没有任何关系！**
 
-*由于 DXRating 服务器出现问题，无法生成 Best 50，本部分暂时移除。Rating Graph 仍然正常更新。*
+![](scoreb50.jpg)
 
 ![](rating.jpg)
 
 ### 舞萌 DX / Rating Graph
 
-请[点击这里](https://b50.mpas.top/1397784681)直接在线查看最新的数据（感谢 [MeowKJ](https://github.com/MeowKJ/maimai-rating-web) 的开发！）。
+请 **[点击这里](https://b50.mpas.top/1397784681)** 直接在线查看最新的数据（感谢 [MeowKJ](https://github.com/MeowKJ/maimai-rating-web) 的开发！）。
 
 ![](realrating.jpg)
 
