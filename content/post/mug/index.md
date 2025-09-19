@@ -3,7 +3,7 @@ title: 关于音游
 description: Let's 音游趴体！能和我一起玩吗？
 slug: mug
 image: image.jpg
-date: 2025-08-30
+date: 2025-09-19
 categories:
     - 音游
 ---
@@ -34,7 +34,9 @@ categories:
 
 ### 舞萌 DX / Rating Graph
 
-请 **[点击这里](https://b50.mpas.top/1397784681)** 直接在线查看最新的数据（感谢 [MeowKJ](https://github.com/MeowKJ/maimai-rating-web) 的开发！）。
+<span style="color:red;">请 **[点击这里](https://b50.mpas.top/1397784681)** 直接在线查看最新的数据。</span>
+
+（感谢 [MeowKJ](https://github.com/MeowKJ/maimai-rating-web) 的开发！）
 
 ![](realrating.jpg)
 
