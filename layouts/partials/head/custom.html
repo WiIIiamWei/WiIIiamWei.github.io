@@ -7,13 +7,18 @@
 
 <script>
     (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://cdn.jsdelivr.net/npm/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.min.css";
-        customFont.href = "https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@365&display=swap";
-    
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-    
-        document.head.appendChild(customFont);
+        // Load HarmonyOS Sans SC font
+        const harmonyFont = document.createElement('link');
+        harmonyFont.href = "https://cdn.jsdelivr.net/npm/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.min.css";
+        harmonyFont.type = "text/css";
+        harmonyFont.rel = "stylesheet";
+        document.head.appendChild(harmonyFont);
+
+        // Load Cascadia Code font
+        const cascadiaFont = document.createElement('link');
+        cascadiaFont.href = "https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@365&display=swap";
+        cascadiaFont.type = "text/css";
+        cascadiaFont.rel = "stylesheet";
+        document.head.appendChild(cascadiaFont);
     }());
 </script>
