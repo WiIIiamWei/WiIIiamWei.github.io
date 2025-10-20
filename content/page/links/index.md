@@ -19,11 +19,11 @@ links:
     description: 是咱同专业的学长捏 | 小小的人偶，想要摘月亮 | Graphics, Reading and the Others
     website: https://www.foth.top/
     image: foth.jpg
-  - title: 清风之恋の小窝 | qingfengzl
-    description: ええ...?被找到了呢,这里会不定期更新一些好玩的东西哦
-    website: https://aurora0x27.github.io/
-    image: https://aurora0x27.github.io/img/personal/matsuri.jpg
-  - title: kingpoem 的王国🏰 | 王俊琦
+  - title: 清風之戀の空想森林 | qingfengzl
+    description: 這裡會不定期更新一些好玩的東西哦
+    website: https://blog.qingfengzl.top/
+    image: https://blog.qingfengzl.top/matsuri.jpg
+  - title: kingpoem 的王国🏰
     description: 适闻有客金陵至，见说江南风景异。 | 每个人都只有一个使命，那就是寻找自我，无论最终成为诗人还是疯子、先知还是罪犯。
     website: https://kingpoem.github.io/
     image: https://kingpoem.github.io/assets/avatar.png
