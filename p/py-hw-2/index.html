@@ -1,0 +1,403 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="放在这边方便看……"><title>Python 第七周作业</title><link rel=canonical href=https://williamwei.top/p/py-hw-2/><link rel=stylesheet href=/scss/style.min.22786b5e0a638313597ddfdb3492718a14274b5dcd9c587aa72c70efe36653ac.css><meta property='og:title' content="Python 第七周作业"><meta property='og:description' content="放在这边方便看……"><meta property='og:url' content='https://williamwei.top/p/py-hw-2/'><meta property='og:site_name' content="William Wei's Blog"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-10-29T00:00:00+00:00'><meta property='article:modified_time' content='2025-10-29T00:00:00+00:00'><meta name=twitter:title content="Python 第七周作业"><meta name=twitter:description content="放在这边方便看……"><link rel="shortcut icon" href=/favicon.png><style>:root{--article-font-family:"HarmonyOS Sans SC", var(--base-font-family)}</style><script>(function(){const e=document.createElement("link");e.href="https://cdn.jsdelivr.net/npm/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.min.css",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e);const t=document.createElement("link");t.href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@365&display=swap",t.type="text/css",t.rel="stylesheet",document.head.appendChild(t)})()</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_101abff92c61e72.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>William Wei's Blog</a></h1><h2 class=site-description>Everything will be well. Hopefully.</h2></div></header><ol class=menu-social><li><a href=https://gravatar.com/realwilliamwei target=_blank title=Gravatar rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-gravatar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.64 5.632A9 9 0 1012 3v7.714"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 102 0 1 1 0 10-2 0"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>关于</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>归档</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>友链</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#data-sources>Data sources</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%AD%A6%E4%B9%A0/ style=background-color:#8ea885;color:#fff>学习</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/py-hw-2/>Python 第七周作业</a></h2><h3 class=article-subtitle>放在这边方便看……</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>2025-10-29</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 6 分钟</time></div></footer></div></header><section class=article-content><blockquote><p>本文章使用工具从 Jupyter Notebook 转换而来。</p><p>本文将在课程结束后撤下。</p></blockquote><h2 id=data-sources>Data sources</h2><ul><li><a class=link href=https://mapshaper.org/ target=_blank rel=noopener>https://mapshaper.org/</a> for shapefile</li><li><a class=link href=https://tj.jiangsu.gov.cn/2024/index.htm target=_blank rel=noopener>https://tj.jiangsu.gov.cn/2024/index.htm</a> for population data</li><li>Thanks to Google's Gemini 2.5 Pro for converting HTML to CSV</li></ul><p>Do note that assets files are .gitignored and will not be included.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>shapefile</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>csv</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>matplotlib.pyplot</span> <span class=k>as</span> <span class=nn>plt</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>matplotlib.patches</span> <span class=kn>import</span> <span class=n>Polygon</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>matplotlib.collections</span> <span class=kn>import</span> <span class=n>PatchCollection</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>matplotlib.colors</span> <span class=k>as</span> <span class=nn>mcolors</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>rcParams</span><span class=p>[</span><span class=s1>&#39;font.sans-serif&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;HarmonyOS Sans SC&#39;</span><span class=p>]</span>  <span class=c1># Huawei make good fonts lol</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>r</span> <span class=o>=</span> <span class=n>shapefile</span><span class=o>.</span><span class=n>Reader</span><span class=p>(</span><span class=s1>&#39;assets/shapefiles/js.shp&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>geom</span> <span class=o>=</span> <span class=n>r</span><span class=o>.</span><span class=n>shape</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>geom</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>geom</span><span class=o>.</span><span class=n>shapeTypeName</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>geom</span><span class=o>.</span><span class=n>shapeType</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>geom</span><span class=o>.</span><span class=n>bbox</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>geom</span><span class=o>.</span><span class=n>points</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>r</span><span class=o>.</span><span class=n>fields</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>r</span><span class=o>.</span><span class=n>records</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>city_to_data</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl><span class=k>with</span> <span class=nb>open</span><span class=p>(</span><span class=s1>&#39;assets/js-data.csv&#39;</span><span class=p>,</span> <span class=s1>&#39;r&#39;</span><span class=p>,</span> <span class=n>encoding</span><span class=o>=</span><span class=s1>&#39;utf-8&#39;</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>reader</span> <span class=o>=</span> <span class=n>csv</span><span class=o>.</span><span class=n>DictReader</span><span class=p>(</span><span class=n>f</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>row</span> <span class=ow>in</span> <span class=n>reader</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>city_to_data</span><span class=p>[</span><span class=n>row</span><span class=p>[</span><span class=s1>&#39;city&#39;</span><span class=p>]]</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=s1>&#39;population&#39;</span><span class=p>:</span> <span class=nb>float</span><span class=p>(</span><span class=n>row</span><span class=p>[</span><span class=s1>&#39;population&#39;</span><span class=p>]),</span>
+</span></span><span class=line><span class=cl>            <span class=s1>&#39;gdp&#39;</span><span class=p>:</span> <span class=nb>float</span><span class=p>(</span><span class=n>row</span><span class=p>[</span><span class=s1>&#39;gdp&#39;</span><span class=p>]),</span>
+</span></span><span class=line><span class=cl>            <span class=s1>&#39;lat&#39;</span><span class=p>:</span> <span class=nb>float</span><span class=p>(</span><span class=n>row</span><span class=p>[</span><span class=s1>&#39;lat&#39;</span><span class=p>]),</span>
+</span></span><span class=line><span class=cl>            <span class=s1>&#39;lon&#39;</span><span class=p>:</span> <span class=nb>float</span><span class=p>(</span><span class=n>row</span><span class=p>[</span><span class=s1>&#39;lon&#39;</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>city_field_name</span> <span class=o>=</span> <span class=s1>&#39;name&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>w</span> <span class=o>=</span> <span class=n>shapefile</span><span class=o>.</span><span class=n>Writer</span><span class=p>(</span><span class=s1>&#39;assets/shapefiles/js-edited.shp&#39;</span><span class=p>,</span> <span class=n>shapeType</span><span class=o>=</span><span class=n>r</span><span class=o>.</span><span class=n>shapeType</span><span class=p>,</span> <span class=n>encoding</span><span class=o>=</span><span class=s1>&#39;gbk&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>w</span><span class=o>.</span><span class=n>fields</span> <span class=o>=</span> <span class=n>r</span><span class=o>.</span><span class=n>fields</span><span class=p>[:]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>w</span><span class=o>.</span><span class=n>field</span><span class=p>(</span><span class=s1>&#39;lat&#39;</span><span class=p>,</span> <span class=s1>&#39;F&#39;</span><span class=p>,</span> <span class=mi>10</span><span class=p>,</span> <span class=mi>6</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>w</span><span class=o>.</span><span class=n>field</span><span class=p>(</span><span class=s1>&#39;lon&#39;</span><span class=p>,</span> <span class=s1>&#39;F&#39;</span><span class=p>,</span> <span class=mi>10</span><span class=p>,</span> <span class=mi>6</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>w</span><span class=o>.</span><span class=n>field</span><span class=p>(</span><span class=s1>&#39;population&#39;</span><span class=p>,</span> <span class=s1>&#39;F&#39;</span><span class=p>,</span> <span class=mi>15</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>w</span><span class=o>.</span><span class=n>field</span><span class=p>(</span><span class=s1>&#39;gdp&#39;</span><span class=p>,</span> <span class=s1>&#39;F&#39;</span><span class=p>,</span> <span class=mi>15</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>w</span><span class=o>.</span><span class=n>field</span><span class=p>(</span><span class=s1>&#39;per_gdp&#39;</span><span class=p>,</span> <span class=s1>&#39;F&#39;</span><span class=p>,</span> <span class=mi>15</span><span class=p>,</span> <span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>r</span><span class=p>)):</span>
+</span></span><span class=line><span class=cl>    <span class=n>w</span><span class=o>.</span><span class=n>shape</span><span class=p>(</span><span class=n>r</span><span class=o>.</span><span class=n>shape</span><span class=p>(</span><span class=n>i</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=n>old_rec</span> <span class=o>=</span> <span class=n>r</span><span class=o>.</span><span class=n>record</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>city_index</span> <span class=o>=</span> <span class=p>[</span><span class=n>f</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=k>for</span> <span class=n>f</span> <span class=ow>in</span> <span class=n>r</span><span class=o>.</span><span class=n>fields</span><span class=p>[</span><span class=mi>1</span><span class=p>:]]</span><span class=o>.</span><span class=n>index</span><span class=p>(</span><span class=n>city_field_name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>city</span> <span class=o>=</span> <span class=n>old_rec</span><span class=p>[</span><span class=n>city_index</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>lat</span> <span class=o>=</span> <span class=mf>0.0</span>
+</span></span><span class=line><span class=cl>    <span class=n>lon</span> <span class=o>=</span> <span class=mf>0.0</span>
+</span></span><span class=line><span class=cl>    <span class=n>people</span> <span class=o>=</span> <span class=mf>0.0</span>
+</span></span><span class=line><span class=cl>    <span class=n>gdp</span> <span class=o>=</span> <span class=mf>0.0</span>
+</span></span><span class=line><span class=cl>    <span class=n>per_gdp</span> <span class=o>=</span> <span class=mf>0.0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>city</span> <span class=ow>in</span> <span class=n>city_to_data</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>data</span> <span class=o>=</span> <span class=n>city_to_data</span><span class=p>[</span><span class=n>city</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>lat</span> <span class=o>=</span> <span class=n>data</span><span class=p>[</span><span class=s1>&#39;lat&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>lon</span> <span class=o>=</span> <span class=n>data</span><span class=p>[</span><span class=s1>&#39;lon&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>people</span> <span class=o>=</span> <span class=n>data</span><span class=p>[</span><span class=s1>&#39;population&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>gdp</span> <span class=o>=</span> <span class=n>data</span><span class=p>[</span><span class=s1>&#39;gdp&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>people</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>per_gdp</span> <span class=o>=</span> <span class=n>gdp</span> <span class=o>/</span> <span class=n>people</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>per_gdp</span> <span class=o>=</span> <span class=mf>0.0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>new_rec</span> <span class=o>=</span> <span class=n>old_rec</span> <span class=o>+</span> <span class=p>[</span><span class=n>lat</span><span class=p>,</span> <span class=n>lon</span><span class=p>,</span> <span class=n>people</span><span class=p>,</span> <span class=n>gdp</span><span class=p>,</span> <span class=n>per_gdp</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=n>w</span><span class=o>.</span><span class=n>record</span><span class=p>(</span><span class=o>*</span><span class=n>new_rec</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>w</span><span class=o>.</span><span class=n>close</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>    Polygon #0
+</span></span><span class=line><span class=cl>    POLYGON
+</span></span><span class=line><span class=cl>    5
+</span></span><span class=line><span class=cl>    (118.364371, 31.229373, 119.241664, 32.608232)
+</span></span><span class=line><span class=cl>    [(119.067452, 32.462398), (119.047022, 32.462882), (119.035909, 32.452428), (119.02373, 32.456073), (119.022495, 32.440303), (119.029455, 32.428836), (119.016434, 32.413193), (119.017556, 32.399261), (119.02749, 32.388316), (119.037425, 32.388844), (119.038435, 32.38159), (119.022551, 32.380447), (119.02171, 32.375436), (119.043823, 32.365191), (119.027322, 32.35134), (119.028445, 32.345095), (119.041971, 32.333264), (119.035853, 32.325435), (119.035572, 32.308718), (119.039838, 32.303746), (119.041073, 32.271709), (119.037088, 32.259868), (119.056563, 32.25168), (119.074748, 32.248951), (119.086029, 32.241158), (119.132332, 32.245164), (119.153772, 32.243668), (119.177232, 32.238912), (119.229036, 32.222179), (119.241664, 32.216278), (119.221403, 32.201127), (119.216239, 32.190686), (119.191095, 32.1854), (119.184529, 32.189629), (119.154446, 32.186193), (119.13671, 32.193374), (119.121332, 32.187603), (119.086871, 32.178527), (119.078677, 32.178747), (119.076039, 32.161695), (119.047976, 32.161254), (119.058472, 32.15645), (119.039333, 32.157023), (119.031756, 32.14865), (119.022383, 32.130886), (119.00925, 32.12467), (119.008913, 32.115941), (119.026649, 32.115941), (119.049772, 32.109768), (119.057686, 32.102228), (119.069248, 32.107916), (119.079799, 32.107343), (119.089733, 32.089704), (119.098882, 32.091027), (119.098489, 32.07162), (119.08659, 32.053224), (119.092652, 32.037604), (119.097928, 32.011256), (119.092371, 32.004105), (119.10281, 32.004899), (119.112464, 32.000441), (119.114204, 31.988212), (119.121612, 31.984812), (119.121107, 31.977571), (119.113923, 31.979823), (119.111061, 31.96949), (119.102979, 31.965603), (119.090126, 31.974126), (119.073738, 31.969622), (119.06487, 31.97342), (119.046854, 31.968562), (119.02923, 31.95708), (119.029455, 31.950013), (119.037537, 31.93897), (119.051512, 31.935922), (119.06762, 31.940207), (119.104157, 31.933624), (119.108423, 31.922977), (119.111173, 31.901634), (119.116449, 31.890497), (119.107806, 31.885149), (119.100341, 31.865787), (119.092427, 31.860437), (119.075421, 31.864195), (119.069753, 31.868793), (119.043374, 31.854424), (119.032822, 31.853761), (119.025919, 31.846376), (119.003357, 31.845757), (118.979672, 31.842352), (118.969457, 31.834613), (118.970411, 31.826077), (118.986407, 31.81785), (118.998137, 31.80166), (119.006387, 31.798607), (119.002908, 31.783431), (118.982534, 31.782988), (118.980458, 31.764667), (118.998867, 31.76719), (119.00504, 31.777766), (119.021541, 31.778607), (119.029679, 31.784714), (119.055665, 31.788962), (119.065768, 31.78197), (119.077105, 31.783962), (119.077835, 31.773916), (119.089902, 31.769624), (119.093999, 31.756036), (119.105392, 31.751344), (119.114428, 31.740233), (119.12498, 31.735806), (119.129245, 31.723586), (119.138674, 31.722125), (119.157701, 31.699362), (119.186437, 31.694136), (119.190422, 31.687049), (119.186605, 31.677658), (119.192274, 31.659847), (119.187335, 31.649168), (119.204734, 31.646642), (119.212423, 31.627718), (119.232516, 31.632283), (119.234087, 31.627053), (119.221852, 31.59478), (119.216239, 31.585423), (119.21579, 31.570389), (119.197662, 31.551849), (119.189075, 31.55176), (119.181105, 31.538096), (119.180656, 31.526959), (119.198616, 31.530021), (119.199458, 31.524519), (119.183518, 31.500199), (119.1664, 31.493453), (119.152986, 31.493186), (119.149114, 31.483998), (119.156017, 31.480135), (119.152481, 31.464374), (119.141481, 31.451674), (119.140919, 31.444969), (119.155568, 31.438618), (119.164155, 31.441105), (119.169207, 31.421739), (119.169207, 31.394015), (119.174089, 31.380906), (119.190085, 31.379084), (119.2003, 31.368817), (119.204509, 31.357838), (119.214107, 31.355883), (119.218035, 31.348859), (119.198336, 31.330674), (119.193172, 31.318935), (119.195361, 31.309373), (119.181105, 31.300478), (119.176222, 31.293939), (119.15815, 31.294784), (119.149787, 31.276945), (119.140695, 31.276011), (119.13222, 31.262752), (119.120041, 31.261684), (119.10702, 31.250603), (119.10528, 31.235293), (119.083728, 31.239744), (119.073794, 31.23289), (119.062344, 31.238498), (119.048818, 31.233557), (119.014526, 31.241524), (119.0033, 31.233735), (118.986463, 31.231154), (118.984218, 31.237474), (118.92495, 31.2397), (118.915184, 31.244195), (118.891219, 31.237964), (118.869666, 31.242237), (118.840481, 31.236361), (118.831277, 31.229462), (118.819491, 31.236005), (118.806357, 31.229507), (118.79575, 31.229373), (118.781382, 31.239833), (118.778575, 31.261684), (118.761401, 31.277702), (118.726603, 31.28224), (118.707914, 31.296786), (118.704434, 31.302791), (118.719588, 31.294784), (118.721103, 31.32267), (118.735078, 31.344769), (118.745742, 31.372684), (118.75461, 31.385084), (118.765386, 31.387928), (118.770886, 31.376951), (118.767575, 31.363973), (118.784525, 31.368595), (118.80024, 31.368995), (118.829481, 31.377529), (118.847385, 31.393927), (118.851145, 31.392549), (118.86961, 31.421561), (118.866074, 31.44488), (118.870508, 31.463042), (118.883193, 31.496471), (118.886279, 31.527669), (118.873539, 31.532062), (118.875111, 31.551982), (118.881958, 31.565156), (118.873315, 31.578417), (118.877299, 31.589902), (118.862258, 31.595001), (118.870789, 31.599346), (118.868768, 31.611139), (118.858554, 31.62395), (118.832848, 31.630377), (118.819547, 31.628516), (118.814495, 31.619252), (118.802765, 31.619473), (118.79603, 31.628294), (118.789576, 31.646554), (118.782953, 31.656258), (118.799005, 31.666361), (118.774141, 31.682619), (118.768304, 31.677481), (118.760503, 31.680271), (118.748099, 31.675753), (118.745125, 31.656524), (118.7394, 31.651074), (118.735976, 31.633436), (118.72868, 31.634233), (118.719419, 31.627452), (118.71695, 31.639463), (118.694949, 31.639729), (118.685127, 31.636139), (118.673846, 31.640527), (118.65785, 31.641103), (118.643594, 31.649656), (118.647972, 31.65936), (118.643257, 31.671367), (118.646962, 31.679873), (118.654931, 31.67562), (118.671432, 31.688201), (118.674407, 31.696483), (118.680749, 31.696616), (118.697699, 31.709416), (118.687372, 31.716147), (118.684902, 31.724914), (118.677269, 31.728589), (118.653977, 31.730139), (118.652125, 31.73979), (118.641686, 31.743996), (118.648365, 31.748821), (118.641686, 31.758249), (118.627037, 31.759444), (118.619068, 31.75006), (118.609358, 31.757187), (118.600995, 31.754133), (118.593082, 31.744438), (118.57529, 31.740941), (118.571698, 31.746253), (118.55312, 31.729032), (118.529772, 31.742358), (118.529379, 31.748555), (118.538696, 31.749352), (118.53965, 31.761569), (118.533869, 31.767234), (118.523599, 31.762011), (118.510746, 31.765641), (118.502608, 31.778342), (118.482178, 31.778342), (118.486107, 31.795421), (118.504741, 31.841733), (118.490597, 31.843148), (118.475443, 31.850312), (118.466744, 31.858005), (118.467081, 31.868881), (118.4723, 31.879623), (118.452263, 31.884663), (118.44014, 31.892707), (118.41595, 31.901457), (118.402986, 31.914007), (118.386036, 31.914803), (118.375316, 31.925319), (118.364371, 31.930178), (118.369198, 31.94299), (118.368974, 31.956196), (118.379974, 31.968341), (118.376719, 31.981721), (118.387158, 31.983267), (118.390975, 31.989536), (118.389628, 32.01205), (118.401526, 32.018671), (118.38598, 32.033147), (118.394342, 32.048414), (118.385025, 32.060768), (118.393276, 32.062665), (118.405455, 32.080794), (118.433518, 32.086661), (118.441095, 32.092041), (118.462871, 32.10064), (118.473647, 32.11065), (118.472974, 32.114839), (118.489474, 32.120746), (118.500812, 32.121584), (118.494694, 32.130974), (118.500587, 32.14173), (118.507435, 32.137895), (118.495648, 32.165176), (118.495592, 32.177073), (118.50648, 32.182096), (118.509848, 32.194299), (118.521859, 32.188219), (118.532354, 32.195797), (118.539594, 32.192449), (118.551717, 32.199629), (118.561708, 32.196898), (118.575627, 32.202536), (118.580902, 32.19866), (118.598357, 32.199497), (118.619629, 32.205443), (118.626588, 32.202536), (118.644099, 32.20998), (118.667504, 32.235918), (118.675137, 32.255862), (118.667447, 32.257535), (118.659253, 32.266119), (118.670759, 32.285617), (118.667335, 32.296354), (118.659983, 32.296354), (118.660263, 32.305418), (118.678448, 32.316549), (118.696352, 32.317736), (118.683948, 32.324071), (118.687652, 32.330009), (118.703199, 32.328954), (118.707914, 32.33841), (118.697531, 32.342632), (118.699832, 32.349757), (118.692928, 32.351692), (118.702021, 32.357936), (118.696071, 32.367961), (118.698878, 32.383085), (118.690178, 32.378293), (118.678672, 32.393943), (118.685744, 32.404975), (118.688887, 32.418202), (118.687091, 32.431297), (118.692648, 32.465122), (118.68928, 32.47351), (118.672892, 32.469865), (118.647691, 32.47654), (118.643426, 32.47048), (118.628104, 32.467669), (118.608572, 32.470567), (118.608067, 32.475837), (118.59673, 32.476628), (118.592127, 32.482029), (118.592464, 32.500207), (118.608011, 32.501744), (118.617496, 32.512411), (118.614465, 32.5204), (118.604812, 32.52299), (118.608853, 32.537034), (118.598975, 32.54467), (118.584663, 32.549014), (118.56805, 32.558755), (118.563728, 32.564371), (118.569509, 32.586435), (118.598077, 32.601347), (118.601781, 32.597356), (118.623838, 32.592444), (118.633043, 32.578979), (118.641237, 32.587093), (118.658411, 32.594812), (118.668794, 32.5949), (118.689561, 32.588541), (118.700842, 32.588541), (118.69798, 32.60639), (118.725312, 32.608232), (118.725986, 32.596523), (118.740691, 32.589374), (118.743273, 32.597751), (118.757528, 32.603978), (118.775769, 32.597751), (118.774815, 32.587663), (118.784749, 32.582444), (118.801811, 32.58433), (118.805291, 32.593453), (118.820501, 32.604241), (118.824542, 32.602531), (118.824654, 32.589637), (118.820501, 32.582532), (118.827573, 32.581172), (118.827011, 32.572662), (118.842502, 32.572969), (118.848507, 32.568187), (118.855972, 32.574373), (118.872641, 32.576084), (118.874998, 32.58297), (118.884203, 32.580426), (118.885101, 32.586348), (118.901995, 32.589023), (118.909347, 32.586874), (118.896382, 32.577268), (118.898627, 32.560466), (118.887907, 32.55485), (118.914005, 32.548839), (118.919786, 32.557263), (118.936568, 32.557526), (118.940609, 32.547785), (118.964799, 32.526721), (118.967942, 32.514562), (118.97984, 32.503851), (118.997463, 32.503895), (119.00751, 32.514079), (119.01924, 32.517986), (119.041409, 32.514782), (119.043318, 32.502841), (119.050502, 32.492919), (119.062793, 32.484576), (119.067452, 32.462398), (118.86585, 31.518972), (118.855691, 31.504726), (118.846711, 31.50304), (118.846262, 31.50912), (118.856421, 31.522256), (118.86585, 31.518972)]
+</span></span><span class=line><span class=cl>    [Field(name=&#34;DeletionFlag&#34;, field_type=FieldType.C, size=1, decimal=0), Field(name=&#34;adcode&#34;, field_type=FieldType.N, size=6, decimal=0), Field(name=&#34;name&#34;, field_type=FieldType.C, size=12, decimal=0), Field(name=&#34;center&#34;, field_type=FieldType.N, size=0, decimal=0), Field(name=&#34;centroid&#34;, field_type=FieldType.N, size=0, decimal=0), Field(name=&#34;childrenNu&#34;, field_type=FieldType.N, size=2, decimal=0), Field(name=&#34;level&#34;, field_type=FieldType.C, size=4, decimal=0), Field(name=&#34;parent&#34;, field_type=FieldType.N, size=0, decimal=0), Field(name=&#34;subFeature&#34;, field_type=FieldType.N, size=2, decimal=0), Field(name=&#34;acroutes&#34;, field_type=FieldType.N, size=0, decimal=0)]
+</span></span><span class=line><span class=cl>    [Record #0: [320100, &#39;南京市&#39;, None, None, 11, &#39;city&#39;, None, 0, None], Record #1: [320200, &#39;无锡市&#39;, None, None, 7, &#39;city&#39;, None, 1, None], Record #2: [320300, &#39;徐州市&#39;, None, None, 10, &#39;city&#39;, None, 2, None], Record #3: [320400, &#39;常州市&#39;, None, None, 6, &#39;city&#39;, None, 3, None], Record #4: [320500, &#39;苏州市&#39;, None, None, 9, &#39;city&#39;, None, 4, None], Record #5: [320600, &#39;南通市&#39;, None, None, 7, &#39;city&#39;, None, 5, None], Record #6: [320700, &#39;连云港市&#39;, None, None, 6, &#39;city&#39;, None, 6, None], Record #7: [320800, &#39;淮安市&#39;, None, None, 7, &#39;city&#39;, None, 7, None], Record #8: [320900, &#39;盐城市&#39;, None, None, 9, &#39;city&#39;, None, 8, None], Record #9: [321000, &#39;扬州市&#39;, None, None, 6, &#39;city&#39;, None, 9, None], Record #10: [321100, &#39;镇江市&#39;, None, None, 6, &#39;city&#39;, None, 10, None], Record #11: [321200, &#39;泰州市&#39;, None, None, 6, &#39;city&#39;, None, 11, None], Record #12: [321300, &#39;宿迁市&#39;, None, None, 5, &#39;city&#39;, None, 12, None]]
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>new_r</span> <span class=o>=</span> <span class=n>shapefile</span><span class=o>.</span><span class=n>Reader</span><span class=p>(</span><span class=s1>&#39;assets/shapefiles/js-edited.shp&#39;</span><span class=p>,</span> <span class=n>encoding</span><span class=o>=</span><span class=s1>&#39;gbk&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>新的属性表字段:&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>new_r</span><span class=o>.</span><span class=n>fields</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>新的属性表记录:&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>new_r</span><span class=o>.</span><span class=n>records</span><span class=p>())</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>    新的属性表字段:
+</span></span><span class=line><span class=cl>    [Field(name=&#34;DeletionFlag&#34;, field_type=FieldType.C, size=1, decimal=0), Field(name=&#34;adcode&#34;, field_type=FieldType.N, size=6, decimal=0), Field(name=&#34;name&#34;, field_type=FieldType.C, size=12, decimal=0), Field(name=&#34;center&#34;, field_type=FieldType.N, size=0, decimal=0), Field(name=&#34;centroid&#34;, field_type=FieldType.N, size=0, decimal=0), Field(name=&#34;childrenNu&#34;, field_type=FieldType.N, size=2, decimal=0), Field(name=&#34;level&#34;, field_type=FieldType.C, size=4, decimal=0), Field(name=&#34;parent&#34;, field_type=FieldType.N, size=0, decimal=0), Field(name=&#34;subFeature&#34;, field_type=FieldType.N, size=2, decimal=0), Field(name=&#34;acroutes&#34;, field_type=FieldType.N, size=0, decimal=0), Field(name=&#34;lat&#34;, field_type=FieldType.F, size=10, decimal=6), Field(name=&#34;lon&#34;, field_type=FieldType.F, size=10, decimal=6), Field(name=&#34;population&#34;, field_type=FieldType.F, size=15, decimal=0), Field(name=&#34;gdp&#34;, field_type=FieldType.F, size=15, decimal=2), Field(name=&#34;per_gdp&#34;, field_type=FieldType.F, size=15, decimal=2)]
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    新的属性表记录:
+</span></span><span class=line><span class=cl>    [Record #0: [320100, &#39;南京市&#39;, None, None, 11, &#39;city&#39;, None, 0, None, 31.85, 118.82, 954, 17421.4, 18.25], Record #1: [320200, &#39;无锡市&#39;, None, None, 7, &#39;city&#39;, None, 1, None, 31.57, 120.31, 749, 15456.19, 20.62], Record #2: [320300, &#39;徐州市&#39;, None, None, 10, &#39;city&#39;, None, 2, None, 34.27, 117.23, 902, 8900.44, 9.87], Record #3: [320400, &#39;常州市&#39;, None, None, 6, &#39;city&#39;, None, 3, None, 31.8, 119.97, 537, 10116.36, 18.82], Record #4: [320500, &#39;苏州市&#39;, None, None, 9, &#39;city&#39;, None, 4, None, 31.3, 120.63, 1295, 24653.37, 19.03], Record #5: [320600, &#39;南通市&#39;, None, None, 7, &#39;city&#39;, None, 5, None, 32.07, 120.87, 774, 11813.27, 15.25], Record #6: [320700, &#39;连云港市&#39;, None, None, 6, &#39;city&#39;, None, 6, None, 34.6, 119.22, 459, 4363.61, 9.5], Record #7: [320800, &#39;淮安市&#39;, None, None, 7, &#39;city&#39;, None, 7, None, 33.62, 119.15, 453, 5015.06, 11.05], Record #8: [320900, &#39;盐城市&#39;, None, None, 9, &#39;city&#39;, None, 8, None, 33.35, 120.15, 668, 7403.87, 11.07], Record #9: [321000, &#39;扬州市&#39;, None, None, 6, &#39;city&#39;, None, 9, None, 32.45, 119.42, 458, 7423.26, 16.19], Record #10: [321100, &#39;镇江市&#39;, None, None, 6, &#39;city&#39;, None, 10, None, 119.45, 32.2, 322, 5264.07, 16.32], Record #11: [321200, &#39;泰州市&#39;, None, None, 6, &#39;city&#39;, None, 11, None, 32.45, 119.92, 450, 6731.66, 14.94], Record #12: [321300, &#39;宿迁市&#39;, None, None, 5, &#39;city&#39;, None, 12, None, 33.97, 118.3, 497, 4398.07, 8.84]]
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>fig_pop</span><span class=p>,</span> <span class=n>ax_pop</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>subplots</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>10</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>patches_pop</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl><span class=n>populations</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>people_index</span> <span class=o>=</span> <span class=p>[</span><span class=n>f</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=k>for</span> <span class=n>f</span> <span class=ow>in</span> <span class=n>new_r</span><span class=o>.</span><span class=n>fields</span><span class=p>[</span><span class=mi>1</span><span class=p>:]]</span><span class=o>.</span><span class=n>index</span><span class=p>(</span><span class=s1>&#39;population&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>new_r</span><span class=p>)):</span>
+</span></span><span class=line><span class=cl>    <span class=n>shape</span> <span class=o>=</span> <span class=n>new_r</span><span class=o>.</span><span class=n>shape</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>rec</span> <span class=o>=</span> <span class=n>new_r</span><span class=o>.</span><span class=n>record</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>pop</span> <span class=o>=</span> <span class=n>rec</span><span class=p>[</span><span class=n>people_index</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=n>populations</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>pop</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>parts</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=n>shape</span><span class=o>.</span><span class=n>parts</span><span class=p>)</span> <span class=o>+</span> <span class=p>[</span><span class=nb>len</span><span class=p>(</span><span class=n>shape</span><span class=o>.</span><span class=n>points</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>parts</span><span class=p>)</span> <span class=o>-</span> <span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>start</span> <span class=o>=</span> <span class=n>parts</span><span class=p>[</span><span class=n>j</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>end</span> <span class=o>=</span> <span class=n>parts</span><span class=p>[</span><span class=n>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>points</span> <span class=o>=</span> <span class=n>shape</span><span class=o>.</span><span class=n>points</span><span class=p>[</span><span class=n>start</span><span class=p>:</span><span class=n>end</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=n>points</span><span class=p>)</span> <span class=o>&gt;</span> <span class=mi>2</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>poly</span> <span class=o>=</span> <span class=n>Polygon</span><span class=p>(</span><span class=n>points</span><span class=p>,</span> <span class=n>closed</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>patches_pop</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>poly</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=ow>not</span> <span class=n>patches_pop</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;No valid polygons to plot.&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># Normalize population values for color mapping</span>
+</span></span><span class=line><span class=cl>    <span class=n>pop_array</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>array</span><span class=p>(</span><span class=n>populations</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>np</span><span class=o>.</span><span class=n>max</span><span class=p>(</span><span class=n>pop_array</span><span class=p>)</span> <span class=o>&gt;</span> <span class=n>np</span><span class=o>.</span><span class=n>min</span><span class=p>(</span><span class=n>pop_array</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>norm_pop</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>Normalize</span><span class=p>(</span><span class=n>vmin</span><span class=o>=</span><span class=n>np</span><span class=o>.</span><span class=n>min</span><span class=p>(</span><span class=n>pop_array</span><span class=p>),</span> <span class=n>vmax</span><span class=o>=</span><span class=n>np</span><span class=o>.</span><span class=n>max</span><span class=p>(</span><span class=n>pop_array</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>norm_pop</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>Normalize</span><span class=p>(</span><span class=n>vmin</span><span class=o>=</span><span class=mi>0</span><span class=p>,</span> <span class=n>vmax</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>pcollection_pop</span> <span class=o>=</span> <span class=n>PatchCollection</span><span class=p>(</span><span class=n>patches_pop</span><span class=p>,</span> <span class=n>cmap</span><span class=o>=</span><span class=s1>&#39;Reds&#39;</span><span class=p>,</span> <span class=n>alpha</span><span class=o>=</span><span class=mf>0.8</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>pcollection_pop</span><span class=o>.</span><span class=n>set_array</span><span class=p>(</span><span class=n>pop_array</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>pcollection_pop</span><span class=o>.</span><span class=n>set_norm</span><span class=p>(</span><span class=n>norm_pop</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>ax_pop</span><span class=o>.</span><span class=n>add_collection</span><span class=p>(</span><span class=n>pcollection_pop</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>bbox</span> <span class=o>=</span> <span class=n>new_r</span><span class=o>.</span><span class=n>bbox</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_pop</span><span class=o>.</span><span class=n>set_xlim</span><span class=p>(</span><span class=n>bbox</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>bbox</span><span class=p>[</span><span class=mi>2</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_pop</span><span class=o>.</span><span class=n>set_ylim</span><span class=p>(</span><span class=n>bbox</span><span class=p>[</span><span class=mi>1</span><span class=p>],</span> <span class=n>bbox</span><span class=p>[</span><span class=mi>3</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>fig_pop</span><span class=o>.</span><span class=n>colorbar</span><span class=p>(</span><span class=n>pcollection_pop</span><span class=p>,</span> <span class=n>ax</span><span class=o>=</span><span class=n>ax_pop</span><span class=p>,</span> <span class=n>label</span><span class=o>=</span><span class=s1>&#39;人口数&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>ax_pop</span><span class=o>.</span><span class=n>set_title</span><span class=p>(</span><span class=s1>&#39;江苏省人口分布图&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_pop</span><span class=o>.</span><span class=n>set_xlabel</span><span class=p>(</span><span class=s1>&#39;经度&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_pop</span><span class=o>.</span><span class=n>set_ylabel</span><span class=p>(</span><span class=s1>&#39;纬度&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_pop</span><span class=o>.</span><span class=n>set_aspect</span><span class=p>(</span><span class=s1>&#39;equal&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/py-hw-2/c7fcf91401b8ebb039484f703cc203ca0d466eec.png width=834 height=790 srcset="/p/py-hw-2/c7fcf91401b8ebb039484f703cc203ca0d466eec_hu_91b21aa018dce5ab.png 480w, /p/py-hw-2/c7fcf91401b8ebb039484f703cc203ca0d466eec_hu_91c53dfd06fa68ba.png 1024w" loading=lazy class=gallery-image data-flex-grow=105 data-flex-basis=253px></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>fig_per</span><span class=p>,</span> <span class=n>ax_per</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>subplots</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>10</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>patches_per</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl><span class=n>per_gdps</span> <span class=o>=</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>per_gdp_index</span> <span class=o>=</span> <span class=p>[</span><span class=n>f</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=k>for</span> <span class=n>f</span> <span class=ow>in</span> <span class=n>new_r</span><span class=o>.</span><span class=n>fields</span><span class=p>[</span><span class=mi>1</span><span class=p>:]]</span><span class=o>.</span><span class=n>index</span><span class=p>(</span><span class=s1>&#39;per_gdp&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>new_r</span><span class=p>)):</span>
+</span></span><span class=line><span class=cl>    <span class=n>shape</span> <span class=o>=</span> <span class=n>new_r</span><span class=o>.</span><span class=n>shape</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>rec</span> <span class=o>=</span> <span class=n>new_r</span><span class=o>.</span><span class=n>record</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>per</span> <span class=o>=</span> <span class=n>rec</span><span class=p>[</span><span class=n>per_gdp_index</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=n>per_gdps</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>per</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>parts</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=n>shape</span><span class=o>.</span><span class=n>parts</span><span class=p>)</span> <span class=o>+</span> <span class=p>[</span><span class=nb>len</span><span class=p>(</span><span class=n>shape</span><span class=o>.</span><span class=n>points</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>parts</span><span class=p>)</span> <span class=o>-</span> <span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>start</span> <span class=o>=</span> <span class=n>parts</span><span class=p>[</span><span class=n>j</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>end</span> <span class=o>=</span> <span class=n>parts</span><span class=p>[</span><span class=n>j</span> <span class=o>+</span> <span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>points</span> <span class=o>=</span> <span class=n>shape</span><span class=o>.</span><span class=n>points</span><span class=p>[</span><span class=n>start</span><span class=p>:</span><span class=n>end</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=n>points</span><span class=p>)</span> <span class=o>&gt;</span> <span class=mi>2</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>poly</span> <span class=o>=</span> <span class=n>Polygon</span><span class=p>(</span><span class=n>points</span><span class=p>,</span> <span class=n>closed</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=n>patches_per</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=n>poly</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=ow>not</span> <span class=n>patches_per</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;No valid polygons to plot.&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># Convert to array</span>
+</span></span><span class=line><span class=cl>    <span class=n>per_array</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>array</span><span class=p>(</span><span class=n>per_gdps</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1># Determine classification: assume 5 levels, based on min and max linear classification</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>np</span><span class=o>.</span><span class=n>max</span><span class=p>(</span><span class=n>per_array</span><span class=p>)</span> <span class=o>&gt;</span> <span class=n>np</span><span class=o>.</span><span class=n>min</span><span class=p>(</span><span class=n>per_array</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>levels</span> <span class=o>=</span> <span class=mi>5</span>
+</span></span><span class=line><span class=cl>        <span class=n>boundaries</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>linspace</span><span class=p>(</span><span class=n>np</span><span class=o>.</span><span class=n>min</span><span class=p>(</span><span class=n>per_array</span><span class=p>),</span> <span class=n>np</span><span class=o>.</span><span class=n>max</span><span class=p>(</span><span class=n>per_array</span><span class=p>),</span> <span class=n>levels</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>norm_per</span> <span class=o>=</span> <span class=n>mcolors</span><span class=o>.</span><span class=n>BoundaryNorm</span><span class=p>(</span><span class=n>boundaries</span><span class=p>,</span> <span class=n>ncolors</span><span class=o>=</span><span class=n>plt</span><span class=o>.</span><span class=n>get_cmap</span><span class=p>(</span><span class=s1>&#39;Blues&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>N</span><span class=p>,</span> <span class=n>clip</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>norm_per</span> <span class=o>=</span> <span class=n>plt</span><span class=o>.</span><span class=n>Normalize</span><span class=p>(</span><span class=n>vmin</span><span class=o>=</span><span class=mi>0</span><span class=p>,</span> <span class=n>vmax</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>boundaries</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>array</span><span class=p>([</span><span class=n>np</span><span class=o>.</span><span class=n>min</span><span class=p>(</span><span class=n>per_array</span><span class=p>),</span> <span class=n>np</span><span class=o>.</span><span class=n>max</span><span class=p>(</span><span class=n>per_array</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span><span class=p>])</span>  <span class=c1># 虚拟边界</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>pcollection_per</span> <span class=o>=</span> <span class=n>PatchCollection</span><span class=p>(</span><span class=n>patches_per</span><span class=p>,</span> <span class=n>cmap</span><span class=o>=</span><span class=s1>&#39;Blues&#39;</span><span class=p>,</span> <span class=n>alpha</span><span class=o>=</span><span class=mf>0.8</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>pcollection_per</span><span class=o>.</span><span class=n>set_array</span><span class=p>(</span><span class=n>per_array</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>pcollection_per</span><span class=o>.</span><span class=n>set_norm</span><span class=p>(</span><span class=n>norm_per</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_per</span><span class=o>.</span><span class=n>add_collection</span><span class=p>(</span><span class=n>pcollection_per</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>bbox</span> <span class=o>=</span> <span class=n>new_r</span><span class=o>.</span><span class=n>bbox</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_per</span><span class=o>.</span><span class=n>set_xlim</span><span class=p>(</span><span class=n>bbox</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>bbox</span><span class=p>[</span><span class=mi>2</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_per</span><span class=o>.</span><span class=n>set_ylim</span><span class=p>(</span><span class=n>bbox</span><span class=p>[</span><span class=mi>1</span><span class=p>],</span> <span class=n>bbox</span><span class=p>[</span><span class=mi>3</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>fig_per</span><span class=o>.</span><span class=n>colorbar</span><span class=p>(</span><span class=n>pcollection_per</span><span class=p>,</span> <span class=n>ax</span><span class=o>=</span><span class=n>ax_per</span><span class=p>,</span> <span class=n>label</span><span class=o>=</span><span class=s1>&#39;人均GDP&#39;</span><span class=p>,</span> <span class=n>boundaries</span><span class=o>=</span><span class=n>boundaries</span><span class=p>,</span> <span class=n>ticks</span><span class=o>=</span><span class=n>boundaries</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>ax_per</span><span class=o>.</span><span class=n>set_title</span><span class=p>(</span><span class=s1>&#39;江苏省人均GDP分布图&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_per</span><span class=o>.</span><span class=n>set_xlabel</span><span class=p>(</span><span class=s1>&#39;经度&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_per</span><span class=o>.</span><span class=n>set_ylabel</span><span class=p>(</span><span class=s1>&#39;纬度&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>ax_per</span><span class=o>.</span><span class=n>set_aspect</span><span class=p>(</span><span class=s1>&#39;equal&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/py-hw-2/676d5c428d5a951c85cc85b9fef15d13b933b30c.png width=838 height=804 srcset="/p/py-hw-2/676d5c428d5a951c85cc85b9fef15d13b933b30c_hu_5382d91bb453b2fe.png 480w, /p/py-hw-2/676d5c428d5a951c85cc85b9fef15d13b933b30c_hu_d5f13a4c3c7c642e.png 1024w" loading=lazy class=gallery-image data-flex-grow=104 data-flex-basis=250px></p></section><footer class=article-footer><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>本文协议：CC BY-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/gisalgo-hw-1/><div class=article-details><h2 class=article-title>GIS 算法实验一</h2></div></a></article><article><a href=/p/cpu-graphics-exp3/><div class=article-details><h2 class=article-title>Python 中使用 GeoJSON，以及压缩算法</h2></div></a></article><article class=has-image><a href=/p/ppt-tips/><div class=article-image><img src=/p/ppt-tips/cover.6ad3738266526e56a7a5757f91312ece_hu_243220634bdaaa83.png width=250 height=150 loading=lazy alt="Featured image of post PowerPoint 技巧合集" data-key=ppt-tips data-hash="md5-atNzgmZSblanpXV/kTEuzg=="></div><div class=article-details><h2 class=article-title>PowerPoint 技巧合集</h2></div></a></article><article class=has-image><a href=/p/thesis-tips/><div class=article-image><img src=/p/thesis-tips/image.645e6425f1b174e768a2c79a4a80e4ba_hu_7fd247118accf1ee.jpg width=250 height=150 loading=lazy alt="Featured image of post 如何高效进行论文排版" data-key=thesis-tips data-hash="md5-ZF5kJfGxdOdooseaSoDkug=="></div><div class=article-details><h2 class=article-title>如何高效进行论文排版</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//williamweiblog.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2024 -
+2025 William Wei's Blog</section><section class=powerby><a href='https://icp.gov.moe/?keyword=20255210' target=_blank>萌 ICP 备 20255210 号</a> | <a href=https://travel.moe/go.html target=_blank>异次元之旅</a><br>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.31.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

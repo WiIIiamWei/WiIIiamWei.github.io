@@ -1,0 +1,317 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="放在这边方便看……"><title>GIS 算法实验一</title><link rel=canonical href=https://williamwei.top/p/gisalgo-hw-1/><link rel=stylesheet href=/scss/style.min.22786b5e0a638313597ddfdb3492718a14274b5dcd9c587aa72c70efe36653ac.css><meta property='og:title' content="GIS 算法实验一"><meta property='og:description' content="放在这边方便看……"><meta property='og:url' content='https://williamwei.top/p/gisalgo-hw-1/'><meta property='og:site_name' content="William Wei's Blog"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-10-29T00:00:00+00:00'><meta property='article:modified_time' content='2025-10-29T00:00:00+00:00'><meta name=twitter:title content="GIS 算法实验一"><meta name=twitter:description content="放在这边方便看……"><link rel="shortcut icon" href=/favicon.png><style>:root{--article-font-family:"HarmonyOS Sans SC", var(--base-font-family)}</style><script>(function(){const e=document.createElement("link");e.href="https://cdn.jsdelivr.net/npm/harmonyos-sans-sc-webfont-splitted@1.1.0/dist/index.min.css",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e);const t=document.createElement("link");t.href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@365&display=swap",t.type="text/css",t.rel="stylesheet",document.head.appendChild(t)})()</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_101abff92c61e72.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>William Wei's Blog</a></h1><h2 class=site-description>Everything will be well. Hopefully.</h2></div></header><ol class=menu-social><li><a href=https://gravatar.com/realwilliamwei target=_blank title=Gravatar rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-gravatar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.64 5.632A9 9 0 1012 3v7.714"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rss"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 102 0 1 1 0 10-2 0"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>主页</span></a></li><li><a href=/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>关于</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>归档</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜索</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>友链</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#算法的伪代码实现>算法的伪代码实现</a></li><li><a href=#简答题自动计算阈值的模型>简答题：自动计算阈值的模型</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%AD%A6%E4%B9%A0/ style=background-color:#8ea885;color:#fff>学习</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/gisalgo-hw-1/>GIS 算法实验一</a></h2><h3 class=article-subtitle>放在这边方便看……</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>2025-10-29</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 3 分钟</time></div></footer></div></header><section class=article-content><blockquote><p>本文章使用工具从 Jupyter Notebook 转换而来。</p><p>本文将在课程结束后撤下。</p></blockquote><h1 id=实验一道格拉斯-普克实现曲线抽稀>实验一：道格拉斯-普克实现曲线抽稀</h1><h2 id=算法的伪代码实现>算法的伪代码实现</h2><pre><code>function DouglasPeucker(PointList, epsilon):
+    if length(PointList) &lt;= 2:
+        return PointList
+    
+    // 找到离首尾连线最远的点
+    dmax = 0
+    index = 0
+    for i = 1 to length(PointList)-2:
+        d = perpendicular_distance(PointList[i], Line(PointList[0], PointList[-1]))
+        if d &gt; dmax:
+            index = i
+            dmax = d
+    
+    // 递归处理
+    if dmax &gt; epsilon:
+        result1 = DouglasPeucker(PointList[0:index+1], epsilon)
+        result2 = DouglasPeucker(PointList[index:], epsilon)
+        return result1[:-1] + result2
+    else:
+        return [PointList[0], PointList[-1]]
+</code></pre><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>math</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>perpendicular_distance</span><span class=p>(</span><span class=n>point</span><span class=p>,</span> <span class=n>line_start</span><span class=p>,</span> <span class=n>line_end</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>line_start</span> <span class=o>==</span> <span class=n>line_end</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>math</span><span class=o>.</span><span class=n>sqrt</span><span class=p>((</span><span class=n>point</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>-</span><span class=n>line_start</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span><span class=o>**</span><span class=mi>2</span> <span class=o>+</span> <span class=p>(</span><span class=n>point</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span><span class=o>-</span><span class=n>line_start</span><span class=p>[</span><span class=mi>1</span><span class=p>])</span><span class=o>**</span><span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>x1</span><span class=p>,</span> <span class=n>y1</span> <span class=o>=</span> <span class=n>line_start</span>
+</span></span><span class=line><span class=cl>    <span class=n>x2</span><span class=p>,</span> <span class=n>y2</span> <span class=o>=</span> <span class=n>line_end</span>
+</span></span><span class=line><span class=cl>    <span class=n>x0</span><span class=p>,</span> <span class=n>y0</span> <span class=o>=</span> <span class=n>point</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>numerator</span> <span class=o>=</span> <span class=nb>abs</span><span class=p>((</span><span class=n>y2</span><span class=o>-</span><span class=n>y1</span><span class=p>)</span><span class=o>*</span><span class=n>x0</span> <span class=o>-</span> <span class=p>(</span><span class=n>x2</span><span class=o>-</span><span class=n>x1</span><span class=p>)</span><span class=o>*</span><span class=n>y0</span> <span class=o>+</span> <span class=n>x2</span><span class=o>*</span><span class=n>y1</span> <span class=o>-</span> <span class=n>y2</span><span class=o>*</span><span class=n>x1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>denominator</span> <span class=o>=</span> <span class=n>math</span><span class=o>.</span><span class=n>sqrt</span><span class=p>((</span><span class=n>y2</span><span class=o>-</span><span class=n>y1</span><span class=p>)</span><span class=o>**</span><span class=mi>2</span> <span class=o>+</span> <span class=p>(</span><span class=n>x2</span><span class=o>-</span><span class=n>x1</span><span class=p>)</span><span class=o>**</span><span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>numerator</span> <span class=o>/</span> <span class=n>denominator</span> <span class=k>if</span> <span class=n>denominator</span> <span class=o>!=</span> <span class=mi>0</span> <span class=k>else</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>douglas_peucker</span><span class=p>(</span><span class=n>points</span><span class=p>,</span> <span class=n>epsilon</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=n>points</span><span class=p>)</span> <span class=o>&lt;=</span> <span class=mi>2</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>points</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>max_distance</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    <span class=n>max_index</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=n>points</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>distance</span> <span class=o>=</span> <span class=n>perpendicular_distance</span><span class=p>(</span><span class=n>points</span><span class=p>[</span><span class=n>i</span><span class=p>],</span> <span class=n>points</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>points</span><span class=p>[</span><span class=o>-</span><span class=mi>1</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>distance</span> <span class=o>&gt;</span> <span class=n>max_distance</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>max_index</span> <span class=o>=</span> <span class=n>i</span>
+</span></span><span class=line><span class=cl>            <span class=n>max_distance</span> <span class=o>=</span> <span class=n>distance</span>
+</span></span><span class=line><span class=cl>            
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>max_distance</span> <span class=o>&gt;</span> <span class=n>epsilon</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>left_result</span> <span class=o>=</span> <span class=n>douglas_peucker</span><span class=p>(</span><span class=n>points</span><span class=p>[:</span><span class=n>max_index</span><span class=o>+</span><span class=mi>1</span><span class=p>],</span> <span class=n>epsilon</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>right_result</span> <span class=o>=</span> <span class=n>douglas_peucker</span><span class=p>(</span><span class=n>points</span><span class=p>[</span><span class=n>max_index</span><span class=p>:],</span> <span class=n>epsilon</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>left_result</span><span class=p>[:</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=o>+</span> <span class=n>right_result</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=p>[</span><span class=n>points</span><span class=p>[</span><span class=mi>0</span><span class=p>],</span> <span class=n>points</span><span class=p>[</span><span class=o>-</span><span class=mi>1</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>calculate_compression_ratio</span><span class=p>(</span><span class=n>original_points</span><span class=p>,</span> <span class=n>simplified_points</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>len</span><span class=p>(</span><span class=n>original_points</span><span class=p>)</span> <span class=o>/</span> <span class=nb>len</span><span class=p>(</span><span class=n>simplified_points</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>calculate_compression_error</span><span class=p>(</span><span class=n>original_points</span><span class=p>,</span> <span class=n>simplified_points</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>total_error</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>point</span> <span class=ow>in</span> <span class=n>original_points</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>min_distance</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=s1>&#39;inf&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=c1># 找到原始点到简化折线的最短距离</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>simplified_points</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>            <span class=n>distance</span> <span class=o>=</span> <span class=n>perpendicular_distance</span><span class=p>(</span><span class=n>point</span><span class=p>,</span> <span class=n>simplified_points</span><span class=p>[</span><span class=n>i</span><span class=p>],</span> <span class=n>simplified_points</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>            <span class=n>min_distance</span> <span class=o>=</span> <span class=nb>min</span><span class=p>(</span><span class=n>min_distance</span><span class=p>,</span> <span class=n>distance</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>total_error</span> <span class=o>+=</span> <span class=n>min_distance</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>total_error</span> <span class=o>/</span> <span class=nb>len</span><span class=p>(</span><span class=n>original_points</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 测试曲线</span>
+</span></span><span class=line><span class=cl><span class=n>original_curve</span> <span class=o>=</span> <span class=p>[(</span><span class=mf>0.0</span><span class=p>,</span> <span class=mf>0.0497</span><span class=p>),</span> <span class=p>(</span><span class=mf>0.526</span><span class=p>,</span> <span class=mf>0.4885</span><span class=p>),</span> <span class=p>(</span><span class=mf>1.053</span><span class=p>,</span> <span class=mf>0.9335</span><span class=p>),</span> <span class=p>(</span><span class=mf>1.579</span><span class=p>,</span> <span class=mf>1.1523</span><span class=p>),</span> <span class=p>(</span><span class=mf>2.105</span><span class=p>,</span> <span class=mf>0.8371</span><span class=p>),</span> <span class=p>(</span><span class=mf>2.632</span><span class=p>,</span> <span class=mf>0.4648</span><span class=p>),</span> <span class=p>(</span><span class=mf>3.158</span><span class=p>,</span> <span class=mf>0.6416</span><span class=p>),</span> <span class=p>(</span><span class=mf>3.684</span><span class=p>,</span> <span class=o>-</span><span class=mf>0.4396</span><span class=p>),</span> <span class=p>(</span><span class=mf>4.211</span><span class=p>,</span> <span class=o>-</span><span class=mf>0.9236</span><span class=p>),</span> <span class=p>(</span><span class=mf>4.737</span><span class=p>,</span> <span class=o>-</span><span class=mf>0.8454</span><span class=p>),</span> <span class=p>(</span><span class=mf>5.263</span><span class=p>,</span> <span class=o>-</span><span class=mf>0.8985</span><span class=p>),</span> <span class=p>(</span><span class=mf>5.789</span><span class=p>,</span> <span class=o>-</span><span class=mf>0.5205</span><span class=p>),</span> <span class=p>(</span><span class=mf>6.316</span><span class=p>,</span> <span class=mf>0.0568</span><span class=p>),</span> <span class=p>(</span><span class=mf>6.842</span><span class=p>,</span> <span class=mf>0.7689</span><span class=p>),</span> <span class=p>(</span><span class=mf>7.368</span><span class=p>,</span> <span class=mf>0.7119</span><span class=p>),</span> <span class=p>(</span><span class=mf>7.895</span><span class=p>,</span> <span class=mf>0.9429</span><span class=p>),</span> <span class=p>(</span><span class=mf>8.421</span><span class=p>,</span> <span class=mf>0.7422</span><span class=p>),</span> <span class=p>(</span><span class=mf>8.947</span><span class=p>,</span> <span class=mf>0.4909</span><span class=p>),</span> <span class=p>(</span><span class=mf>9.474</span><span class=p>,</span> <span class=o>-</span><span class=mf>0.1397</span><span class=p>),</span> <span class=p>(</span><span class=mf>10.0</span><span class=p>,</span> <span class=o>-</span><span class=mf>0.6853</span><span class=p>)]</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;原始曲线节点数: </span><span class=si>{</span><span class=nb>len</span><span class=p>(</span><span class=n>original_curve</span><span class=p>)</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>thresholds</span> <span class=o>=</span> <span class=p>[</span><span class=mf>0.1</span><span class=p>,</span> <span class=mf>0.3</span><span class=p>,</span> <span class=mf>0.5</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span><span class=p>,</span> <span class=n>threshold</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>thresholds</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>=== 测试 </span><span class=si>{</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=si>}</span><span class=s2>: 阈值 = </span><span class=si>{</span><span class=n>threshold</span><span class=si>}</span><span class=s2> ===&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>simplified_curve</span> <span class=o>=</span> <span class=n>douglas_peucker</span><span class=p>(</span><span class=n>original_curve</span><span class=p>,</span> <span class=n>threshold</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>compression_ratio</span> <span class=o>=</span> <span class=n>calculate_compression_ratio</span><span class=p>(</span><span class=n>original_curve</span><span class=p>,</span> <span class=n>simplified_curve</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>compression_error</span> <span class=o>=</span> <span class=n>calculate_compression_error</span><span class=p>(</span><span class=n>original_curve</span><span class=p>,</span> <span class=n>simplified_curve</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;抽稀后节点数: </span><span class=si>{</span><span class=nb>len</span><span class=p>(</span><span class=n>simplified_curve</span><span class=p>)</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;压缩率: </span><span class=si>{</span><span class=n>compression_ratio</span><span class=si>:</span><span class=s2>.2f</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;压缩误差: </span><span class=si>{</span><span class=n>compression_error</span><span class=si>:</span><span class=s2>.4f</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;抽稀后的前5个坐标点:&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>j</span><span class=p>,</span> <span class=n>point</span> <span class=ow>in</span> <span class=nb>enumerate</span><span class=p>(</span><span class=n>simplified_curve</span><span class=p>[:</span><span class=mi>5</span><span class=p>]):</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;  (</span><span class=si>{</span><span class=n>point</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=si>:</span><span class=s2>.3f</span><span class=si>}</span><span class=s2>, </span><span class=si>{</span><span class=n>point</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span><span class=si>:</span><span class=s2>.3f</span><span class=si>}</span><span class=s2>)&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>    原始曲线节点数: 20
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    === 测试 1: 阈值 = 0.1 ===
+</span></span><span class=line><span class=cl>    抽稀后节点数: 14
+</span></span><span class=line><span class=cl>    压缩率: 1.43
+</span></span><span class=line><span class=cl>    压缩误差: 0.0087
+</span></span><span class=line><span class=cl>    抽稀后的前5个坐标点:
+</span></span><span class=line><span class=cl>      (0.000, 0.050)
+</span></span><span class=line><span class=cl>      (1.053, 0.933)
+</span></span><span class=line><span class=cl>      (1.579, 1.152)
+</span></span><span class=line><span class=cl>      (2.632, 0.465)
+</span></span><span class=line><span class=cl>      (3.158, 0.642)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    === 测试 2: 阈值 = 0.3 ===
+</span></span><span class=line><span class=cl>    抽稀后节点数: 9
+</span></span><span class=line><span class=cl>    压缩率: 2.22
+</span></span><span class=line><span class=cl>    压缩误差: 0.0678
+</span></span><span class=line><span class=cl>    抽稀后的前5个坐标点:
+</span></span><span class=line><span class=cl>      (0.000, 0.050)
+</span></span><span class=line><span class=cl>      (1.579, 1.152)
+</span></span><span class=line><span class=cl>      (2.632, 0.465)
+</span></span><span class=line><span class=cl>      (3.158, 0.642)
+</span></span><span class=line><span class=cl>      (4.211, -0.924)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    === 测试 3: 阈值 = 0.5 ===
+</span></span><span class=line><span class=cl>    抽稀后节点数: 7
+</span></span><span class=line><span class=cl>    压缩率: 2.86
+</span></span><span class=line><span class=cl>    压缩误差: 0.1101
+</span></span><span class=line><span class=cl>    抽稀后的前5个坐标点:
+</span></span><span class=line><span class=cl>      (0.000, 0.050)
+</span></span><span class=line><span class=cl>      (1.579, 1.152)
+</span></span><span class=line><span class=cl>      (3.158, 0.642)
+</span></span><span class=line><span class=cl>      (4.211, -0.924)
+</span></span><span class=line><span class=cl>      (5.263, -0.898)
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>matplotlib.pyplot</span> <span class=k>as</span> <span class=nn>plt</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>figure</span><span class=p>(</span><span class=n>figsize</span><span class=o>=</span><span class=p>(</span><span class=mi>12</span><span class=p>,</span> <span class=mi>8</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=o>*</span><span class=nb>zip</span><span class=p>(</span><span class=o>*</span><span class=n>original_curve</span><span class=p>),</span> <span class=n>label</span><span class=o>=</span><span class=s1>&#39;Original Curve&#39;</span><span class=p>,</span> <span class=n>color</span><span class=o>=</span><span class=s1>&#39;black&#39;</span><span class=p>,</span> <span class=n>linewidth</span><span class=o>=</span><span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>threshold</span> <span class=ow>in</span> <span class=n>thresholds</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>simplified_curve</span> <span class=o>=</span> <span class=n>douglas_peucker</span><span class=p>(</span><span class=n>original_curve</span><span class=p>,</span> <span class=n>threshold</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>plt</span><span class=o>.</span><span class=n>plot</span><span class=p>(</span><span class=o>*</span><span class=nb>zip</span><span class=p>(</span><span class=o>*</span><span class=n>simplified_curve</span><span class=p>),</span> <span class=n>label</span><span class=o>=</span><span class=sa>f</span><span class=s1>&#39;Simplified (ε=</span><span class=si>{</span><span class=n>threshold</span><span class=si>}</span><span class=s1>)&#39;</span><span class=p>,</span> <span class=n>linewidth</span><span class=o>=</span><span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>legend</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>title</span><span class=p>(</span><span class=s1>&#39;Douglas-Peucker Line Simplification&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>xlabel</span><span class=p>(</span><span class=s1>&#39;X-axis&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>ylabel</span><span class=p>(</span><span class=s1>&#39;Y-axis&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>grid</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>plt</span><span class=o>.</span><span class=n>show</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/gisalgo-hw-1/c740528c55063c31601efb6d6c8ed145c121c967.png width=1012 height=701 srcset="/p/gisalgo-hw-1/c740528c55063c31601efb6d6c8ed145c121c967_hu_b7025b55b19428d3.png 480w, /p/gisalgo-hw-1/c740528c55063c31601efb6d6c8ed145c121c967_hu_a75513729cdceb4d.png 1024w" loading=lazy class=gallery-image data-flex-grow=144 data-flex-basis=346px></p><h2 id=简答题自动计算阈值的模型>简答题：自动计算阈值的模型</h2><ol><li><p>基于曲线特征的自适应阈值模型</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>adaptive_threshold</span><span class=p>(</span><span class=n>points</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 计算曲线的总长度</span>
+</span></span><span class=line><span class=cl>    <span class=n>total_length</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>points</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>dx</span> <span class=o>=</span> <span class=n>points</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>-</span> <span class=n>points</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>dy</span> <span class=o>=</span> <span class=n>points</span><span class=p>[</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>-</span> <span class=n>points</span><span class=p>[</span><span class=n>i</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>        <span class=n>total_length</span> <span class=o>+=</span> <span class=n>math</span><span class=o>.</span><span class=n>sqrt</span><span class=p>(</span><span class=n>dx</span><span class=o>*</span><span class=n>dx</span> <span class=o>+</span> <span class=n>dy</span><span class=o>*</span><span class=n>dy</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1># 基于曲线长度和点密度的自适应阈值</span>
+</span></span><span class=line><span class=cl>    <span class=n>point_density</span> <span class=o>=</span> <span class=nb>len</span><span class=p>(</span><span class=n>points</span><span class=p>)</span> <span class=o>/</span> <span class=n>total_length</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>total_length</span> <span class=o>*</span> <span class=mf>0.02</span> <span class=o>/</span> <span class=n>point_density</span>  <span class=c1># 可调节系数</span>
+</span></span></code></pre></td></tr></table></div></div></li><li><p>基于曲率变化的阈值模型</p><ul><li>计算各点的曲率变化率</li><li>在曲率变化大的区域使用较小阈值，平坦区域使用较大阈值</li></ul></li><li><p>目标压缩率驱动模型</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>find_threshold_by_ratio</span><span class=p>(</span><span class=n>points</span><span class=p>,</span> <span class=n>target_ratio</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>low</span><span class=p>,</span> <span class=n>high</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=n>max_distance</span><span class=p>(</span><span class=n>points</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=n>high</span> <span class=o>-</span> <span class=n>low</span> <span class=o>&gt;</span> <span class=mf>1e-6</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>mid</span> <span class=o>=</span> <span class=p>(</span><span class=n>low</span> <span class=o>+</span> <span class=n>high</span><span class=p>)</span> <span class=o>/</span> <span class=mi>2</span>
+</span></span><span class=line><span class=cl>        <span class=n>simplified</span> <span class=o>=</span> <span class=n>douglas_peucker</span><span class=p>(</span><span class=n>points</span><span class=p>,</span> <span class=n>mid</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>current_ratio</span> <span class=o>=</span> <span class=nb>len</span><span class=p>(</span><span class=n>points</span><span class=p>)</span> <span class=o>/</span> <span class=nb>len</span><span class=p>(</span><span class=n>simplified</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>current_ratio</span> <span class=o>&gt;</span> <span class=n>target_ratio</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>low</span> <span class=o>=</span> <span class=n>mid</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=n>high</span> <span class=o>=</span> <span class=n>mid</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=p>(</span><span class=n>low</span> <span class=o>+</span> <span class=n>high</span><span class=p>)</span> <span class=o>/</span> <span class=mi>2</span>
+</span></span></code></pre></td></tr></table></div></div></li><li><p>统计分析模型</p><ul><li>计算所有点到弦距离的统计特征（均值、方差等）</li><li>根据统计特征动态设定阈值：<code>threshold = mean + k * std</code></li></ul></li><li><p>机器学习模型</p><ul><li>使用历史数据训练回归模型</li><li>输入：曲线特征（长度、点数、曲率方差等）</li><li>输出：最优阈值</li></ul></li></ol></section><footer class=article-footer><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>本文协议：CC BY-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/py-hw-2/><div class=article-details><h2 class=article-title>Python 第七周作业</h2></div></a></article><article><a href=/p/cpu-graphics-exp3/><div class=article-details><h2 class=article-title>Python 中使用 GeoJSON，以及压缩算法</h2></div></a></article><article class=has-image><a href=/p/ppt-tips/><div class=article-image><img src=/p/ppt-tips/cover.6ad3738266526e56a7a5757f91312ece_hu_243220634bdaaa83.png width=250 height=150 loading=lazy alt="Featured image of post PowerPoint 技巧合集" data-key=ppt-tips data-hash="md5-atNzgmZSblanpXV/kTEuzg=="></div><div class=article-details><h2 class=article-title>PowerPoint 技巧合集</h2></div></a></article><article class=has-image><a href=/p/thesis-tips/><div class=article-image><img src=/p/thesis-tips/image.645e6425f1b174e768a2c79a4a80e4ba_hu_7fd247118accf1ee.jpg width=250 height=150 loading=lazy alt="Featured image of post 如何高效进行论文排版" data-key=thesis-tips data-hash="md5-ZF5kJfGxdOdooseaSoDkug=="></div><div class=article-details><h2 class=article-title>如何高效进行论文排版</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//williamweiblog.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2024 -
+2025 William Wei's Blog</section><section class=powerby><a href='https://icp.gov.moe/?keyword=20255210' target=_blank>萌 ICP 备 20255210 号</a> | <a href=https://travel.moe/go.html target=_blank>异次元之旅</a><br>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.31.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
