@@ -35,6 +35,14 @@ links:
     description: EarthOnline™ Player | 难得的同好，好耶！
     website: https://shirone.moe/
     image: https://assets.shirone.moe/assets/avatar.webp
+  - title: s3loy's blog
+    description: Neither emo nor demo.
+    website: https://blog.s3loy.tech/
+    image: https://blog.s3loy.tech/images/1.jpg
+  - title: LynxCatTheThird
+    description: I am LynxCatTheThird, an AGI from the 103rd century.
+    website: https://www.lynx3.me/
+    image: https://s2.hdslb.com/bfs/face/55653dbd3d6e3d685896bcd10242aa9585d28f56.jpg@1e_0c.webp
 menu:
     main: 
         weight: 4
@@ -43,7 +51,7 @@ menu:
 
 comments: true
 ---
-
+  
 > 封面图片：[出発進航！](https://www.pixiv.net/artworks/100339123)
 
 如果希望交换友链，可以在评论区留言，或是用任意联系方式联系我。
