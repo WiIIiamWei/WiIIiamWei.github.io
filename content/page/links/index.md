@@ -5,8 +5,8 @@ image: image.jpg
 links:
   - title: 594飞飘的个人博客 | feipiao594
     description: 学习笔记与生活记录 | Pray to take back the sunflower that was given out from the bottom of my heart.
-    website: https://feipiao594.github.io/
-    image: https://feipiao594.github.io/images/feipiao.gif
+    website: https://blog.feipiao.xyz/
+    image: https://blog.feipiao.xyz/images/feipiao.gif
   - title: 冷雨 | Cold Rain's Blog
     description: 一个喜欢炼丹的小镇青年 | 希望能成为一个厉害的人
     website: https://ziheng5.github.io/
@@ -43,6 +43,10 @@ links:
     description: I am LynxCatTheThird, an AGI from the 103rd century.
     website: https://www.lynx3.me/
     image: https://s2.hdslb.com/bfs/face/55653dbd3d6e3d685896bcd10242aa9585d28f56.jpg@1e_0c.webp
+  - title: Glucy2 的小天地
+    description: 也是咱同专业的学长捏 | 记录一些折腾的东西和生活琐事
+    website: https://glucy2.com/
+    image: glucy2.jpg
 menu:
     main: 
         weight: 4

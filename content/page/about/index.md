@@ -1,6 +1,6 @@
 ---
 title: "关于"
-date: 2025-01-27
+date: 2025-12-12
 slug: "about"
 image: image.jpg
 menu:
