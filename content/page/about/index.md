@@ -46,14 +46,16 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 
 咱正好注册了一些免费域名。为确保可用性，本博客使用以下构建方式构建：
 
-| 构建服务 | 网址 |
-| :------ | :--- |
-| GitHub Pages（主站所在处，推荐访问） | [williamwei.top](https://williamwei.top)、[wiiiiamwei.github.io](https://wiiiiamwei.github.io)
-| Cloudflare Pages（中国移动网络访问存在问题） | [williamwei.qzz.io](https://williamwei.qzz.io)、[williamwei.pages.dev](https://williamwei.pages.dev)
-| Vercel | [williamwei.us.kg](williamwei.us.kg)、[williamwei.vercel.app](https://williamwei.vercel.app)
-| Netlify | [williamwei.is-a.dev](https://williamwei.is-a.dev)、[willwell.netlify.app](https://willwell.netlify.app)
-| Render | [williamwei.dpdns.org](https://williamwei.dpdns.org)、[williamwei.onrender.com](https://williamwei.onrender.com)
-| Tencent EdgeOne（中国大陆读者推荐访问） | [blog.williamwei.top](https://blog.williamwei.top)
+| 构建服务             | 网址                                                                                                   |
+| :------------------- | :----------------------------------------------------------------------------------------------------- |
+| GitHub Pages（主站） | [williamwei.top](https://williamwei.top)                                                               |
+| Cloudflare Pages     | [williamwei.qzz.io](https://williamwei.qzz.io)、[williamwei.ccwu.cc](https://williamwei.ccwu.cc)       |
+| Vercel               | [williamwei.us.kg](williamwei.us.kg)                                                                   |
+| Netlify              | [williamwei.is-a.dev](https://williamwei.is-a.dev)                                                     |
+| Render               | [williamwei.de5.net](https://williamwei.de5.net)、[williamwei.dpdns.org](https://williamwei.dpdns.org) |
+| Tencent EdgeOne      | [williamwei.us.ci](https://williamwei.us.ci)、[williamwei.cc.cd](https://williamwei.cc.cd)             |
+
+**推荐来自中国大陆的读者尝试使用 Tencent Edgeone 站点访问。**
 
 当一个站点不可用时，你可尝试使用其他方式构建的站点。对于使用中国大陆地区网络访问的读者，推荐使用代理或者访问由 Tencent EdgeOne 部署的页面。 
 
