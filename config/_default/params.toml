@@ -2,7 +2,7 @@
 mainSections = ["post"]
 # Output page's full content in RSS.
 rssFullContent = false
-favicon = "/favicon.png"
+favicon = "/favicon.ico"
 
 [footer]
 since = 2024
@@ -28,7 +28,7 @@ readingTime = true
 
 [article.license]
 enabled = true
-default = "本文协议：CC BY-SA 4.0"
+default = "本文协议：<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans' target='_blank'>CC BY-SA 4.0</a>"
 
 ## Widgets
 [[widgets.homepage]]

@@ -10,7 +10,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/bg.jpg');
+  background-image: url('/bg.webp');
   background-size: cover;
   background-position: 25% 10%;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/bg_dark.jpg');
+    background-image: url('/bg_dark.webp');
     background-size: cover;
     background-position: 18% 10%;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@ body::before {
 
 /* 深色模式使用不同的背景图片（手动切换） */
 html[data-scheme="dark"] body::before {
-  background-image: url('/bg_dark.jpg');
+  background-image: url('/bg_dark.webp');
   background-position: 18% 10%;
   opacity: 0.15;
 }
@@ -112,6 +112,12 @@ code,
 .code-toolbar,
 .highlight {
   font-family: "Cascadia Code", monospace !important;
+}
+
+/* Revert KaTeX to default font, not HarmonyOS Sans SC */
+.katex,
+.katex * {
+  font-family: "KaTeX_Main", "Times New Roman", serif !important;
 }
 
 .article-page .article-content .highlight,
