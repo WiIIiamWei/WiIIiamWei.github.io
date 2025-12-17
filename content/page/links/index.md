@@ -39,6 +39,10 @@ links:
     description: Neither emo nor demo.
     website: https://blog.s3loy.tech/
     image: https://blog.s3loy.tech/images/1.jpg
+  - title: SeanDictionary
+    description: 折腾日记
+    website: https://seandictionary.top/
+    image: https://seandictionary.top/wp-content/uploads/2024/09/哭哭_透明.png
   - title: LynxCatTheThird
     description: I am LynxCatTheThird, an AGI from the 103rd century.
     website: https://www.lynx3.me/
