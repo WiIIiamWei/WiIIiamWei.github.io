@@ -3,7 +3,7 @@ title: zoxide 使用感受
 description: 一位忠实的 zoxide 用户在使用 zoxide 一年后的感受
 slug: feelings-about-zoxide
 date: 2025-02-02
-image: image.jpg
+image: image.webp
 categories:
     - 技术
 tags:

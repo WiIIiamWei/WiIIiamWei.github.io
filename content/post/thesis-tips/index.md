@@ -3,7 +3,7 @@ title: 如何高效进行论文排版
 description: 在被各种论文折磨良久后整理出的一篇文章
 slug: thesis-tips
 date: 2025-02-11
-image: image.jpg
+image: image.webp
 categories:
     - 学习
 tags:

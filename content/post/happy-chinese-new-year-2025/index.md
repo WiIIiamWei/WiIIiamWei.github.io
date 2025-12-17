@@ -3,7 +3,7 @@ title: 2025 新年彩蛋
 description: 2025 年农历新年彩蛋解谜题目
 slug: happy-chinese-new-year-2025
 date: 2025-01-16
-image: image.jpg
+image: image.webp
 math: true
 categories:
     - 杂项

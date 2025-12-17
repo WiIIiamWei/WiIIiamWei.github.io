@@ -2,7 +2,7 @@
 title: Kindle 越狱
 description: 捡起你的泡面盖板，让它重获新生吧。
 slug: kindle-jailbreak
-image: image.png
+image: image.webp
 date: 2025-04-11
 categories:
     - 技术

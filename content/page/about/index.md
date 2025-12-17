@@ -2,7 +2,7 @@
 title: "关于"
 date: 2025-12-12
 slug: "about"
-image: image.jpg
+image: image.webp
 menu:
     main:
         weight: 2

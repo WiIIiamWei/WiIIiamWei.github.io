@@ -3,7 +3,7 @@ title: 记校园网维权全过程
 description: 一次失败的维权尝试，祝你能争取到自己的合法权益
 slug: school-net
 date: 2025-07-09
-image: cover.jpg
+image: cover.webp
 categories:
     - 生活
 ---

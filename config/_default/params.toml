@@ -19,7 +19,7 @@ subtitle = "Everything will be well. Hopefully."
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.png"
+src = "img/avatar.webp"
 
 [article]
 headingAnchor = false

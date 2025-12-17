@@ -1,7 +1,7 @@
 ---
 title: "友链"
 slug: "links"
-image: image.jpg
+image: image.webp
 links:
   - title: 594飞飘的个人博客 | feipiao594
     description: 学习笔记与生活记录 | Pray to take back the sunflower that was given out from the bottom of my heart.
@@ -9,8 +9,8 @@ links:
     image: https://blog.feipiao.xyz/images/feipiao.gif
   - title: 冷雨 | Cold Rain's Blog
     description: 一个喜欢炼丹的小镇青年 | 希望能成为一个厉害的人
-    website: https://ziheng5.github.io/
-    image: https://ziheng5.github.io/images/head.jpg
+    website: https://coldrain.top/
+    image: https://coldrain.top/images/head.jpg
   - title: Ain\'t no moon? | fermata
     description: 技术、生活、文学 | 😘
     website: https://anemone.moe/
@@ -64,7 +64,7 @@ comments: true
 
 * 名称：William Wei's Blog
 * 链接：`https://williamwei.top`
-* 头像：`https://williamwei.top/links/avatar.png`
+* 头像：`https://williamwei.top/links/avatar.webp`
 * 简介：Everything will be well. Hopefully.
 
 咱朋友少，所以欢迎大家和我做朋友~
