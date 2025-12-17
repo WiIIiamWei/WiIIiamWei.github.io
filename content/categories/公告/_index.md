@@ -1,7 +1,8 @@
 ---
 title: 公告
+slug: notice
 description: 网站的公告
-image: image.jpg
+image: image.webp
 
 # Badge style
 style:

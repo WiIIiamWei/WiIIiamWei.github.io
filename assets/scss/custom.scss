@@ -72,7 +72,7 @@ kbd {
 // }
 
 /* 将友链的链接元素设置为 Flex 容器 */
-.article-list--compact.links article a {
+.article-list--compact [href] {
   display: flex;
   align-items: center;
   /* 垂直居中对齐文本和头像 */
@@ -83,7 +83,7 @@ kbd {
 /* * 为链接中的第一个 div（通常是包含标题和描述的文本容器）设置样式
  * 让它可以缩放并允许内部文本换行
 */
-.article-list--compact.links article a>div:not(.article-image) {
+.article-list--compact [href]>div:not(.article-image) {
   flex: 1;
   /* 允许该元素占据所有可用空间 */
   min-width: 0;
@@ -93,7 +93,7 @@ kbd {
 }
 
 /* 设置头像样式，防止其被压缩 */
-.article-list--compact.links article a .article-image {
+.article-list--compact [href] .article-image {
   flex-shrink: 0;
   /* 防止头像被压缩变形 */
   border-radius: var(--card-border-radius);
@@ -101,10 +101,21 @@ kbd {
 }
 
 /* 保持头像图片的圆角 */
-.article-list--compact.links article a .article-image img {
+.article-list--compact [href] .article-image img {
   border-radius: var(--card-border-radius);
   display: block;
   /* 解决一些潜在的布局问题 */
+}
+
+/* Section 卡片图片圆角 */
+.section-card>.section-image {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+}
+
+.section-card>.section-image img {
+  border-radius: var(--card-border-radius);
+  display: block;
 }
 
 pre,

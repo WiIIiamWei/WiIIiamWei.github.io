@@ -2,7 +2,7 @@
 title: 2024 新年彩蛋
 description: 2024 年农历新年彩蛋解谜题目
 slug: happy-chinese-new-year-2024
-image: image.
+image: image.webp
 date: 2024-01-01
 categories:
     - 杂项

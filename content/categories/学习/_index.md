@@ -1,7 +1,8 @@
 ---
 title: 学习
+slug: learn
 description: 和大学课程有关的内容，亦或是学习经验分享
-image: image.jpg
+image: image.webp
 
 # Badge style
 style:

@@ -1,7 +1,8 @@
 ---
 title: 置顶
+slug: top
 description: 被置顶的文章
-image: image.jpg
+image: image.webp
 
 # Badge style
 style:
