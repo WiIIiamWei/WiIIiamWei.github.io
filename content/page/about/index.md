@@ -53,9 +53,10 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 | Vercel               | [williamwei.us.kg](williamwei.us.kg)                                                                   |
 | Netlify              | [williamwei.is-a.dev](https://williamwei.is-a.dev)                                                     |
 | Render               | [williamwei.de5.net](https://williamwei.de5.net)、[williamwei.dpdns.org](https://williamwei.dpdns.org) |
-| Tencent EdgeOne      | [williamwei.us.ci](https://williamwei.us.ci)、[williamwei.cc.cd](https://williamwei.cc.cd)             |
+| Tencent EdgeOne      | [williamwei.us.ci](https://williamwei.us.ci)                                                           |
+| Leapcell             | [williamwei.cc.cd](https://williamwei.cc.cd)                                                           |
 
-**推荐来自中国大陆的读者尝试使用 Tencent Edgeone 站点访问。**
+**推荐来自中国大陆的读者尝试使用 Tencent Edgeone / Leapcell 站点访问。**
 
 当一个站点不可用时，你可尝试使用其他方式构建的站点。对于使用中国大陆地区网络访问的读者，推荐使用代理或者访问由 Tencent EdgeOne 部署的页面。 
 
