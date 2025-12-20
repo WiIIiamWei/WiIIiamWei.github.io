@@ -6,6 +6,9 @@ image: image.webp
 date: 2025-04-11
 categories:
     - 技术
+tags:
+    - 越狱
+    - Kindle
 ---
 
 > 本文章参考以下来源：

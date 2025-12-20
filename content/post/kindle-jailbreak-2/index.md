@@ -5,6 +5,9 @@ slug: kindle-jailbreak-2
 date: 2025-11-12
 categories:
     - 技术
+tags:
+    - 越狱
+    - Kindle
 ---
 
 > 本文档是：[Kindle 越狱](/p/kindle-jailbreak) 的补充。你很可能需要其中的一些知识。
