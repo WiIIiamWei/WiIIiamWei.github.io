@@ -2,7 +2,7 @@
 title: 关于联系方式 - QQ
 description: 对我的 QQ 号的声明
 slug: qq
-date: 2025-12-20
+date: 2025-12-19
 categories:
     - 公告
 ---
