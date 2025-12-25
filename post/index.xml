@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on William Wei's Blog</title><link>https://williamwei.top/post/</link><description>Recent content in Posts on William Wei's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://williamwei.top/post/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Leapcell 部署 Hugo 博客</title><link>https://williamwei.top/p/hugo-on-leapcell/</link><pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/hugo-on-leapcell/</guid><description>&lt;img src="https://williamwei.top/p/hugo-on-leapcell/image.webp" alt="Featured image of post 使用 Leapcell 部署 Hugo 博客" /&gt;&lt;p&gt;大概 3 个月前，一个新的 PaaS 平台 Leapcell 上线了。他们和主流的 PaaS 不一样，主要聚焦在了 FastAPI、Django 等知名 Python 服务上，对 Golang、Rust 和 TypeScript 也有很棒的支持。而我的个人项目正好是 FastAPI 写的，因此就探索了这个平台，把服务尝试部署在了这上面，确实很好用。后来发现，这个平台比想象中的强大，甚至可以部署这个博客（Hugo 框架，刚好是基于 Go 的），因此写一篇文章记录一下。&lt;/p&gt;</description></item><item><title>关于联系方式 - QQ</title><link>https://williamwei.top/p/qq/</link><pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/qq/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;本页面会不时更新。最后更新时间见标题下方。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果您是通过直接访问该链接看到此文章，那么说明您应该知道我的 QQ 号码了。这篇文章专门用来对我的 QQ 情况做一些说明。&lt;/p&gt;</description></item><item><title>关于音游</title><link>https://williamwei.top/p/mug/</link><pubDate>Fri, 19 Dec 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/mug/</guid><description>&lt;img src="https://williamwei.top/p/mug/image.webp" alt="Featured image of post 关于音游" /&gt;&lt;blockquote&gt;
+&lt;p&gt;封面图片：(From Rotaeno) Inverted World - ARForest&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="目前正在游玩的音游"&gt;目前正在游玩的音游
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;按照游玩频率排序&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deemo II：国际服大魔法师成就，零氪藏品全收集，主线 9 级以下歌曲全 AC，最常玩（因为长期有活动）&lt;/li&gt;
+&lt;li&gt;舞萌 DX：从 AstroDX 转生到游戏，因此习惯全内屏，好友码 &lt;code&gt;212317908287344&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;AstroDX：舞萌模拟器（平板），使用自己写的小脚本追踪成绩，达成了上机前 w4 的奇怪成就（？）。会在练歌以及希望游玩最新最热的时候使用&lt;/li&gt;
+&lt;li&gt;中二节奏：近期新开坑。Deemo 的基础帮了我很多，正在处于上升期，好友码 &lt;code&gt;101881553883280&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rotaeno：好友码 &lt;code&gt;HPMGCP&lt;/code&gt;，基本上只在有活动的时候高强度玩&lt;/li&gt;
+&lt;li&gt;Rizline，Milthm，Muse Dash，Orzmic，Phigros 等等&lt;/li&gt;
+&lt;li&gt;Arcaea（基本退坑，打不动啦）：好友码 &lt;code&gt;044 040 642&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="个人资料截图"&gt;个人资料截图
+&lt;/h2&gt;&lt;h3 id="astrodx-best-50--rating-graph"&gt;AstroDX Best 50 / Rating Graph
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;请注意：此成绩非官方成绩，与 SEGA 没有任何关系！&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>适用于 5.18.1 以上的 Kindle 固件版本越狱法 AdBreak</title><link>https://williamwei.top/p/kindle-jailbreak-2/</link><pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/kindle-jailbreak-2/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;本文档是：&lt;a class="link" href="https://williamwei.top/p/kindle-jailbreak" &gt;Kindle 越狱&lt;/a&gt; 的补充。你很可能需要其中的一些知识。&lt;/p&gt;
+&lt;p&gt;本文依旧参考 Kindle Modding Wiki 编写。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;AdBreak 是在 WinterBreak 失效后，利用 &lt;a class="link" href="https://scarybeastsecurity.blogspot.com/2017/05/ode-to-use-after-free-one-vulnerable.html" target="_blank" rel="noopener"
+&gt;CVE-2012-3748&lt;/a&gt; 的最新越狱法，于今年 9 月 25 日发布。&lt;/p&gt;
+&lt;p&gt;此方法适用于 Kindle 固件 5.18.1 及以上版本。注意：该漏洞可能在版本 5.18.5.0.1 后修复。如果你的设备拥有此版本的固件，请谨慎操作，因为不一定能成功。&lt;strong&gt;已经确认固件版本 5.18.6 修复了 AdBreak，因此请不要更新该版本固件。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>记校园网维权全过程</title><link>https://williamwei.top/p/school-net/</link><pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/school-net/</guid><description>&lt;img src="https://williamwei.top/p/school-net/cover.webp" alt="Featured image of post 记校园网维权全过程" /&gt;&lt;blockquote&gt;
+&lt;p&gt;封面图片：《星之终途》CG&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;本文采用 CC0 协议。不保留任何权利。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为了方便本文更好地传播，本文&lt;strong&gt;不采用博客一贯采用的 CC BY-SA 4.0 协议&lt;/strong&gt;，本页面底部的本文协议声明无效，请以这里为准。&lt;/p&gt;</description></item><item><title>Kindle 越狱</title><link>https://williamwei.top/p/kindle-jailbreak/</link><pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/kindle-jailbreak/</guid><description>&lt;img src="https://williamwei.top/p/kindle-jailbreak/image.webp" alt="Featured image of post Kindle 越狱" /&gt;&lt;blockquote&gt;
+&lt;p&gt;本文章参考以下来源：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.youtube.com/watch?v=Qtk7ERwlIAk" target="_blank" rel="noopener"
+&gt;It&amp;rsquo;s Time to Jailbreak Your Kindle. - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://kindlemodding.org/" target="_blank" rel="noopener"
+&gt;Kindle Modding Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://koreader.rocks/user_guide/" target="_blank" rel="noopener"
+&gt;KOReader User Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://bookfere.com/post/1145.html" target="_blank" rel="noopener"
+&gt;2025 Kindle 越狱教程：适用于版本低于 5.18.1 的固件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果有条件的话，请务必去看看原文！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;距离 Kindle 中国关闭（2023 年 6 月 30 日）已经过去快两年了。这段时间以来，我的 Kindle 一直在我的抽屉里躺着，扮演着泡面盖板的角色。我曾尝试一些第三方的 Kindle 刷机包，奈何门槛和风险都很高。直到今年初，某位大神看不惯亚马逊的吃相，在 2025 年新年发布了 WinterBreak 破解，让 Kindle 越狱变得触手可得。本文将详细介绍这种越狱方法，祝你也能越狱成功。&lt;/p&gt;</description></item><item><title>PowerPoint 技巧合集</title><link>https://williamwei.top/p/ppt-tips/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/ppt-tips/</guid><description>&lt;img src="https://williamwei.top/p/ppt-tips/cover.webp" alt="Featured image of post PowerPoint 技巧合集" /&gt;&lt;blockquote&gt;
+&lt;p&gt;看这个博客内容就知道这是个学文科的。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;——某位科协朋友的吐槽&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我平常会打些比赛，经常遇到需要团队共同完成一份展示用 PowerPoint 演示文稿（下简称 PPT）的场景，这其中的排版工作通常又是由我来把关的。奈何我所呆过的团队还没有见到能在排版技巧上超过我的（虽然我的团队定位是个技术人员），因此决定整理一篇我自己常用的排版和美化技巧，希望可以帮助大家更有效率的完成各种排版。&lt;/p&gt;</description></item><item><title>如何高效进行论文排版</title><link>https://williamwei.top/p/thesis-tips/</link><pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/thesis-tips/</guid><description>&lt;img src="https://williamwei.top/p/thesis-tips/image.webp" alt="Featured image of post 如何高效进行论文排版" /&gt;&lt;p&gt;我平常会打些比赛，经常遇到需要团队共同完成一篇技术文稿/论文的场景，这其中的收尾排版工作通常是由我来把关的。奈何我所呆过的团队还没有见到能在排版技巧上超过我的（虽然我的团队定位是个技术人员），因此决定整理一篇我自己常用的排版技巧，希望可以帮助大家更有效率的完成各种排版。&lt;/p&gt;</description></item><item><title>zoxide 使用感受</title><link>https://williamwei.top/p/feelings-about-zoxide/</link><pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/feelings-about-zoxide/</guid><description>&lt;img src="https://williamwei.top/p/feelings-about-zoxide/image.webp" alt="Featured image of post zoxide 使用感受" /&gt;&lt;p&gt;&lt;a class="link" href="https://github.com/ajeetdsouza/zoxide" target="_blank" rel="noopener"
+&gt;zoxide&lt;/a&gt; 是一个更聪明的 &lt;code&gt;cd&lt;/code&gt; 命令，旨在让你更快速的在目录之间来回切换。&lt;/p&gt;
+&lt;p&gt;我是在 YouTube 闲逛时看到这个项目的，感觉很不错就尝试了一下。事实证明，这个工具确实很方便。下文将详细阐述为什么我认为这是个好工具。&lt;/p&gt;</description></item><item><title>2025 新年彩蛋</title><link>https://williamwei.top/p/happy-chinese-new-year-2025/</link><pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/happy-chinese-new-year-2025/</guid><description>&lt;img src="https://williamwei.top/p/happy-chinese-new-year-2025/image.webp" alt="Featured image of post 2025 新年彩蛋" /&gt;&lt;blockquote&gt;
+&lt;p&gt;封面图片：&lt;a class="link" href="https://x.com/etechroniclejp/status/1884058817748447474" target="_blank" rel="noopener"
+&gt;エタクロニクル:Re【公式】&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;题目出处：&lt;a class="link" href="https://matrix67.itch.io/can-you-solve-these-equations" target="_blank" rel="noopener"
+&gt;Can You Solve These Equations? by matrix67&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今年也想写一个彩蛋题，正好看到一个很合适的，就直接分享给大家吧。&lt;/p&gt;
+&lt;p&gt;本题目由原题翻译而来，如果有条件的话，请务必去游玩原题目！&lt;/p&gt;</description></item><item><title>furryCTF 2024 寒假赛总结</title><link>https://williamwei.top/p/furryctf-2024-winter-writeup/</link><pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/furryctf-2024-winter-writeup/</guid><description>&lt;img src="https://williamwei.top/p/furryctf-2024-winter-writeup/image.webp" alt="Featured image of post furryCTF 2024 寒假赛总结" /&gt;&lt;blockquote&gt;
+&lt;p&gt;封面图片：&lt;a class="link" href="https://www.pixiv.net/artworks/114436683" target="_blank" rel="noopener"
+&gt;にゃー&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;此文章为完全没打过 CTF 的新人初次尝试 CTF 的记录和感想，这不是一篇好的题解，各位 CTF 大神们不要喷我 awa&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;另请参阅：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://hydro.ac/contest/6728fe9aa325b9e5ba5f9489" target="_blank" rel="noopener"
+&gt;furryCTF 2024 寒假赛题目&lt;/a&gt;&lt;/p&gt;</description></item><item><title>网络爬虫入门</title><link>https://williamwei.top/p/web-crawler-intro/</link><pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/web-crawler-intro/</guid><description>&lt;img src="https://williamwei.top/p/web-crawler-intro/cover.webp" alt="Featured image of post 网络爬虫入门" /&gt;&lt;h2 id="什么是爬虫"&gt;什么是爬虫
+&lt;/h2&gt;&lt;p&gt;网络爬虫就是一种可以从网页上抓取数据信息并保存的自动化程序，它的原理就是模拟浏览器发送网络请求，接受请求响应，然后按照一定的规则自动抓取互联网数据。&lt;/p&gt;</description></item><item><title>永恒的回文单词</title><link>https://williamwei.top/p/everlasting-palindrome/</link><pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/everlasting-palindrome/</guid><description>&lt;img src="https://williamwei.top/p/everlasting-palindrome/yMnB5YFfEImchXz7lJoL6.png" alt="Featured image of post 永恒的回文单词" /&gt;&lt;p&gt;这是在大一脑子不清爽的时候出的一道题。当时看到了 carykh 的视频（见下），遂有感而发：这玩意就是个算法题啊！于是就写出了题面。&lt;/p&gt;
+&lt;p&gt;据算法组的人说，这题目意外质量蛮高的，因此放出来给大家看看。我本身并不写算法，因此题解以及测试数据都没有办法提供。试着用 AI 解决此题，AI（GPT 4o）上了动态规划，但是仍然过不了样例，估计是个比较难的题吧。&lt;/p&gt;</description></item><item><title>2024 新年彩蛋</title><link>https://williamwei.top/p/happy-chinese-new-year-2024/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/happy-chinese-new-year-2024/</guid><description>&lt;img src="https://williamwei.top/p/happy-chinese-new-year-2024/image.webp" alt="Featured image of post 2024 新年彩蛋" /&gt;&lt;blockquote&gt;
+&lt;p&gt;封面图片：&lt;a class="link" href="https://www.pixiv.net/artworks/114748159" target="_blank" rel="noopener"
+&gt;✨🎉ॱ॰&lt;em&gt;❅HAPPY NEW YEAR❅&lt;/em&gt;॰ॱ🎉✨&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;农历新年在家闲着无事，想来点新年彩蛋，又想起曾经看过的某个逆天&lt;a class="link" href="https://wy-lang.org/" target="_blank" rel="noopener"
+&gt;文言编程语言&lt;/a&gt;，就学着用文言写了这一出：&lt;/p&gt;</description></item><item><title>一位一中人的内心呐喊</title><link>https://williamwei.top/p/anti-ntyz/</link><pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/anti-ntyz/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;本文经过原作者的同意，为引用原标题的授权转载。按照原作者要求，不公布作者姓名。&lt;/p&gt;
+&lt;p&gt;这篇文章在老的博客上就转载过。鉴于我曾也是这种学校教育模式的受害者，且文中所述“一中”似乎还存在这种情况，甚至崇尚这种模式的校领导得到了表彰和升职，我决定将这篇文章再次转载到新博客上。&lt;/p&gt;</description></item><item><title>封校的那些事</title><link>https://williamwei.top/p/schooling-under-covid/</link><pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/schooling-under-covid/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;本文主要记述在 2022-09-05~2022-09-09 期间因疫情原因在南通市开放大学封校的生活。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;高三学业紧张，再加上开学前突然出现的阳性病例，打了个措手不及，把教育局属实是搞蒙了，于是在刚做完四次全员核酸还是阴性的情况下，教育局慌慌张张地就决定让我们封校上课。而我所在的学校不具备高三学生全体住宿的条件，故借用南通开放大学的场地，在那里开展教学活动。本文将分各个方面记述封校四天的生活。&lt;/p&gt;</description></item></channel></rss>
