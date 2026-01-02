@@ -3,7 +3,7 @@ title: 关于音游
 description: Let's 音游趴体！能和我一起玩吗？
 slug: mug
 image: image.webp
-date: 2025-12-19
+date: 2025-01-02
 categories:
     - 音游
 ---
@@ -19,7 +19,8 @@ categories:
 * AstroDX：舞萌模拟器（平板），使用自己写的小脚本追踪成绩，达成了上机前 w4 的奇怪成就（？）。会在练歌以及希望游玩最新最热的时候使用
 * 中二节奏：近期新开坑。Deemo 的基础帮了我很多，正在处于上升期，好友码 `101881553883280`
 * Rotaeno：好友码 `HPMGCP`，基本上只在有活动的时候高强度玩
-* Rizline，Milthm，Muse Dash，Orzmic，Phigros 等等
+* Milthm：ID: `GE49J4C9C`，最近才上线的账号系统和新玩法，很小众的音游
+* Rizline，Muse Dash，Orzmic，Phigros 等等
 * Arcaea（基本退坑，打不动啦）：好友码 `044 040 642`
 
 ## 个人资料截图
@@ -27,6 +28,8 @@ categories:
 ### AstroDX Best 50 / Rating Graph
 
 **请注意：此成绩非官方成绩，与 SEGA 没有任何关系！**
+
+*由于 DXRating.net API Best 50 网页 API 出现问题，因此 Best 50 图片不会立即生成。下方的 Rating Graph 仍然会更新。*
 
 ![](scoreb50.jpg)
 
@@ -50,6 +53,8 @@ categories:
 
 ### Rotaeno
 
+图片由铃猫酱 SuzuNeko 生成。感谢开发！
+
 ![](rotaeno.jpg)
 
 ![](rotaenob40.jpg)
@@ -68,6 +73,6 @@ categories:
 
 ### Arcaea
 
-在这个账号上我是零氪哦……200 个记忆源点全是领取的 616 新年撒币（
+在这个账号上我是零氪哦……400 个记忆源点全是领取的 616 新年撒币（
 
 ![](arcaea.jpg)
