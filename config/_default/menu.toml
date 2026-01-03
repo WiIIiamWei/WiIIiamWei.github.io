@@ -22,3 +22,11 @@ url = "https://gravatar.com/realwilliamwei"
 
 [social.params]
 icon = "brand-gravatar"
+
+[[social]]
+identifier = "lit.link"
+name = "lit.link"
+url = "https://lit.link/zh-tw/williamwei"
+
+[social.params]
+icon = "lit"

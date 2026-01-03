@@ -138,3 +138,15 @@ html body.article-page div.container.main-container.flex.on-phone--column.extend
 html body.article-page div.container.main-container.flex.on-phone--column.extended main.main.full-width article.main-article section.article-content div.highlight * {
   font-family: "Cascadia Code", monospace !important;
 }
+
+/* Override only the second social icon (Lit): remove forced strokes */
+html body div.container.main-container.flex.on-phone--column.extended aside.sidebar.left-sidebar.sticky ol.menu-social li:nth-child(2) svg path {
+  stroke: none !important;
+  stroke-width: 0 !important;
+  fill: #707070 !important;
+}
+
+/* Dark mode: lighten the Lit icon fill */
+html[data-scheme="dark"] body div.container.main-container.flex.on-phone--column.extended aside.sidebar.left-sidebar.sticky ol.menu-social li:nth-child(2) svg path {
+  fill: rgba(255, 255, 255, 0.7) !important;
+}

@@ -1,6 +1,6 @@
 ---
 title: "关于"
-date: 2025-12-12
+date: 2025-01-03
 slug: "about"
 image: image.webp
 menu:
@@ -32,7 +32,7 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 
 同时长期欢迎有想法、想一起学些什么或者想一起打竞赛的联系我。我参加的比赛基本都是团队合作出项目的那种（例如挑战杯），如果你智力超群、会写算法、想打 ICPC 或者蓝桥杯那还是算了，我菜（
 
-有话想和我讲？考虑到隐私问题，所有的联系方式现已转到 Gravatar。请点击头像下的 [Gravatar](https://gravatar.com/realwilliamwei) 图标/文末的卡片来找我，或是在评论区留言！
+有话想和我讲？考虑到隐私问题，所有的联系方式现已转到 Gravatar。请点击头像下的 [Gravatar](https://gravatar.com/realwilliamwei) 图标或是 [lit.link](https://lit.link/zh-tw/williamwei) 图标/文末的卡片来找我，或是在评论区留言！
 
 ## 关于这里
 
