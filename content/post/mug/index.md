@@ -59,6 +59,8 @@ categories:
 
 ![](rotaenob40.jpg)
 
+![](rotgraph.jpg)
+
 ### Muse Dash
 
 ![](musedash.jpg)
