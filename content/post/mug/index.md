@@ -3,7 +3,7 @@ title: 关于音游
 description: Let's 音游趴体！能和我一起玩吗？
 slug: mug
 image: image.webp
-date: 2026-01-02
+date: 2026-03-08
 categories:
     - 音游
 ---
@@ -44,6 +44,8 @@ categories:
 ![](realrating.jpg)
 
 ### 中二节奏
+
+图片由提比不想睡觉 Tippy Bot 生成。感谢开发！
 
 ![](chuni.jpg)
 
