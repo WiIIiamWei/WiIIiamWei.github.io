@@ -51,6 +51,10 @@ links:
     description: 也是咱同专业的学长捏 | 记录一些折腾的东西和生活琐事
     website: https://glucy2.com/
     image: glucy2.jpg
+  - title: Cuskiy
+    description: Be a good kid.
+    website: https://ity.moe/
+    image: https://ity.moe/avatar.svg
 menu:
     main: 
         weight: 4
