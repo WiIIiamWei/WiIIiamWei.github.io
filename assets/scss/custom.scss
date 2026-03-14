@@ -150,3 +150,22 @@ html body div.container.main-container.flex.on-phone--column.extended aside.side
 html[data-scheme="dark"] body div.container.main-container.flex.on-phone--column.extended aside.sidebar.left-sidebar.sticky ol.menu-social li:nth-child(2) svg path {
   fill: rgba(255, 255, 255, 0.7) !important;
 }
+
+/* 友链页面双列布局 */
+.article-list--compact.links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  article:nth-child(odd) {
+    border-right: 1px solid var(--card-separator-color, rgba(0, 0, 0, 0.1));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    article:nth-child(odd) {
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+}

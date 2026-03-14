@@ -54,7 +54,11 @@ links:
   - title: Cuskiy
     description: Be a good kid.
     website: https://ity.moe/
-    image: https://ity.moe/avatar.svg
+    image: https://ity.moe/avatar.svg  
+  - title: chihuo2104の部落格
+    description: 一个不喜欢随波逐流的高中生的blog
+    website: https://blog.chihuo2104.dev/
+    image: https://1.gravatar.com/avatar/f1f32e9ad3e3b6a98e78bd02814021723c1daf602844875f1b08f01fa916e3b3
 menu:
     main: 
         weight: 4
@@ -75,6 +79,6 @@ comments: true
 * 头像：`https://williamwei.top/links/avatar.webp`
 * 简介：Everything will be well. Hopefully.
 
-咱朋友少，所以欢迎大家和我做朋友~
+下方排名不分先后。咱朋友少，所以欢迎大家和我做朋友~
 
 顺带，本站会定期清理已经失效的友链。如果你的链接被误删，请联系我恢复。
