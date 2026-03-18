@@ -29,13 +29,13 @@ categories:
 
 **请注意：此成绩非官方成绩，与 SEGA 没有任何关系！**
 
-*由于 DXRating.net API Best 50 网页 API 出现问题，因此 Best 50 图片不会立即生成。下方的 Rating Graph 仍然会更新。*
+*由于 DXRating.net API Best 50 网页 API 时不时出现问题，因此 Best 50 图片不一定会立即生成。下方的 Rating Graph 仍然会更新。*
 
 ![](scoreb50.jpg)
 
 ![](rating.jpg)
 
-### 舞萌 DX / Rating Graph
+### 舞萌 DX Best 50 / Rating Graph
 
 <span style="color:red;">请 **[点击这里](https://b50.mpas.top/1397784681)** 直接在线查看最新的数据。</span>
 
@@ -43,7 +43,7 @@ categories:
 
 ![](realrating.jpg)
 
-### 中二节奏
+### 中二节奏 Best 50
 
 图片由提比不想睡觉 Tippy Bot 生成。感谢开发！
 
@@ -53,7 +53,7 @@ categories:
 
 ![](deemoii.jpg)
 
-### Rotaeno
+### Rotaeno / Best 40 / Rating Graph
 
 图片由铃猫酱 SuzuNeko 生成。感谢开发！
 
