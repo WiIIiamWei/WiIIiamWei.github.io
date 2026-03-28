@@ -59,6 +59,14 @@ links:
     description: 一个不喜欢随波逐流的高中生的blog
     website: https://blog.chihuo2104.dev/
     image: https://1.gravatar.com/avatar/f1f32e9ad3e3b6a98e78bd02814021723c1daf602844875f1b08f01fa916e3b3
+  - title: io-wy Blog
+    description: The dreamer never existed.
+    website: https://io-wy.github.io/
+    image: https://io-wy.github.io/avatar.jpg
+  - title: Symb0x76 小站
+    description: 一点技术和小巧思 | 分享开发经验、踩坑经历和个人兴趣爱好
+    website: https://blog0x76.vercel.app/
+    image: https://blog0x76.vercel.app/images/avatar.jpg
 menu:
     main: 
         weight: 4

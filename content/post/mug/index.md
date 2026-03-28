@@ -3,7 +3,7 @@ title: 关于音游
 description: Let's 音游趴体！能和我一起玩吗？
 slug: mug
 image: image.webp
-date: 2026-03-12
+date: 2026-03-28
 categories:
     - 音游
 ---
