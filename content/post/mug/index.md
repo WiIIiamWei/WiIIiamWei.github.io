@@ -37,9 +37,9 @@ categories:
 
 ### 舞萌 DX Best 50 / Rating Graph
 
-<span style="color:red;">请 **[点击这里](https://b50.mpas.top/1397784681)** 直接在线查看最新的数据。</span>
+<span style="color:red;">请 **[点击这里](https://maimai-lab-web.vercel.app/b50/WilliamWei)** 直接在线查看最新的数据。</span>
 
-（感谢 [MeowKJ](https://github.com/MeowKJ/maimai-rating-web) 的开发！）
+（感谢 [MeowKJ](https://github.com/MeowKJ/maimai-lab) 的开发！）
 
 ![](realrating.jpg)
 
