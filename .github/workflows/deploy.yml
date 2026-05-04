@@ -45,19 +45,19 @@ jobs:
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  branch: gh-pages
+                  branch: pages
                   folder: public
                   clean: true
                   single-commit: true
 
-            - name: Checkout gh-pages
+            - name: Checkout pages
               if: github.event_name == 'push' && github.ref == 'refs/heads/master'
               uses: actions/checkout@v4
               with:
-                  ref: gh-pages
+                  ref: pages
                   fetch-depth: 0
 
-            - name: Mirror gh-pages to Codeberg
+            - name: Mirror to Codeberg
               if: github.event_name == 'push' && github.ref == 'refs/heads/master'
               uses: yesolutions/mirror-action@v0.7.0
               with:
