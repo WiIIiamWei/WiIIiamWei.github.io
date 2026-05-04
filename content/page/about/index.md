@@ -67,6 +67,8 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 | Tencent EdgeOne  | williamwei.us.ci     | 江苏反诈（DNS 污染 + SNI） |
 -->
 
+你可以到 [William Wei 的服务状态](https://status.williamwei.top/)查看目前的各站点状况。
+
 *目前观测到 Render 所有 IP 被阻断，这里推荐部署静态站点时不再选择 Render。*
 
 部分域名来自 DigitalPlat FreeDomains 和 DNSHE。你可以在这里获得一些免费域名。点击下方的卡片将使用邀请码。
