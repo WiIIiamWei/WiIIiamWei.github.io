@@ -46,21 +46,36 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 
 咱正好注册了一些免费域名。为确保可用性，本博客使用以下构建方式构建：
 
-| 构建服务             | 网址                                                 |
-| :------------------- | :--------------------------------------------------- |
-| GitHub Pages（主站） | [williamwei.top](https://williamwei.top)             |
-| Codeberg Pages       | [williamwei.dpdns.org](https://williamwei.dpdns.org) |
-| Cloudflare Pages     | [williamwei.qzz.io](https://williamwei.qzz.io)       |
-| Vercel               | [williamwei.us.kg](https://williamwei.us.kg)         |
-| Netlify              | [williamwei.is-a.dev](https://williamwei.is-a.dev)   |
-| Render               | [williamwei.de5.net](https://williamwei.de5.net)     |
-| Tencent EdgeOne      | [williamwei.ccwu.cc](https://williamwei.ccwu.cc)     |
+| 构建服务               | 网址                                               | 访问平均延时 | 阻断       |
+| :--------------------- | :------------------------------------------------- | :----------- | :--------- |
+| GitHub Pages（主站）   | [williamwei.top](https://williamwei.top)           | 1.8s         | 随机       |
+| Codeberg Pages（推荐） | [williamwei.de5.net](https://williamwei.de5.net)   | 2.2s         | **暂无**   |
+| Cloudflare Pages       | [williamwei.qzz.io](https://williamwei.qzz.io)     | 2.1s         | 随机       |
+| Vercel                 | [williamwei.us.kg](https://williamwei.us.kg)       | 2.0s         | 随机       |
+| Netlify                | [williamwei.is-a.dev](https://williamwei.is-a.dev) | 2.2s         | 随机       |
+| Render                 | [williamwei.cc.cd](https://williamwei.cc.cd)       | **阻断**     | **不可用** |
+| Tencent EdgeOne        | [williamwei.ccwu.cc](https://williamwei.ccwu.cc)   | 2.7s         | 随机       |
 
-部分域名来自 DigitalPlat FreeDomains。你可以在这里获得一些免费域名。点击下方的卡片将使用邀请码。
+<!--
+被阻断 / 备用的域名：
+
+| 构建服务         | 网址                 | 原因                       |
+| :--------------- | :------------------- | :------------------------- |
+| Render           | williamwei.cc.cd     | 江苏反诈（DNS 污染 + SNI） |
+| Render           | williamwei.cn.mt     | 江苏反诈（DNS 污染 + SNI） |
+| Cloudflare Pages | williamwei.dpdns.org | 备用，长域名               |
+| Tencent EdgeOne  | williamwei.us.ci     | 江苏反诈（DNS 污染 + SNI） |
+-->
+
+*目前观测到 Render 所有 IP 被阻断，这里推荐部署静态站点时不再选择 Render。*
+
+部分域名来自 DigitalPlat FreeDomains 和 DNSHE。你可以在这里获得一些免费域名。点击下方的卡片将使用邀请码。
 
 <a href="https://dash.domain.digitalplat.org/signup?ref=z45ShpZo4w" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid #d6dbe7;border-radius:12px;background:#ffffff;color:#0f172a;text-decoration:none;font:500 13px/1.25 'HarmonyOS Sans SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;box-shadow:0 1px 2px rgba(15,23,42,0.06);"><span style="display:inline-flex;align-items:center;justify-content:center;padding:4px 8px;border-radius:9999px;background:#eff6ff;color:#1d4ed8;font:600 11px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:0.02em;text-transform:uppercase;">DigitalPlat</span><span style="display:flex;flex-direction:column;gap:2px;"><span style="font-weight:600;">本网站部分由 DigitalPlat 提供支持</span><span style="color:#475569;">从 DigitalPlat 获得免费域名</span></span></a>
 
-当一个站点不可用时，你可尝试使用其他方式构建的站点。**推荐来自中国大陆的读者尝试使用 Tencent Edgeone / Leapcell 站点访问。**
+DNSHE 的助力码：`93RU8GDTTZ`
+
+当一个站点不可用时，你可尝试使用其他方式构建的站点。
 
 博客支持 RSS 订阅，请点击头像下方的 RSS 图标访问 XML。
 
