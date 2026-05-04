@@ -16,6 +16,6 @@ jobs:
       - name: Mirror repository to Codeberg
         uses: yesolutions/mirror-action@v0.7.0
         with:
-          REMOTE: git@codeberg.org:WilliamWei/WiIIiamWei.github.io.git
+          REMOTE: git@codeberg.org:WilliamWei/pages.git
           GIT_SSH_PRIVATE_KEY: ${{ secrets.CODEBERG_SSH_PRIVATE_KEY }}
-          GIT_SSH_KNOWN_HOSTS: ${{ secrets.CODEBERG_KNOWN_HOSTS }}
+          GIT_SSH_NO_VERIFY_HOST: "true"
