@@ -61,6 +61,6 @@ jobs:
               if: github.event_name == 'push' && github.ref == 'refs/heads/master'
               uses: yesolutions/mirror-action@v0.7.0
               with:
-                  REMOTE: git@codeberg.org:WilliamWei/pages.git
+                  REMOTE: git@codeberg.org:WilliamWei/blog.git
                   GIT_SSH_PRIVATE_KEY: ${{ secrets.CODEBERG_SSH_PRIVATE_KEY }}
                   GIT_SSH_NO_VERIFY_HOST: "true"
