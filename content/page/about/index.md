@@ -46,15 +46,15 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 
 咱正好注册了一些免费域名。为确保可用性，本博客使用以下构建方式构建：
 
-| 构建服务             | 网址                                                                                                   |
-| :------------------- | :----------------------------------------------------------------------------------------------------- |
-| GitHub Pages（主站） | [williamwei.top](https://williamwei.top)                                                               |
-| Cloudflare Pages     | [williamwei.qzz.io](https://williamwei.qzz.io)、[williamwei.ccwu.cc](https://williamwei.ccwu.cc)       |
-| Vercel               | [williamwei.us.kg](williamwei.us.kg)                                                                   |
-| Netlify              | [williamwei.is-a.dev](https://williamwei.is-a.dev)                                                     |
-| Render               | [williamwei.de5.net](https://williamwei.de5.net)、[williamwei.dpdns.org](https://williamwei.dpdns.org) |
-| Tencent EdgeOne      | [williamwei.us.ci](https://williamwei.us.ci)                                                           |
-| Leapcell             | [williamwei.cc.cd](https://williamwei.cc.cd)                                                           |
+| 构建服务             | 网址                                                 |
+| :------------------- | :--------------------------------------------------- |
+| GitHub Pages（主站） | [williamwei.top](https://williamwei.top)             |
+| Codeberg Pages       | [williamwei.dpdns.org](https://williamwei.dpdns.org) |
+| Cloudflare Pages     | [williamwei.qzz.io](https://williamwei.qzz.io)       |
+| Vercel               | [williamwei.us.kg](https://williamwei.us.kg)         |
+| Netlify              | [williamwei.is-a.dev](https://williamwei.is-a.dev)   |
+| Render               | [williamwei.de5.net](https://williamwei.de5.net)     |
+| Tencent EdgeOne      | [williamwei.ccwu.cc](https://williamwei.ccwu.cc)     |
 
 部分域名来自 DigitalPlat FreeDomains。你可以在这里获得一些免费域名。点击下方的卡片将使用邀请码。
 
