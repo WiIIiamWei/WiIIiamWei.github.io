@@ -46,15 +46,15 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 
 咱正好注册了一些免费域名。为确保可用性，本博客使用以下构建方式构建：
 
-| 构建服务               | 网址                                               | 访问平均延时 | 阻断       |
-| :--------------------- | :------------------------------------------------- | :----------- | :--------- |
-| GitHub Pages（主站）   | [williamwei.top](https://williamwei.top)           | 1.8s         | 随机       |
-| Codeberg Pages（推荐） | [williamwei.de5.net](https://williamwei.de5.net)   | 2.2s         | **暂无**   |
-| Cloudflare Pages       | [williamwei.qzz.io](https://williamwei.qzz.io)     | 2.1s         | 随机       |
-| Vercel                 | [williamwei.us.kg](https://williamwei.us.kg)       | 2.0s         | 随机       |
-| Netlify                | [williamwei.is-a.dev](https://williamwei.is-a.dev) | 2.2s         | 随机       |
-| Render                 | [williamwei.cc.cd](https://williamwei.cc.cd)       | **阻断**     | **不可用** |
-| Tencent EdgeOne        | [williamwei.ccwu.cc](https://williamwei.ccwu.cc)   | 2.7s         | 随机       |
+| 构建服务             | 网址                                               | 访问平均延时 | 阻断       |
+| :------------------- | :------------------------------------------------- | :----------- | :--------- |
+| GitHub Pages（主站） | [williamwei.top](https://williamwei.top)           | 0.84s        | 随机       |
+| Codeberg Pages       | [williamwei.de5.net](https://williamwei.de5.net)   | 0.74s        | 随机       |
+| Cloudflare Pages     | [williamwei.qzz.io](https://williamwei.qzz.io)     | 0.72s        | 随机       |
+| Vercel（推荐）       | [williamwei.us.kg](https://williamwei.us.kg)       | 0.46s        | 随机       |
+| Netlify              | [williamwei.is-a.dev](https://williamwei.is-a.dev) | 0.70s        | 随机       |
+| Render               | [williamwei.cc.cd](https://williamwei.cc.cd)       | **阻断**     | **不可用** |
+| Tencent EdgeOne      | [williamwei.ccwu.cc](https://williamwei.ccwu.cc)   | 1.22s        | 随机       |
 
 <!--
 被阻断 / 备用的域名：
@@ -63,6 +63,7 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 | :--------------- | :------------------- | :------------------------- |
 | Render           | williamwei.cc.cd     | 江苏反诈（DNS 污染 + SNI） |
 | Render           | williamwei.cn.mt     | 江苏反诈（DNS 污染 + SNI） |
+| Codeberg Pages   | williamwei.de5.net   | 上海反诈（观察中）         |
 | Cloudflare Pages | williamwei.dpdns.org | 备用，长域名               |
 | Tencent EdgeOne  | williamwei.us.ci     | 江苏反诈（DNS 污染 + SNI） |
 -->
