@@ -56,7 +56,7 @@ links:
     website: https://ity.moe/
     image: https://ity.moe/avatar.svg  
   - title: chihuo2104の部落格
-    description: 一个不喜欢随波逐流的高中生的blog
+    description: 一个不喜欢随波逐流的高中生大学生的blog
     website: https://blog.chihuo2104.dev/
     image: https://1.gravatar.com/avatar/f1f32e9ad3e3b6a98e78bd02814021723c1daf602844875f1b08f01fa916e3b3
   - title: io-wy Blog
@@ -67,6 +67,26 @@ links:
     description: 一点技术和小巧思 | 分享开发经验、踩坑经历和个人兴趣爱好
     website: https://blog0x76.vercel.app/
     image: https://blog0x76.vercel.app/images/avatar.jpg
+  - title: Duo 云站
+    description: MathForest官方🌲|程序及数学可视化✨|屑魔女游世界🔮
+    website: https://www.mduo.cloud/
+    image: https://www.mduo.cloud/elaina_q.jpg
+  - title: Blue Space
+    description: 在宇宙角落找寻破碎的心
+    website: https://blog.bluespace.ren/
+    image: https://blog.bluespace.ren/img/soine.png
+  - title: 柏园猫のBlog
+    description: 可爱猫猫！| 人与人虽然相距遥远，但又彼此相依
+    website: https://nekomoe.xyz/
+    image: https://nekomoe.xyz/favicon.ico
+  - title: 文轩夜话
+    description: 用心享受生活
+    website: https://blog.awaae001.top/
+    image: https://image.neosora.cc/?/images/2024/01/13/Pqeh0v6VaK/ico.jpg
+  - title: 洛仙璃の幻梦
+    description: 如光似幻，如影随形
+    website: https://mzwing.eu.org/
+    image: https://gravatar.loli.net/avatar/b740a96fe85051e07ed3fb9aa86d5202?d=mp&v=1.5.1
 menu:
     main: 
         weight: 4

@@ -49,11 +49,11 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 | 构建服务             | 网址                                               | 访问平均延时 | 阻断       |
 | :------------------- | :------------------------------------------------- | :----------- | :--------- |
 | GitHub Pages（主站） | [williamwei.top](https://williamwei.top)           | 0.84s        | 随机       |
-| Codeberg Pages       | [williamwei.de5.net](https://williamwei.de5.net)   | 0.74s        | 随机       |
+| Codeberg Pages       | [williamwei.de5.net](https://williamwei.de5.net)   | 0.74s **（不稳定）**| 随机       |
 | Cloudflare Pages     | [williamwei.qzz.io](https://williamwei.qzz.io)     | 0.72s        | 随机       |
 | Vercel（推荐）       | [williamwei.us.kg](https://williamwei.us.kg)       | 0.46s        | 随机       |
 | Netlify              | [williamwei.is-a.dev](https://williamwei.is-a.dev) | 0.70s        | 随机       |
-| Render               | [williamwei.cc.cd](https://williamwei.cc.cd)       | **阻断**     | **不可用** |
+| Render               | [williamwei.cc.cd](https://williamwei.cc.cd)       | 0.87s        | 随机       |
 | Tencent EdgeOne      | [williamwei.ccwu.cc](https://williamwei.ccwu.cc)   | 1.22s        | 随机       |
 
 <!--
