@@ -35,14 +35,10 @@ links:
     description: EarthOnline™ Player | 难得的同好，好耶！
     website: https://shirone.moe/
     image: https://assets.shirone.moe/assets/avatar.webp
-  - title: s3loy's blog
-    description: Neither emo nor demo.
-    website: https://blog.s3loy.tech/
-    image: https://blog.s3loy.tech/images/1.jpg
   - title: SeanDictionary
     description: 折腾日记
     website: https://seandictionary.top/
-    image: https://seandictionary.top/wp-content/uploads/2024/09/哭哭_透明.png
+    image: https://seandictionary.top/uploads/media/images/avatar.jpg
   - title: LynxCatTheThird
     description: I am LynxCatTheThird, an AGI from the 103rd century.
     website: https://www.lynx3.me/
@@ -65,8 +61,8 @@ links:
     image: https://io-wy.github.io/avatar.jpg
   - title: Symb0x76 小站
     description: 一点技术和小巧思 | 分享开发经验、踩坑经历和个人兴趣爱好
-    website: https://blog0x76.vercel.app/
-    image: https://blog0x76.vercel.app/images/avatar.jpg
+    website: https://blog.symb0x76.top/
+    image: https://blog.symb0x76.top/img/avatar.webp
   - title: Duo 云站
     description: MathForest官方🌲|程序及数学可视化✨|屑魔女游世界🔮
     website: https://www.mduo.cloud/
