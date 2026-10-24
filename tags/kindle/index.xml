@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kindle on William Wei's Blog</title><link>https://williamwei.top/tags/kindle/</link><description>Recent content in Kindle on William Wei's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://williamwei.top/tags/kindle/index.xml" rel="self" type="application/rss+xml"/><item><title>适用于 5.18.1 以上的 Kindle 固件版本越狱法 AdBreak</title><link>https://williamwei.top/p/kindle-jailbreak-2/</link><pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/kindle-jailbreak-2/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;本文档是：&lt;a class="link" href="https://williamwei.top/p/kindle-jailbreak" &gt;Kindle 越狱&lt;/a&gt; 的补充。你很可能需要其中的一些知识。&lt;/p&gt;
+&lt;p&gt;本文依旧参考 Kindle Modding Wiki 编写。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;AdBreak 是在 WinterBreak 失效后，利用 &lt;a class="link" href="https://scarybeastsecurity.blogspot.com/2017/05/ode-to-use-after-free-one-vulnerable.html" target="_blank" rel="noopener"
+&gt;CVE-2012-3748&lt;/a&gt; 的最新越狱法，于今年 9 月 25 日发布。&lt;/p&gt;
+&lt;p&gt;此方法适用于 Kindle 固件 5.18.1 及以上版本。注意：该漏洞可能在版本 5.18.5.0.1 后修复。如果你的设备拥有此版本的固件，请谨慎操作，因为不一定能成功。&lt;strong&gt;已经确认固件版本 5.18.6 修复了 AdBreak，因此请不要更新该版本固件。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Kindle 越狱</title><link>https://williamwei.top/p/kindle-jailbreak/</link><pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate><guid>https://williamwei.top/p/kindle-jailbreak/</guid><description>&lt;img src="https://williamwei.top/p/kindle-jailbreak/image.webp" alt="Featured image of post Kindle 越狱" /&gt;&lt;blockquote&gt;
+&lt;p&gt;本文章参考以下来源：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.youtube.com/watch?v=Qtk7ERwlIAk" target="_blank" rel="noopener"
+&gt;It&amp;rsquo;s Time to Jailbreak Your Kindle. - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://kindlemodding.org/" target="_blank" rel="noopener"
+&gt;Kindle Modding Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://koreader.rocks/user_guide/" target="_blank" rel="noopener"
+&gt;KOReader User Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://bookfere.com/post/1145.html" target="_blank" rel="noopener"
+&gt;2025 Kindle 越狱教程：适用于版本低于 5.18.1 的固件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果有条件的话，请务必去看看原文！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;距离 Kindle 中国关闭（2023 年 6 月 30 日）已经过去快两年了。这段时间以来，我的 Kindle 一直在我的抽屉里躺着，扮演着泡面盖板的角色。我曾尝试一些第三方的 Kindle 刷机包，奈何门槛和风险都很高。直到今年初，某位大神看不惯亚马逊的吃相，在 2025 年新年发布了 WinterBreak 破解，让 Kindle 越狱变得触手可得。本文将详细介绍这种越狱方法，祝你也能越狱成功。&lt;/p&gt;</description></item></channel></rss>
