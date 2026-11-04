@@ -1,0 +1,47 @@
+name: Sync content to Shittim Blog
+
+on:
+  push:
+    branches: [master]
+    paths: ['content/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-content-to-shittim
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out latest source content
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: source
+          persist-credentials: false
+      - name: Check out destination
+        uses: actions/checkout@v4
+        with:
+          repository: WiIIiamWei/shittim-blog
+          ref: master
+          token: ${{ secrets.CROSS_REPO_PAT }}
+          path: target
+      - name: Sync and push content
+        working-directory: target
+        run: |
+          rsync -a --delete ../source/content/ content/
+          git add --all -- content/
+          if git diff --cached --quiet; then
+            echo "Content is already up to date."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          source_commit=$(git -C ../source rev-parse --short=12 HEAD)
+          git commit -m "Sync content from WiIIiamWei.github.io ($source_commit)"
+          git push origin HEAD:master
