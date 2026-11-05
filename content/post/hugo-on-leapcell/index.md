@@ -10,6 +10,13 @@ tags:
     - Leapcell
     - PaaS
     - Hugo
+shittim:
+  arona:
+    summary: >-
+      这是一篇关于如何在 Leapcell 上部署 Hugo 博客的文章呢。可惜平台不在了呢。
+  plana:
+    summary: >-
+      分析：这是一篇已经过时的文章。是关于如何在 Leapcell 上部署 Hugo 博客的。
 ---
 
 > **此方法已经失效。**

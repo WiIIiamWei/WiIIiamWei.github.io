@@ -5,6 +5,13 @@ slug: qq
 date: 2025-12-19
 categories:
     - 公告
+shittim:
+  arona:
+    summary: >-
+      这里写了档案室主人的 QQ 号状态。
+  plana:
+    summary: >-
+      分析：这里写了档案室主人的 QQ 号状态。
 ---
 
 > 本页面会不时更新。最后更新时间见标题下方。
@@ -35,7 +42,7 @@ categories:
 
 > 如果你看不懂该内容，请忽略它。
 
-我的主力机为 Google Pixel 7，Magisk Alpha + LSPosed 配置。没有为 QQ 挂载 LSPosed 模组，然而 QQ 仍然提示风控。现在采用的隐藏方案为 Shamiko + HideMyApplist。如果有更好的隐藏方案，请务必告诉我（个人喜好问题，暂时不考虑 KernelSU 类）。
+我的主力机为 Google Pixel 7，KSU + LSPosed 配置。没有为 QQ 挂载 LSPosed 模组，然而 QQ 仍然提示风控。现在采用的隐藏方案为 ZN + HideMyApplist + 一大堆有的没的。如果有更好的隐藏方案，请务必告诉我。
 
 QQ 的风控政策不但没有阻挡机器人等自动脚本的运行（NapCat），反而限制了正常用户的使用。不好好做聊天软件，一天到晚搞这些干嘛（怒）
 

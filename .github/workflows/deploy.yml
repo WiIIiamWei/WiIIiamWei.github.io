@@ -36,11 +36,20 @@ jobs:
             - name: Setup Hugo
               uses: peaceiris/actions-hugo@v2
               with:
-                  hugo-version: "0.153.1"
+                  hugo-version: "0.169.0"
                   extended: true
 
+            - name: Install Dart Sass
+              env:
+                  SASS_VERSION: 1.107.1
+              run: |
+                  curl -fsSL --retry 3 "https://github.com/sass/dart-sass/releases/download/${SASS_VERSION}/dart-sass-${SASS_VERSION}-linux-x64.tar.gz" -o "${RUNNER_TEMP}/dart-sass.tar.gz"
+                  echo "6cefe78692d03ca53843394bb98de4dccf9a3d8ee5ece40be7316be852624003  ${RUNNER_TEMP}/dart-sass.tar.gz" | sha256sum -c -
+                  tar -xzf "${RUNNER_TEMP}/dart-sass.tar.gz" -C "${RUNNER_TEMP}"
+                  echo "${RUNNER_TEMP}/dart-sass" >> "${GITHUB_PATH}"
+
             - name: Build
-              run: hugo --minify --gc
+              run: hugo --minify --gc --panicOnWarning
 
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4

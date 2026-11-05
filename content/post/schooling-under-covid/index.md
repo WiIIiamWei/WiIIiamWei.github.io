@@ -5,6 +5,13 @@ slug: schooling-under-covid
 date: 2022-09-10
 categories:
     - 生活
+shittim:
+  arona:
+    summary: >-
+      这是档案室主人在高三被封校的全过程记录。貌似是一段艰难的时光呢。
+  plana:
+    summary: >-
+      分析：这是档案室主人在高三被封校的全过程记录。
 ---
 
 > 本文主要记述在 2022-09-05~2022-09-09 期间因疫情原因在南通市开放大学封校的生活。

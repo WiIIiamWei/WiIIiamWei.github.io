@@ -6,6 +6,13 @@ image: image.webp
 date: 2026-10-24
 categories:
     - 音游
+shittim:
+  arona:
+    summary: >-
+      这是详细介绍档案室主人所玩音游的文章！老师也会玩吗？
+  plana:
+    summary: >-
+      分析：这是详细介绍档案室主人所玩音游的文章。档案室主人似乎很欢迎老师一起来玩。
 ---
 
 > 封面图片：(From Rotaeno) Inverted World - ARForest

@@ -9,6 +9,13 @@ categories:
 tags:
     - cd
     - zoxide
+shittim:
+  arona:
+    summary: >-
+      这是档案室主人对于 zoxide 的使用体验！老师也可以试一下哦！
+  plana:
+    summary: >-
+      分析：这是档案室主人对于 zoxide 的使用体验。普拉娜觉得应该会很适合老师。
 ---
 
 [zoxide](https://github.com/ajeetdsouza/zoxide) 是一个更聪明的 `cd` 命令，旨在让你更快速的在目录之间来回切换。

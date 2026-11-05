@@ -6,6 +6,13 @@ date: 2026-05-06
 image: image.webp
 categories:
   - 生活
+shittim:
+  arona:
+    summary: >-
+      这是档案室的主人对于 AI 的思考的说。这么说来阿罗娜也是 AI 呢……
+  plana:
+    summary: >-
+      分析：这是档案室的主人对于 AI 的思考。
 ---
 
 > 封面图由 Nano Banana 3 创作。

@@ -9,6 +9,13 @@ categories:
 tags:
     - Office
     - PowerPoint
+shittim:
+  arona:
+    summary: >-
+      这是介绍各种 PowerPoint 技巧的合集！貌似很有用的样子呢！
+  plana:
+    summary: >-
+      分析：这是介绍各种 PowerPoint 技巧的合集。老师应该可以学到很多有用的技巧。
 ---
 
 > 看这个博客内容就知道这是个学文科的。

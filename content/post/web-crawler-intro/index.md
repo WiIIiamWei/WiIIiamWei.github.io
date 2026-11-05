@@ -9,6 +9,13 @@ categories:
 tags:
     - 爬虫
     - Python
+shittim:
+  arona:
+    summary: >-
+      这是档案室主人为自己社团写的 Python 爬虫授课文档！但其实老师可以喊阿罗娜直接检索的……
+  plana:
+    summary: >-
+      分析：这是档案室主人为自己社团写的 Python 爬虫授课文档。……关于数据检索，其实普拉娜可以代劳。
 ---
 
 ## 什么是爬虫

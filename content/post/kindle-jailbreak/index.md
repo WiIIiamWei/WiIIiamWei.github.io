@@ -9,6 +9,13 @@ categories:
 tags:
     - 越狱
     - Kindle
+shittim:
+  arona:
+    summary: >-
+      这是介绍 Kindle 越狱方法的文章！老师手上有 Kindle 的话，不妨来试一试！
+  plana:
+    summary: >-
+      分析：这是介绍 Kindle 越狱方法的文章。老师手上有 Kindle 的话不妨试一试。
 ---
 
 > 本文章参考以下来源：

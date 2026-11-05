@@ -90,6 +90,13 @@ menu:
             icon: link
 
 comments: true
+shittim:
+  arona:
+    summary: >-
+      这里记录了档案室主人们的朋友哦！阿罗娜也很好奇，想去看看呢！
+  plana:
+    summary: >-
+      分析：这里记录了档案室主人的朋友链接。老师不妨点进去看看。
 ---
   
 > 封面图片：[出発進航！](https://www.pixiv.net/artworks/100339123)

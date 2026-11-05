@@ -9,6 +9,13 @@ categories:
 tags:
     - 新年快乐
     - 2024
+shittim:
+  arona:
+    summary: >-
+      这是档案室主人在 2024 农历新年出的解谜题目！阿罗娜还是第一次见到「文言编程语言」呢……
+  plana:
+    summary: >-
+      分析：这是档案室主人在 2024 农历新年出的解谜题目。貌似采用了「文言编程语言」，有一定难度。
 ---
 
 > 封面图片：[✨🎉ॱ॰*❅HAPPY NEW YEAR❅*॰ॱ🎉✨](https://www.pixiv.net/artworks/114748159)

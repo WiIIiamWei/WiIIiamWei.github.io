@@ -8,6 +8,13 @@ categories:
 tags:
     - 越狱
     - Kindle
+shittim:
+  arona:
+    summary: >-
+      这是介绍 Kindle 越狱方法的补充文章！老师手上有 Kindle 的话，不妨来试一试！
+  plana:
+    summary: >-
+      分析：这是介绍 Kindle 越狱方法的补充文章。老师手上有 Kindle 的话不妨试一试。
 ---
 
 > 本文档是：[Kindle 越狱](/p/kindle-jailbreak) 的补充。你很可能需要其中的一些知识。

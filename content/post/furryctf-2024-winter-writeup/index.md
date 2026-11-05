@@ -8,6 +8,13 @@ categories:
     - 技术
 tags:
     - CTF
+shittim:
+  arona:
+    summary: >-
+      这是档案室主人的首次 CTF 尝试和 writeup！虽然文章有点稚嫩……但还是很有意思的！
+  plana:
+    summary: >-
+      分析：这是档案室主人的首次 CTF 尝试和 writeup。警告：检测到危险解法，不建议老师学习其中的方法。
 ---
 
 > 封面图片：[にゃー](https://www.pixiv.net/artworks/114436683)
