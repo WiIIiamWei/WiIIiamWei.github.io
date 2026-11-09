@@ -37,7 +37,9 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 
 在学习之余探索自我，有些焦虑，选择了以竞赛促进学习，还拿了一个实习，目前还是有些收获的，希望一切都好吧。
 
-有话想和我讲？考虑到隐私问题，所有的联系方式现已转到 Gravatar。请点击头像下的 [Gravatar](https://gravatar.com/realwilliamwei) 图标或是 [lit.link](https://lit.link/zh-tw/williamwei) 图标，或是文末的卡片来找我，或是在评论区留言！
+有话想和我讲？考虑到隐私问题，所有的联系方式现已转到 Gravatar 和 lit.link。请点击博客头像下方的图标（若有）或右侧链接进入 [Gravatar](https://gravatar.com/realwilliamwei) 或是 [lit.link](https://lit.link/zh-tw/williamwei)，或是点击文末的卡片来找我。也可以与左边的阿罗娜 / 普拉娜交互，让她带你去 lit.link。对博客有任何意见和建议，欢迎在评论区留言！
+
+技术细节：阿罗娜和普拉娜的对话不使用 AI。全部对话都是我手搓的。
 
 ## 关于这里
 
@@ -45,36 +47,29 @@ XP 集中在机娘（身体是机械的萌娘，而非驾驶或装备机械的�
 
 此前使用 WordPress 搭建博客，现在换到了 Hugo，感觉变清爽了很多……在[原站点](https://realwilliamwei.wordpress.com)（已经关闭）上的博文就不公布/同步了。说得好听点：有一股清涩感；难听点：都啥玩意（不忍直视.webp）
 
-另外，本博客正在试验新的版本，设计灵感来自于游戏《蔚蓝档案》，有借用其中资产。可以去[这里](https://shittim.williamwei.top)看看哦！
+本博客正在试验新的主题「Shittim」，设计灵感来自于游戏《蔚蓝档案》，有借用其中资产。目前主站已经换上了。各位也可以随时访问原来的 Stack 主题，位于 [blog.williamwei.top](https://blog.williamwei.top)，两边文章一直会同步。
+
+*《蔚蓝档案》是 NEXON 的注册商标，其背景 · 设计 · 人物素材归 NEXON 所有。本站因此不提供新主题的源代码。*
 
 本博客使用以下技术构建：
 * 静态站点生成 - Hugo（使用 Stack 主题，详见页面底部）
 * 字体 - jsDelivr（提供 HarmonyOS Sans SC，意外地觉得这个字体很美观）、Google Font API（提供 Cascadia Mono）
 
-咱正好注册了一些免费域名。为确保可用性，本博客使用以下构建方式构建：
+咱正好注册了一大堆免费域名（说实话我觉得可以清理一些了）。为确保可用性，本博客使用以下构建方式构建：
 
-| 构建服务             | 网址                                               | 访问平均延时 | 阻断       |
-| :------------------- | :------------------------------------------------- | :----------- | :--------- |
-| GitHub Pages（主站） | [williamwei.top](https://williamwei.top)           | 0.84s        | 随机       |
-| Codeberg Pages       | [williamwei.de5.net](https://williamwei.de5.net)   | 0.74s **（不稳定）**| 随机       |
-| Cloudflare Pages     | [williamwei.qzz.io](https://williamwei.qzz.io)     | 0.72s        | 随机       |
-| Vercel（推荐）       | [williamwei.us.kg](https://williamwei.us.kg)       | 0.46s        | 随机       |
-| Netlify              | [williamwei.is-a.dev](https://williamwei.is-a.dev) | 0.70s        | 随机       |
-| Render               | [williamwei.cc.cd](https://williamwei.cc.cd)       | 0.87s        | 随机       |
-| Tencent EdgeOne      | [williamwei.ccwu.cc](https://williamwei.ccwu.cc)   | 1.22s        | 随机       |
-| Edgeone (Shittim)    | [shittim.williamwei.top](https://shittim.williamwei.top) | 3.00s | 随机 |
-
-<!--
-被阻断 / 备用的域名：
-
-| 构建服务         | 网址                 | 原因                       |
-| :--------------- | :------------------- | :------------------------- |
-| Render           | williamwei.cc.cd     | 江苏反诈（DNS 污染 + SNI） |
-| Render           | williamwei.cn.mt     | 江苏反诈（DNS 污染 + SNI） |
-| Codeberg Pages   | williamwei.de5.net   | 上海反诈（观察中）         |
-| Cloudflare Pages | williamwei.dpdns.org | 备用，长域名               |
-| Tencent EdgeOne  | williamwei.us.ci     | 江苏反诈（DNS 污染 + SNI） |
--->
+| 构建服务             | 主题 | 网址                                               |
+| :------------------- | :-- | :------------------------------------------------- |
+| **Tencent Edgeone** | Shittim | [williamwei.top](https://williamwei.top)           |
+| **GitHub Pages** | Stack | [blog.williamwei.top](https://blog.williamwei.top) |
+| Vercel | Shittim | [shittim.williamwei.top](https://shittim.williamwei.top) |
+| Cloudflare Pages | Shittim | [williamwei.new.tg](https://williamwei.new.tg) |
+| Netlify | Shittim | [williamwei.cc.cd](https://williamwei.cc.cd) |
+| Codeberg Pages | Stack | [williamwei.de5.net](https://williamwei.de5.net)   |
+| Cloudflare Pages | Stack | [williamwei.dpdns.org](https://williamwei.dpdns.org)     |
+| Vercel | Stack | [williamwei.us.kg](https://williamwei.us.kg)       |
+| Netlify | Stack | [williamwei.is-a.dev](https://williamwei.is-a.dev) |
+| Render | Stack | [williamwei.cn.mt](https://williamwei.cn.mt)       |
+| Tencent EdgeOne | Stack | [williamwei.ccwu.cc](https://williamwei.ccwu.cc)   |
 
 你可以到 [William Wei 的服务状态](https://status.williamwei.top/)查看目前的各站点状况。
 
