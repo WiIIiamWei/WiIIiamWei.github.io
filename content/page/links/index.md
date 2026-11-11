@@ -47,14 +47,10 @@ links:
     description: 也是咱同专业的学长捏 | 记录一些折腾的东西和生活琐事
     website: https://glucy2.com/
     image: glucy2.jpg
-  - title: Cuskiy
-    description: Be a good kid.
-    website: https://ity.moe/
-    image: https://ity.moe/avatar.svg  
   - title: chihuo2104の部落格
     description: 一个不喜欢随波逐流的高中生大学生的blog
     website: https://blog.chihuo2104.dev/
-    image: https://1.gravatar.com/avatar/f1f32e9ad3e3b6a98e78bd02814021723c1daf602844875f1b08f01fa916e3b3
+    image: https://gravatar.loli.net/avatar/f1f32e9ad3e3b6a98e78bd02814021723c1daf602844875f1b08f01fa916e3b3
   - title: io-wy Blog
     description: The dreamer never existed.
     website: https://io-wy.github.io/
@@ -73,12 +69,12 @@ links:
     image: https://blog.bluespace.ren/img/soine.png
   - title: 柏园猫のBlog
     description: 可爱猫猫！| 人与人虽然相距遥远，但又彼此相依
-    website: https://nekomoe.xyz/
+    website: https://i.nekomoe.xyz/
     image: https://nekomoe.xyz/favicon.ico
   - title: 文轩夜话
     description: 用心享受生活
     website: https://blog.awaae001.top/
-    image: https://image.neosora.cc/?/images/2024/01/13/Pqeh0v6VaK/ico.jpg
+    image: https://blog.awaae001.top/avater.webp
   - title: 洛仙璃の幻梦
     description: 如光似幻，如影随形
     website: https://mzwing.eu.org/
